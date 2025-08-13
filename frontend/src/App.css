@@ -1,0 +1,280 @@
+
+
+:root{
+
+    
+   --main-white--: hsl(258, 44%, 93%);
+    --white-blple--: hsl(221, 32%, 77%);
+
+
+      /* [PL3]MOON PHASE */
+    --moon-phases-a: hsl(204, 19%, 15%);
+    --moon-phases-b: hsl(210, 19%, 22%);
+    --moon-phases-c: hsl(197, 65%, 24%);
+    --moon-phases-d: hsl(192, 11%, 52%);
+    --moon-phases-e: hsl(120, 13%, 85%);
+
+
+
+    
+    /* DARK MODE PALLETE */
+    --metal-dark1: hsl(0, 2%, 14%);
+    --metal-dark2: hsl(0, 1%, 25%);
+    --metal-dark3: hsl(0, 0%, 13%);
+    --metal-dark4: hsl(240, 2%, 53%);
+    --metal-dark5: hsl(0, 0%, 7%);
+
+    /* GRAYS */
+    --gray_1--: hsl(0, 0%, 50%);
+    --color-jk-dark: hsl(204, 19%, 15%);
+    --color-jk-dgray: hsl(210, 100%, 99%);
+
+
+    /* DARK */
+    --dark-variant: hsl(220, 7%, 19%);
+    --dark-variantb: hsl(0, 0%, 21%);
+    --color-dark-blue: hsl(210, 29%, 15%);
+
+    /* SHADOWS */
+    --shad-alpha: rgba(53,53,53,0.5);
+    --shad-alpha-b: rgba(53,53,53,0.4);
+    --shad-alpha-c: rgba(53,53,53,0.3);
+    --shad-alpha-d: rgba(53,53,53,0.2);
+    --shad-alpha-e: rgba(53,53,53,0.1);
+    
+    --shad-dark: rgb(0,0,0);
+    --shad-dark-b: rgba(0,0,0,0.7);
+    --shad-dark-c: rgba(0,0,0,0.6);
+    --shad-dark-d: rgba(0,0,0,0.5);
+    --shad-dark-e: rgba(0,0,0,0.4);
+    --shad-dark-f: rgba(0,0,0,0.3);
+    --shad-dark-g: rgba(0,0,0,0.2);
+    --shad-dark-h: rgba(0,0,0,0.1);
+
+    /* 1.618  */
+    --fns-default-down-0-6:0.618rem;
+    --fns-down-1:0.8rem;
+    --fns-default-1:1rem;
+    --fns-up2:1.3rem;
+    --fns-default-up1-6:1.618rem;
+    --fns-up4:2.1rem;
+    --fns-default-up2-6:2.617rem;
+    --fns-default-up4-2:4.23rem;
+    --fns-default-up-6-8:6.84rem;
+    --fns-deafult-up-11-08:11.08rem;
+
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/Fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Monument Text";
+  src: url("./assets/Fonts/MonumentExtended-Regular.otf");
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./assets/Fonts/BebasNeue-Regular.ttf");
+}
+
+*{
+
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  color: gainsboro;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  text-align: center;
+  font-size: clamp(1rem, 8vw, 1rem); 
+}
+span{
+  text-align: center;
+    font-size: clamp(5rem, 8vw, 9rem); 
+}
+
+body::-webkit-scrollbar{
+  background-color: var(--metal-dark5);
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: var(--metal-dark2);
+  border-left: 2px solid var(--metal-dark5);
+  border-right: 2px solid var(--metal-dark5);
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 100vh 100vh;
+  overflow-x: hidden;
+}
+
+
+.hero{
+  position: relative;
+  display: grid;
+  grid-template-rows: 0.5fr 9.5fr;
+  grid-template-columns: 1fr;
+  background-color: var(--metal-dark5);
+}
+
+  
+
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } 
+
+    .header_part{
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    header .logo_div{
+      margin: 0rem 1rem;
+    }   
+      .logo_div span{
+        margin: 0.5rem 0rem;
+      }
+      .logo_div #logo_name{
+        font-family: "Bebas Neue";
+        font-size: var(--fns-default-up1-6);
+        border-right: 1px solid var(--metal-dark2);
+        padding: 0rem 0.5rem 0rem 0rem;
+      }
+
+      .logo_div #fullname{
+        padding: 0rem 0.5rem;
+        font-size: var(--fns-down-1);
+        color: var(--metal-dark4);
+      }
+
+    header .header_nav{
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      margin: 0rem 2rem;
+    }
+      .lightmode_bar{
+        width: 4rem;
+        height: 1.3rem;
+        padding: 0.1rem 0rem;
+        border-radius: 8px;
+        box-shadow: 5px 5px 5px inset var(--shad-dark);
+      } 
+
+        .lightmode_toggle{
+          width: 2rem;
+          height: 2rem;
+        }
+
+    .main_wrapper{
+       position: relative;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+    }   
+
+
+    /* SIDEBAR  */
+    .sidebar_frame{
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      flex-direction: column;
+      right: 5rem;
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      font-size: var(--fns-down-1);
+    }
+
+
+
+    .hero_grid.text_frame{
+        display: grid;
+        grid-template-columns:1fr ;
+        grid-template-rows: 3fr 4fr 3fr ;
+        grid-area: 2 / 1 / 2 /3;
+        border-radius: 8px;
+        height: 70%;
+        width: 100%;
+    } 
+
+          .hook_frame{
+            transition: background-color 0.5s ease; 
+            width: 100%;
+            height: 30%;
+          }
+
+          
+          .bento_text{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            height: 100%;
+            width: 100%; 
+            margin: 0rem 5rem;
+          }     
+           
+
+         
+              .bento_text.hook #hook_text{
+                font-family: "Monument Text";
+                color: var(--main-white--);
+                cursor: pointer;
+                width: 100%;
+                text-align:start;
+                font-size: clamp(5rem, 8vw, 9rem); 
+                transition: background-color 0.5s ease; 
+              } 
+
+              /* .bento_text.hook #hook_text:hover{
+                 color: var(--metal-dark1);
+                 transition: 0.8s;
+                 background-color: gainsboro;
+              }  */
+
+              
+            .bento_text.role {         
+              align-items: start;
+              justify-content: start;
+              flex-direction: column;
+              font-size: var(--fns-default-up1-6);
+              
+          } 
+
+            .bento_text.role #role_text{
+              font-family: "Monument Text";
+              font-size: var(--fns-default-up1-6);
+            } 
+            
+             .bento_text.role p{
+                font-family: "Poppins";
+                color: var(--metal-dark4);
+                font-size: var(--fns-down-1);
+            } 
+
+            .bento_text.role #selling_prop_text_1{
+              margin-top: 0.5rem;
+            }
+
+            
+
+
+           
