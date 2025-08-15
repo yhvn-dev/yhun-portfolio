@@ -20,7 +20,12 @@ function Hero() {
                 {/* hook frame */}
             
                 <div className="hero_grid browser_header">
-                    browser heeader
+
+                    <ul className="circ_div">
+                        <div className="circ" id="a"></div>
+                        <div className="circ" id="b"></div>
+                        <div className="circ" id="c"></div>
+                    </ul>
 
                 </div>                
 

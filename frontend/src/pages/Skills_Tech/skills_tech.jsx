@@ -10,6 +10,9 @@ function Skills_Tech(){
   
         <section className={`${st.skills_tech}`}>
 
+
+
+
             <div className={`box ${st.skills_tech_contents_frame}`}>    
 
                 {/* header */}
@@ -17,13 +20,21 @@ function Skills_Tech(){
 
                     <ol className={`${st.header_part} ${st.left}`}> 
 
+                  
+
+                    </ol>
+
+                    <ol className={`${st.header_part} ${st.middle}`}> 
+
                         <p>SKILLS</p> 
                         <p>&</p> 
                         <p>TECHNOLOGIES</p>           
 
                     </ol>
 
-                    <ol className={`${st.header_part} ${st.right}`}>RIGHT</ol>
+                    <ol className={`${st.header_part} ${st.right}`}>
+                        
+                    </ol>
 
                 </ul >
     
