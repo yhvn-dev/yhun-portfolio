@@ -16,13 +16,13 @@
           align-items: center;
           justify-content: end;
           width: 100%;
-          margin: 0.2rem 0rem;
+          margin: 0.5rem 0rem;
           padding: 0.2rem;
         } 
         
           .links p{
               margin-right: 0.4rem;
-             color: var(--metal-dark4);
+             color: var(--metal-dark2);
              font-size: var(--fns-down-1);
           }
 

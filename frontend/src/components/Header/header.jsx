@@ -1,5 +1,5 @@
 import st from "./header.module.css";
-import "./../../global.css"
+
 
 function Header() {
   return (
@@ -25,7 +25,7 @@ function Header() {
             </a>
 
             {/* GitHub Link */}
-            <a 
+            <a cla
             href="https://github.com/yhun-tech" 
             target="_blank" 
             rel="noopener noreferrer" 

@@ -1,24 +1,30 @@
-import { useEffect } from "react";
+import { useEffect,useRef, useState } from "react";
 import Header from "../Header/header";
 import Sidebar from "../Sidebar/sidebar";
 
-
-
-
 function Hero() {
-
   
     return (
 
         <>
-        <section className="sections hero">
-            <Header />
-            <Sidebar></Sidebar>
-            
-            <div className="box main_wrapper">
 
-                {/* hook frame */}
+        <section className="sections hero">
+            <Header/>
+            <Sidebar></Sidebar>
+
+
+            {/* HERO BACKDROP */}
+            <div className="bd bd_main_wrapper">
+                
+                <ul className="bd_light">
+                   
+                </ul>
+
+            </div>
             
+       
+            <div className="box  main_wrapper">
+          
                 <div className="hero_grid browser_header">
 
                     <ul className="circ_div">
@@ -41,7 +47,7 @@ function Hero() {
                     </div>
 
 
-                    {/* text frame  */}
+           
                     <div className="hero_grid text_frame">
                         <div className="bento_text role">
                             <span id="role_text">Fullstack Web Developer</span>
@@ -52,7 +58,7 @@ function Hero() {
                                 I thrive on building responsive, user-focused designs while understanding how the backend powers them.
                             </p>
                             <p id="selling_prop_text_3">
-                                My goal is to keep creating projects that inspire curiosity and deliver great user experiences
+                                My goal is to keep creating projects that inspire curiosity and deliver great user experiences.
                             </p>
                         </div>
 
@@ -82,8 +88,6 @@ function Hero() {
 
 
                     </div>
-
-
 
                 </div>
               
