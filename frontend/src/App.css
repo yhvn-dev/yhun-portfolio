@@ -11,7 +11,6 @@
     --color-dark--blue: hsl(225, 15%, 25%);
 
 
-
       /* [PL3]MOON PHASE */
     --moon-phases-a: hsl(204, 19%, 15%);
     --moon-phases-b: hsl(210, 19%, 22%);
@@ -169,8 +168,8 @@ body::-webkit-scrollbar-thumb{
   align-items: center;
   justify-content: center;
   background-color: var(--metal-dark5);
-    height: 100vh;
-     scroll-snap-align: start;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 
@@ -384,10 +383,17 @@ body::-webkit-scrollbar-thumb{
 
 
 
+
+
+
+
+
+
+
 /* SKILLS TECH  ===== =====  ===== ===== ===== ===== ===== ===== ===== ===== */                  
 .skills_tech {
   display: grid;
-  grid-template-rows: 1fr; /* or auto/whatever */
+  grid-template-rows: 1fr;
   grid-template-columns: 1.5fr 7fr 1.5fr;
   background-color: var(--metal-dark5);
   grid-area: 2 / 1 / 3 / 2;
@@ -397,9 +403,7 @@ body::-webkit-scrollbar-thumb{
     
 
     .bd.bd_skill_tech{
-        display: grid;
-        grid-template-columns: repeat(10,1fr);
-        grid-template-rows: repeat(6,1fr);  
+       position: relative;
         overflow: hidden;   
         box-shadow: none; 
         height: 70%;
@@ -407,18 +411,18 @@ body::-webkit-scrollbar-thumb{
         border-radius: 10px;
         grid-area: 1/ 2 / 1 /3;
         margin: 0rem 1rem;
-  
     } 
-
+    
         .shapes.st_triangle_c{
-          grid-area: 3 / 3  / 4 / 9;
+          position: absolute;
           width: 0;
           height: 0;
           border-left: 400px solid transparent;
           border-right: 400px solid transparent;
           border-top: 450px solid var(--color-dark-blue);
+          left: 50%;
+          transform: translateX(-50%);
           filter: blur(80px);
-          /* background-color: var(--moon-phases-c) */
       } 
 
       
@@ -438,7 +442,7 @@ body::-webkit-scrollbar-thumb{
         box-shadow: 0px 10px 10px 1px var(--shad-dark);           
         background: transparent;
         backdrop-filter: blur(80px);
-     /* display: none; */
+    
     }     
 
         .skills_tech_contents_frame .st_part.header{
@@ -459,7 +463,25 @@ body::-webkit-scrollbar-thumb{
                 width: 100%;
                 height: 100%;
             }     
-                
+            .header_part.left .st_circ_div{
+                display: flex;
+                margin: 0rem 1rem;
+            }
+               .st_circ_div .circ{
+                  width: 1rem;
+                  height: 1rem;        
+                  border-radius: 50%;    
+                  margin: 0rem 0.3rem;
+              } 
+                .st_circ_div .circ#a{
+                    background-color: var(--metal-dark4);
+                }
+                .st_circ_div .circ#b{
+                    background-color: var(--metal-dark3);
+                }
+                .st_circ_div .circ#c{
+                  background-color: var(--metal-dark2);
+                }
 
             .header_part p{
                 text-align: start;
@@ -468,19 +490,24 @@ body::-webkit-scrollbar-thumb{
           
                 background: linear-gradient(to top, var(--white-blple--),var(--white-blple--), whitesmoke,white);
                 -webkit-background-clip: text; 
-                background-clip: text;
-                
+                background-clip: text;                
                 text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
             }
+            
 
                 .header_part.middle p:nth-child(2){
                     margin: 0rem 1rem;           
                 }   
                 
+
+
+
+
+                
                 .st_part.content_grid_frame{
                     display: grid;
                     grid-template-rows: 2fr 1fr;
-                    grid-template-columns: 3fr 4.5fr 2.5fr;
+                    grid-template-columns: 3fr 4fr 3fr;
                     gap: 1rem;
                     height: 80%;
                     border-radius: 8px;   
@@ -532,29 +559,30 @@ body::-webkit-scrollbar-thumb{
                             width: 80%;
                             height: 20%;
                             border-radius: 10px;
+                            
                           } 
                             .tech_box svg{          
                                 padding: 0.5rem;
                                 border-radius: 8px;
-                                background-color: var(--metal-dark3);
-                                filter: drop-shadow(0px 2px 1px var(--metal-dark5));
+                                background-color: var(--metal-dark3);                         
                                 width: 2rem;
                                 height: 2rem;   
                                 fill: var(--metal-dark4);
+                                box-shadow: 2px 2px 2px 1px var(--shad-dark-d);
                             }
                             .tech_box img{
                                 padding: 0.5rem;
                                 border-radius: 8px;
                                 background-color: var(--metal-dark3);
-                                filter: drop-shadow(2px -2px 1px var(--metal-dark5));
                                 width: 2rem;
                                 height: 2rem;
-                                fill:  var(--metal-dark4);
+                                box-shadow: 2px 2px 2px 1px var(--shad-dark-d);
                             }
 
                               .tech_box #wamp_img{
                                  transform: rotate(90deg);
-                              }
+                                box-shadow: 2px -2px 2px 1px var(--shad-dark-d);
+                            }
 
                                 .tech_box p{
                                   font-size: var(--fns-down-1);
@@ -572,15 +600,30 @@ body::-webkit-scrollbar-thumb{
                         }
 
                         
-                        .bento_stack.soft_skills{
-                            grid-area: 2/ 2 /2 /2;
-                        }
+                     
                         .bento_stack.tools{
                             grid-area: 1/ 3/1 /3;
                         }
                         .bento_stack.version_control{
-                            grid-area: 2/ 3/2 /3;                                            
-                        }
+                       
+                            grid-area: 2/ 2/2 /4;                                            
+                        }   
+                          .version_control .version_control_div{
+                            display: flex;            
+                            flex-direction: row;         
+                          }     
+                              .version_control_div .tech_box{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                               height: 100%;
+                            
+                              }
+                            
+                              .tech_box svg{
+                                 box-shadow: 2px 2px 2px 1px var(--shad-dark-d);
+                              }
+                            
 
 
 
@@ -591,6 +634,12 @@ body::-webkit-scrollbar-thumb{
 
 
                         
+
+
+
+
+
+
 
 /* PROJECTS WRAPPER ===== =====  ===== ===== ===== ===== ===== ===== ===== ===== */
   .projects{
@@ -605,20 +654,44 @@ body::-webkit-scrollbar-thumb{
       align-items: center;
       justify-content: center;
       box-shadow: none;
-      height: 100%;
-    
+      height: 100%;   
     }
-      .projects_box.moving_text_intro{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-      }
-        .moving_text_intro p{
-          font-family:"Monument Text";
-          font-size: 8rem;
-        }
+      .projects_box.moving_text_intro_frame{
+        display: grid;
+        grid-template-columns: 1.5fr 7fr 1.5fr;
+        grid-template-rows: 1fr;
+   
+      } 
+          .moving_text_intro_frame .mt_content_frame{
+            grid-area: 1 /2  /1 / 2;
+            height: 80%;
+            max-width: 100%;
+            overflow: hidden;
+          }
+            .moving_text_intro_frame .mt_box{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;      
+            }
+            
+              .mt_box.mt_header{
+                height: 10%;
+                background-color: var(--metal-dark4);
+              }
+              .mt_box.mt_screen{
+                height: 90%;
+                flex-wrap: wrap;
+              }
+
+                .mt_screen p{
+                  font-size: var(--fns-default-up-6-8);
+                  font-family: "Monument Text";
+                }
 
 
+
+    
 
                   
               

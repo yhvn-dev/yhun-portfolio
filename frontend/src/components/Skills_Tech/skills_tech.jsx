@@ -3,11 +3,8 @@ import wampp from "./../../assets/Images/Wamp.png"
 import vscode from "./../../assets/Images/Vscode.png"
 
 const parentVariant = {
-
     hidden: { opacity: 0, y: 50 },
-    visible: {
-    opacity: 1,
-    y: 0,
+    visible: {opacity: 1, y: 0,
     transition: { duration: 0.5, ease: "easeInOut" }
   } 
 
@@ -32,10 +29,10 @@ function Skills_Tech(){
 
           
             <motion.div 
-                variant={ parentVariant}
                 className="box skills_tech_contents_frame"
-                initial={{opacity: 0, y:50}}
-                whileInView={{ opacity: [0, 0.5, 1], y: 0}}
+                variant={ parentVariant}
+                initial="hidden"
+                animate="visible"  
                 transition={{ duration: 0.5,               
                             ease: "easeInOut",
                             times: [0,  1],  }}>    
@@ -44,7 +41,11 @@ function Skills_Tech(){
 
                     <ol className="header_part left"> 
 
-                 
+                        <ul className="st_circ_div">
+                            <div className="circ" id="a"></div>
+                            <div className="circ" id="b"></div>
+                            <div className="circ" id="c"></div>
+                        </ul>
 
                     </ol>
 
@@ -156,24 +157,31 @@ function Skills_Tech(){
                     </ol>
 
 
-
-
                     <ol className="bento_stack version_control">
-                    
-                        <ul className="bs_headers version_control_header">
+                        
+                            <ul className="bs_headers version_control_header">
                                 Version Control
+                            </ul>
+
+
+                          <ul className="bs_content version_control_div">
+
+                                         <div className="tech_box github_box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+                                <p>Github</p>
+                            </div>
+
+                            <div className="tech_box git_box">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7.10508 8.78991C7.45179 10.0635 8.61653 11 10 11H14C16.4703 11 18.5222 12.7915 18.9274 15.1461C20.1303 15.5367 21 16.6668 21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18C15 16.7334 15.7849 15.6501 16.8949 15.2101C16.5482 13.9365 15.3835 13 14 13H10C8.87439 13 7.83566 12.6281 7 12.0004V15.1707C8.16519 15.5825 9 16.6938 9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.6938 3.83481 15.5825 5 15.1707V8.82929C3.83481 8.41746 3 7.30622 3 6C3 4.34315 4.34315 3 6 3C7.65685 3 9 4.34315 9 6C9 7.26661 8.21506 8.34988 7.10508 8.78991Z"></path></svg>
+                                <p>Git</p>
+                            </div>  
+
+
                         </ul>
                         
                     </ol>
 
-                    <ol className="bento_stack soft_skills">
-
-                        <ul className="bs_headers soft_skills_header">
-                                Soft Skills
-                        </ul>
-                                               
-                    </ol>
-                
+            
                    
                 
                 </div>

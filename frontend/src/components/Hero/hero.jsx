@@ -1,6 +1,20 @@
 import { useEffect,useRef, useState } from "react";
 import Header from "../Header/header";
 import Sidebar from "../Sidebar/sidebar";
+import {motion} from "framer-motion"
+
+const lightVariant = {
+    hidden:{opacity:0, y:0 },
+    visible:{opacity:1, y:0},
+    transition:{duration:2, ease:"ease in out"}
+}
+
+const parentVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
+
 
 function Hero() {
   
@@ -12,18 +26,32 @@ function Hero() {
             <Header/>
             <Sidebar></Sidebar>
 
-
             {/* HERO BACKDROP */}
             <div className="bd bd_main_wrapper">
                 
-                <ul className="bd_light">
+                <motion.div
+                    variants={lightVariant}
+                    initial={{opacity: 0, y:50}}
+                    animate="visible"  
+                    transition={{ duration: 2,               
+                    ease: "easeInOut",
+                    times: [0,  1],  }}
+                    className="bd_light">
                    
-                </ul>
+
+                </motion.div>
 
             </div>
             
        
-            <div className="box  main_wrapper">
+            <div 
+            variants={parentVariant}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 2,               
+            ease: "easeInOut",
+            times: [0,  1],  }}
+            className="box main_wrapper">
           
                 <div className="hero_grid browser_header">
 

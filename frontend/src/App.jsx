@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Home from "./pages/Home/home.jsx"
 
-
 import './App.css'
 import './Animation.css'
 
