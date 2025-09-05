@@ -1,41 +1,29 @@
 import {motion} from "framer-motion"
 import wampp from "./../../assets/Images/Wamp.png"
 import vscode from "./../../assets/Images/Vscode.png"
+import './skills_tech.css'
+import useScrollAnimation from "../../hooks/userscroll_animation.jsx"
 
-const parentVariant = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {opacity: 1, y: 0,
-    transition: { duration: 0.5, ease: "easeInOut" }
-  } 
 
-}
 
 function Skills_Tech(){
+
+    useScrollAnimation("skills_tech_contents_frame")
+    useScrollAnimation("st_triangle_c")
+
     return(
         <section className="sections skills_tech">
 
 
-            <motion.div className="bd bd_skill_tech" 
-                initial={{opacity: 0, y:50}}
-                whileInView={{ opacity: [0,1], y: 0}}
-                transition={{ duration: 1,               
-                ease: "easeInOut",
-                times: [0,  1],  }}>
+            <div className="bd bd_skill_tech">
 
-                    <div className="shapes st_triangle_c">  
-                    </div>
+                <div className="shapes st_triangle_c">  
+                </div>
 
-            </motion.div>
+            </div>
 
           
-            <motion.div 
-                className="box skills_tech_contents_frame"
-                variant={ parentVariant}
-                initial="hidden"
-                animate="visible"  
-                transition={{ duration: 0.5,               
-                            ease: "easeInOut",
-                            times: [0,  1],  }}>    
+            <div className="box skills_tech_contents_frame">    
                                     
                 <ul className="st_part header">
 
@@ -186,7 +174,7 @@ function Skills_Tech(){
                 
                 </div>
 
-            </motion.div>
+            </div>
       
          
         </section>

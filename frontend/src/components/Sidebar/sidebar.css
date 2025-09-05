@@ -25,10 +25,4 @@
              color: var(--metal-dark2);
              font-size: var(--fns-down-1);
           }
-
-          .links#home{
-             border-radius: 5px;
-             border: 1px solid var(--metal-dark4);
-              background-color: var(--dark-variant);
-          }
-          
+ 

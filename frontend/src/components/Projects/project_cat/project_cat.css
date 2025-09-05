@@ -1,0 +1,47 @@
+  
+      /* PRODUCT CATEGORIES */
+      .projects_box.moving_text_intro_frame{
+        display: grid;
+        grid-template-columns: 1.5fr 7fr 1.5fr;
+        grid-template-rows: 1fr;
+      } 
+      
+          .moving_text_intro_frame .mt_content_frame {
+              grid-area: 1 / 2 / 1 / 2;
+              height: 80%;
+              width: 100%;
+              max-width: 100%;
+              overflow: hidden;
+              opacity: 0;
+              transform: translateY(30px);
+              transition: opacity 1s ease-in, transform 1s ease-in;
+            }
+
+            .moving_text_intro_frame .mt_content_frame.show {
+                opacity: 1;
+                transform: translateY(0);             
+            }
+
+        
+
+            .moving_text_intro_frame .mt_box{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;      
+            }
+            
+              .mt_box.mt_header{
+                height: 10%;
+                background-color: var(--metal-dark4);
+              }
+              .mt_box.mt_screen{
+                height: 90%;
+                flex-wrap: wrap;
+              }
+
+                .mt_screen p{
+                  font-size: var(--fns-default-up-6-8);
+                  font-family: "Monument Text";
+                }
+

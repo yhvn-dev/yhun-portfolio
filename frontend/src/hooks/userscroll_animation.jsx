@@ -1,26 +1,31 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
-function useScrollAnimation(options = { threshold: 0.2 }) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+function useScrollAnimation(className, options = { threshold: 0.2 }) {
+  const elementsRef = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setVisible(true);
-        observer.unobserve(entry.target); // animate only once
-      }
-    }, options);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+        });
+      },
+      options 
+    );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    const elements = document.querySelectorAll(`.${className}`);
+    elementsRef.current = elements;
+
+    elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [options]);
+  }, [className, options]);
 
-  return [ref, visible];
-  
+  return elementsRef;
 }
 
 export default useScrollAnimation;
+
+
+
+// function userScrollAnimation2({classname,options})

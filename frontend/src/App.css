@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 :root{
 
@@ -8,7 +12,6 @@
     --mainblue--: hsl(225, 46%, 44%);
     --gainsbro: hsl(0, 0%, 96%);
     --blue-white: hsl(195, 44%, 86%);
-    --color-dark--blue: hsl(225, 15%, 25%);
 
 
       /* [PL3]MOON PHASE */
@@ -155,10 +158,15 @@ body::-webkit-scrollbar-thumb{
   border-right:4px solid var(--metal-dark5);
 }
 
+
 .wrapper{
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 100vh 100vh 100vh 100vh;
+  grid-template-rows:
+  100vh      /*Hero*/
+  100vh     /*Skills And Technology*/
+  300vh     /*Projects Label*/ 
+;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
 }
@@ -172,528 +180,54 @@ body::-webkit-scrollbar-thumb{
   scroll-snap-align: start;
 }
 
-
-
 .hero{
   display: grid;
   grid-template-rows: 0.5fr 9.5fr;
   grid-template-columns: 1.5fr 7fr 1.5fr;
   background-color: var(--metal-dark5);
+}   
+
+  .main_wrapper.show + #home{
+    
+  }
+
+
+
+
+.box{
+    box-shadow: 0px 10px 10px 1px var(--shad-dark);        
 }
 
 
 
-    /* BACKDROP */
-    .bd_main_wrapper{
-      display: grid;
-      grid-template-rows: repeat(6,1fr);
-      grid-template-columns: repeat(10,1fr);
-      height: 80%;
-      grid-area: 2/ 2 /2 / 3;
-    }
-      .bd_light{
-        grid-area: 1/ 3 /6  /9;
-        border-radius: 50%;
-        background:linear-gradient(to top,var(--color-jk-dark),var(--color-dark-blue),var(--moon-phases-c));
-      
-      }
 
-    .box{
-        border-radius: 10px;
-        box-shadow: 0px 10px 10px 1px var(--shad-dark);
-    }
 
-
-    .main_wrapper{
-        display: flex;
-        align-items: center;
-        justify-content:center;
-        flex-direction: column;
-        grid-area: 2/ 2 /2 / 3;
-        height: 80%;
-        overflow: hidden;  
-        border: 5px solid var(--metal-dark1);
-        background-color: transparent;
-        backdrop-filter: blur(80px);
-        
-    }     
-
-
-  
-
-
-    
-    
-      .hero_grid{
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        width: 100%;
-      }
-
-      .hero_grid.browser_header{
-        height: 20%;
-        padding: 1rem 0rem;
-        border-radius: 0px 0px 2px 2px;
-        background:linear-gradient(to left,var(--metal-dark2),var(--metal-dark4),var(--metal-dark2));
-        box-shadow: 0px 10px 50px inset hsla(220, 13%, 95%, 0.5);  
-      } 
-
-        .browser_header .circ_div{
-          display: flex;
-          margin: 0rem 1rem;
-        }
-          .circ_div .circ{
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            margin: 0rem 0.3rem;
-          } 
-            .circ#a{
-              background-color: var(--color-danger-b);
-            }
-            .circ#b{
-              background-color: var(--color-warning);
-            }
-            .circ#c{
-             background-color: var(--color-success-a);
-          }
-
-    
-      .hero_grid.hook_frame{     
-          transition: background-color 1s ease; 
-          width: 100%;
-          height: 30%;
-          height: 25%;
-          padding: 1rem 0rem;
-        }
-
-
-        .text_content_main_frame{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          width: 95%;
-          height: 90%; 
-        }
-
-       /* TEXT FRAME */
-      .hero_grid.text_frame{
-          display: grid;
-          grid-template-columns:1fr ;
-          grid-template-rows: 3fr 4fr 3fr ;
-          grid-area: 2 / 1 / 2 /3;
-          border-radius: 8px;
-          height: 60%;
-          width: 100%;     
-      } 
-      
-    
-          .bento_text{
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            height: 100%;
-            width: 100%;       
-          }     
-          
-              .bento_text.hook #hook_text {
-                  font-family: "Monument Text";
-                  color: transparent; 
-                  background: linear-gradient(to top, var(--white-blple--),var(--white-blple--), whitesmoke,white);
-                  -webkit-background-clip: text; 
-                  background-clip: text;
-                  
-                  text-shadow: 0px -3px 10px rgba(255, 255, 255, 0.5);
-                  cursor: pointer;
-                  width: 100%;
-              
-                  font-size: clamp(4rem, 8vw, 11rem); 
-                  transition: background-color 1s ease; 
-              }
-              
-            .bento_text.role {         
-              align-items: start;
-              justify-content: start;
-              flex-direction: column;
-              font-size: var(--fns-default-up1-6);                
-          } 
-
-            .bento_text.role #role_text{
-              font-family: "Monument Text";
-              font-size: var(--fns-default-up1-6);
-            } 
-            
-             .bento_text.role p{
-                font-family: "Poppins";
-                color: whitesmoke;
-                font-size: var(--fns-down-1);
-            } 
-
-            .bento_text.role #selling_prop_text_1{
-              margin-top: 0.5rem;
-            }
-
-
-            .bento_text.hero_contact{
-              height: 100%;           
-            }   
- 
-                .hero_contact ul{
-                  display: flex;
-                  align-items: center;
-                  justify-content: start;
-                  width: 50%;                
-                  height: 100%;
-                
-                } 
-
-                  .links#more{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-top: 5rem;
-                    width: 30%;
-                    padding: 0.3rem 0rem;
-                    overflow: hidden;
-                    border-radius: 8px;
-                    background-color:var(--metal-dark5);
-                    border: 2px solid var(--metal-dark2);
-                  } 
-                      .links p{
-                          font-size: var(--fns-down-1);
-                      }
-                      .links svg{
-                        margin: 0.2rem;
-                      } 
-
-                .hc_contact.hc_location{
-                  align-items: end;
-                  justify-content: end;
-                  flex-direction: column;
-                } 
-                
-                  .hc_location p{
-                    color: var(--metal-dark4);
-                    font-size: var(--fns-down-1);
-                  }
-
-
-
-
-
-
-
-
-
-
-
-
-/* SKILLS TECH  ===== =====  ===== ===== ===== ===== ===== ===== ===== ===== */                  
-.skills_tech {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1.5fr 7fr 1.5fr;
-  background-color: var(--metal-dark5);
-  grid-area: 2 / 1 / 3 / 2;
-  height: 100%; 
-  width: 100%;
-}
-    
-
-    .bd.bd_skill_tech{
-       position: relative;
-        overflow: hidden;   
-        box-shadow: none; 
-        height: 70%;
-        width: 100%;
-        border-radius: 10px;
-        grid-area: 1/ 2 / 1 /3;
-        margin: 0rem 1rem;
-    } 
-    
-        .shapes.st_triangle_c{
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-left: 400px solid transparent;
-          border-right: 400px solid transparent;
-          border-top: 450px solid var(--color-dark-blue);
-          left: 50%;
-          transform: translateX(-50%);
-          filter: blur(80px);
-      } 
-
-      
-
-        
-    .skills_tech_contents_frame{
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        flex-direction: column;
-        grid-area: 1/ 2 / 1 /3;
-        overflow: hidden;   
-        box-shadow: none; 
-        height: 80%;
-        width: 100%;
-        border: 5px solid var(--metal-dark1);  
-        box-shadow: 0px 10px 10px 1px var(--shad-dark);           
-        background: transparent;
-        backdrop-filter: blur(80px);
-    
-    }     
-
-        .skills_tech_contents_frame .st_part.header{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 20%;
-          }   
-
-            .st_part{
-                width: 100%;
-            }
-            .header_part{
-                display: flex;
-                justify-content: start;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-            }     
-            .header_part.left .st_circ_div{
-                display: flex;
-                margin: 0rem 1rem;
-            }
-               .st_circ_div .circ{
-                  width: 1rem;
-                  height: 1rem;        
-                  border-radius: 50%;    
-                  margin: 0rem 0.3rem;
-              } 
-                .st_circ_div .circ#a{
-                    background-color: var(--metal-dark4);
-                }
-                .st_circ_div .circ#b{
-                    background-color: var(--metal-dark3);
-                }
-                .st_circ_div .circ#c{
-                  background-color: var(--metal-dark2);
-                }
-
-            .header_part p{
-                text-align: start;
-                font-size: clamp(1.6rem, 4vw, var(--fns-default-up2-6));
-                font-family: "Monument Text";
-          
-                background: linear-gradient(to top, var(--white-blple--),var(--white-blple--), whitesmoke,white);
-                -webkit-background-clip: text; 
-                background-clip: text;                
-                text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-            }
-            
-
-                .header_part.middle p:nth-child(2){
-                    margin: 0rem 1rem;           
-                }   
-                
-
-
-
-
-                
-                .st_part.content_grid_frame{
-                    display: grid;
-                    grid-template-rows: 2fr 1fr;
-                    grid-template-columns: 3fr 4fr 3fr;
-                    gap: 1rem;
-                    height: 80%;
-                    border-radius: 8px;   
-                    background-color: transparent;
-                }   
-
-                    .content_grid_frame .bento_stack{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;  
-                        flex-direction: column;                       
-                        box-shadow: 1px 10px 10px 1px var(--shad-dark);
-                        border-radius: 8px;            
-                        overflow: hidden;                                       
-                    }
-
-
-
-                    /* Front End */
-                    .bs_headers{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        grid-area: 1/1/1/1;
-                        width: 100%;
-                        padding: 0.2rem 0rem;
-                        background-color: var(--metal-dark1);           
-                    }
-                     .bs_content{
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        flex-direction: column;
-                        height: 100%;
-                        width: 100%;
-                       
-                          }
-
-                        .bento_stack.front_end{                       
-                            grid-area: 1/1/3/1;             
-                        } 
-
-                         
-                          .tech_box{
-                            display: flex;
-                            align-items: center;
-                            justify-content: start;
-                            padding: 0rem 0.2rem;
-                            width: 80%;
-                            height: 20%;
-                            border-radius: 10px;
-                            
-                          } 
-                            .tech_box svg{          
-                                padding: 0.5rem;
-                                border-radius: 8px;
-                                background-color: var(--metal-dark3);                         
-                                width: 2rem;
-                                height: 2rem;   
-                                fill: var(--metal-dark4);
-                                box-shadow: 2px 2px 2px 1px var(--shad-dark-d);
-                            }
-                            .tech_box img{
-                                padding: 0.5rem;
-                                border-radius: 8px;
-                                background-color: var(--metal-dark3);
-                                width: 2rem;
-                                height: 2rem;
-                                box-shadow: 2px 2px 2px 1px var(--shad-dark-d);
-                            }
-
-                              .tech_box #wamp_img{
-                                 transform: rotate(90deg);
-                                box-shadow: 2px -2px 2px 1px var(--shad-dark-d);
-                            }
-
-                                .tech_box p{
-                                  font-size: var(--fns-down-1);
-                                  margin: 0rem 1rem 0rem 1rem;
-                                }
-                                
-
-                            
-
-                            
-
-                                                
-                        .bento_stack.back_end{            
-                            grid-area: 1 /2 / 1 /2;
-                        }
-
-                        
-                     
-                        .bento_stack.tools{
-                            grid-area: 1/ 3/1 /3;
-                        }
-                        .bento_stack.version_control{
-                       
-                            grid-area: 2/ 2/2 /4;                                            
-                        }   
-                          .version_control .version_control_div{
-                            display: flex;            
-                            flex-direction: row;         
-                          }     
-                              .version_control_div .tech_box{
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                               height: 100%;
-                            
-                              }
-                            
-                              .tech_box svg{
-                                 box-shadow: 2px 2px 2px 1px var(--shad-dark-d);
-                              }
-                            
-
-
-
-
-
-
-
-
-
-                        
-
-
-
-
-
-
-
-/* PROJECTS WRAPPER ===== =====  ===== ===== ===== ===== ===== ===== ===== ===== */
-  .projects{
+  /* SKILLS & TECHNOLOGIES  ===== =====  ===== ===== ===== ===== ===== ===== ===== ===== */                  
+  .skills_tech {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh 100vh;
-    grid-area:  3/ 1 /5 /3 ;
- }    
-
-    .projects_box{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: none;
-      height: 100%;   
-    }
-      .projects_box.moving_text_intro_frame{
-        display: grid;
-        grid-template-columns: 1.5fr 7fr 1.5fr;
-        grid-template-rows: 1fr;
-   
-      } 
-          .moving_text_intro_frame .mt_content_frame{
-            grid-area: 1 /2  /1 / 2;
-            height: 80%;
-            max-width: 100%;
-            overflow: hidden;
-          }
-            .moving_text_intro_frame .mt_box{
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 100%;      
-            }
-            
-              .mt_box.mt_header{
-                height: 10%;
-                background-color: var(--metal-dark4);
-              }
-              .mt_box.mt_screen{
-                height: 90%;
-                flex-wrap: wrap;
-              }
-
-                .mt_screen p{
-                  font-size: var(--fns-default-up-6-8);
-                  font-family: "Monument Text";
-                }
-
-
-
+    grid-template-rows: 1fr;
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    background-color: var(--metal-dark5);
+    grid-area: 2 / 1 / 3 / 2;
+    height: 100%; 
+    width: 100%;
+}
     
 
-                  
-              
 
+
+
+
+                          
+
+
+  /* PROJECTS WRAPPER ===== =====  ===== ===== ===== ===== ===== ===== ===== ===== */ 
+  .projects{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100vh 150vh 150vh;
+      grid-area:  3/ 1 /5/3 ;
+      height: 100%;
+      width:100%;
+  }    
 

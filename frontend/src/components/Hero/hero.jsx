@@ -2,24 +2,34 @@ import { useEffect,useRef, useState } from "react";
 import Header from "../Header/header";
 import Sidebar from "../Sidebar/sidebar";
 import {motion} from "framer-motion"
+import useScrollAnimation from "../../hooks/userscroll_animation";
+import './hero.css'
+
+
 
 const lightVariant = {
     hidden:{opacity:0, y:0 },
     visible:{opacity:1, y:0},
     transition:{duration:2, ease:"ease in out"}
 }
-
 const parentVariant = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 0 },
+  visible: { opacity: 1, y: 50 },
 };
+
+
+
 
 
 
 function Hero() {
   
-    return (
+    useScrollAnimation("main_wrapper")
+    useScrollAnimation("bd_light")
+    useScrollAnimation("circ")
 
+    return (
+    
         <>
 
         <section className="sections hero">
@@ -29,29 +39,13 @@ function Hero() {
             {/* HERO BACKDROP */}
             <div className="bd bd_main_wrapper">
                 
-                <motion.div
-                    variants={lightVariant}
-                    initial={{opacity: 0, y:50}}
-                    animate="visible"  
-                    transition={{ duration: 2,               
-                    ease: "easeInOut",
-                    times: [0,  1],  }}
-                    className="bd_light">
-                   
-
-                </motion.div>
+                <div     className="bd_light">
+                </div>
 
             </div>
             
        
-            <div 
-            variants={parentVariant}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 2,               
-            ease: "easeInOut",
-            times: [0,  1],  }}
-            className="box main_wrapper">
+            <div className="box main_wrapper">
           
                 <div className="hero_grid browser_header">
 
@@ -73,8 +67,6 @@ function Hero() {
                         </ul>
 
                     </div>
-
-
            
                     <div className="hero_grid text_frame">
                         <div className="bento_text role">
@@ -97,18 +89,14 @@ function Hero() {
 
                                     <p className="more_c">More</p>
 
-                                    <ol>
-                                        
-                                    </ol>
                                     <svg className="more_c" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
                                     
                                 </a>
                             </ul>
                             
                             <ul className="hc_contact hc_location">
-
-                                <p>College Student At Sariaya, Quezon Philippines</p>
-                                                <p>jhunguidef@gmail.com</p>
+                                <i>College Student At Sariaya, Quezon Philippines</i>
+                                <i>jhunguidef@gmail.com</i>
                             </ul>
 
 
