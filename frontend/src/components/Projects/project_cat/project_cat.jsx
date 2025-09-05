@@ -1,7 +1,12 @@
 import React from 'react'
 import './project_cat.css'
+import useScrollAnimation from '../../../hooks/userscroll_animation'
 
 function Project_Cat() {
+
+useScrollAnimation("mt_content_frame")
+
+
   return (
     
      <div className="projects_box moving_text_intro_frame">

@@ -79,6 +79,20 @@
     --fns-up-8-96:8.96rem;
     --fns-deafult-up-11-08:11.08rem;
 
+
+    /* margin */
+    --szd-0-6:0.618rem;
+    --sz-0-8:0.8rem;
+    --szd-1:1rem;
+    --sz-1-3:1.3rem;
+    --szd-1-6:1.618rem;
+    --sz-2-1:2.1rem;
+    --szd-2-6:2.617rem;
+    --szd-4-2:4.23rem;
+    --szd-6-8:6.84rem;
+    --sz-8-96:8.96rem;
+    --szd-11-08:11.08rem;
+
 }
 
 @font-face {
@@ -159,16 +173,19 @@ body::-webkit-scrollbar-thumb{
 }
 
 
+
+
 .wrapper{
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows:
   100vh      /*Hero*/
   100vh     /*Skills And Technology*/
-  300vh     /*Projects Label*/ 
+  400vh     /*Projects Label*/ 
 ;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  height: auto;
 }
 
 .sections{

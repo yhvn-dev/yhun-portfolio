@@ -8,9 +8,6 @@ import Ptrs from './ptrs/ptrs.jsx'
 import useScrollAnimation from "../../hooks/userscroll_animation.jsx";
 
 function Projects(){
-
-    useScrollAnimation("mt_content_frame")
-    useScrollAnimation("hrm_box")
   
     return(
         

@@ -24,7 +24,7 @@
       }
           .bd_light.show{
              opacity: 1;
-             transform: translateY(0); 
+               transform: translateY(0); 
               background:linear-gradient(to top,var(--color-jk-dark),var(--color-dark-blue),var(--moon-phases-c));
           }
 
@@ -131,7 +131,7 @@
           grid-template-rows: 3fr 4fr 3fr ;
           grid-area: 2 / 1 / 2 /3;
           border-radius: 8px;
-          height: 60%;
+          height: 60%; 
           width: 100%;     
       } 
       

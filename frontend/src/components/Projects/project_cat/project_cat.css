@@ -4,6 +4,7 @@
         display: grid;
         grid-template-columns: 1.5fr 7fr 1.5fr;
         grid-template-rows: 1fr;
+       
       } 
       
           .moving_text_intro_frame .mt_content_frame {
@@ -29,6 +30,7 @@
               align-items: center;
               justify-content: center;
               width: 100%;      
+               height: auto;
             }
             
               .mt_box.mt_header{
@@ -41,7 +43,7 @@
               }
 
                 .mt_screen p{
-                  font-size: var(--fns-default-up-6-8);
+                  font-size: clamp(2rem, 8vw, var(--fns-default-up-6-8)); 
                   font-family: "Monument Text";
                 }
 
