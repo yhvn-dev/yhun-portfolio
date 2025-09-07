@@ -10,6 +10,7 @@
       grid-template-columns: repeat(10,1fr);
       height: 80%;
       grid-area: 2/ 2 /2 / 3;
+      
     }
       .bd_light{
         grid-area: 1/ 3 /6  /9;
@@ -28,11 +29,6 @@
               background:linear-gradient(to top,var(--color-jk-dark),var(--color-dark-blue),var(--moon-phases-c));
           }
 
-    .box{
-        border-radius: 10px;
-        box-shadow: 0px 10px 10px 1px var(--shad-dark);
-    }
-
     .main_wrapper{
         display: flex;
         align-items: center;
@@ -41,12 +37,12 @@
         grid-area: 2/ 2 /2 / 3;
         height: 80%;
         overflow: hidden;  
-        border: 5px solid var(--metal-dark1);
         background-color: transparent;
         backdrop-filter: blur(80px);
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 1s ease-in, transform 1s ease-in;
+
     }     
 
       .main_wrapper.show{

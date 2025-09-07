@@ -4,7 +4,7 @@
         display: grid;
         grid-template-columns: 1.5fr 7fr 1.5fr;
         grid-template-rows: 1fr;
-       
+        
       } 
       
           .moving_text_intro_frame .mt_content_frame {
