@@ -22,7 +22,6 @@ function Hero() {
             </div>
             
             
-
             {/* MAIN BOX */}
           <main className="z-10 flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 
             center bg-[var(--metal-dark5)] border-4  border-[var(--dark-variant)]  h-full w-full rounded-2xl overflow-hidden">
@@ -48,7 +47,7 @@ function Hero() {
                     <div className="w-full h-full flex-col flex items-start justify-start p-4 ">                     
                         <p className="hook-txt hook-txt-2 text-5xl px-12 py-8
                         flex justify-end align-start text-[var(--metal-dark4)] w-[100%]">
-                            I Deliver end-to-end solutions 
+                            I DELIVER END-TO-END SOLUTIONS
                         </p>
                         <p className="hook-txt  text-3xl 
                         flex items-center justify-end text-[var(--metal-dark4)] px-12 w-[100%]">

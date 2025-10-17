@@ -3,11 +3,11 @@
 
 :root{
 
-    --main-white--: hsl(258, 44%, 93%);
-    --white-blple--: hsl(221, 32%, 77%);
-    --purpluish--: hsl(225, 25%, 65%);
-    --bluis--: hsl(220, 74%, 62%);
-    --mainblue--: hsl(225, 46%, 44%);
+    --main-white: hsl(258, 44%, 93%);
+    --white-blple: hsl(221, 32%, 77%);
+    --purpluish: hsl(225, 25%, 65%);
+    --bluis: hsl(220, 74%, 62%);
+    --mainblue: hsl(225, 46%, 44%);
     --gainsbro: hsl(0, 0%, 96%);
     --blue-white: hsl(195, 44%, 86%);
 
@@ -25,6 +25,13 @@
     --metal-dark3: hsl(0, 0%, 13%);
     --metal-dark4: hsl(240, 2%, 53%);
     --metal-dark5: hsl(0, 0%, 7%);
+
+    
+    /* ASH 1 */
+    --ash1-darka: hsl(204, 21%, 15%);
+    --ash1-darkb: hsl(204, 18%, 27%);
+    --ash1-gray: hsl(204, 16%, 45%);
+    --ash1-lgray: hsl(204, 26%, 60%);
 
     /* GRAYS */
     --gray_1--: hsl(0, 0%, 50%);
@@ -116,7 +123,7 @@
   font-family: "Inter";
   margin: 0;
   padding: 0;
-  color: var(--main-white--);
+  color: var(--main-white);
 }
 
 body{
@@ -148,8 +155,6 @@ p{
 .column-start{
   @apply flex flex-col items-start justify-start;
 }
-
-
 .sections{
   @apply grid grid-cols-[1.5fr_7fr_1.5fr] grid-rows-[1fr_8fr_1fr];
 }
@@ -180,13 +185,18 @@ body::-webkit-scrollbar-thumb{
 
 .hook-txt{
       font-family:"Monument Text";
-      background: linear-gradient(90deg, white, white,var(--moon-phases-e));
+      background: linear-gradient(90deg, white, white,var(--white-blple));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-shadow: 0px -2px 8px whitesmoke;
+      text-shadow: 0px -2px 10px var(--main-white);
 }
-
 .hook-txt-2 {
     font-size: 5rem;
+}
+.monu-txt{
+  font-family:"Monument Text";
+}
+.about-bg-header {
+  background: linear-gradient(to right,var(--white-blple),white,var(--white-blple));
 }

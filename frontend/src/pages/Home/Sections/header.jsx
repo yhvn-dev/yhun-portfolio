@@ -23,7 +23,7 @@ function Header() {
               </a>
 
               {/* GitHub Link */}
-              <a cla
+              <a 
               href="https://github.com/yhvn-dev" 
               target="_blank" 
               rel="noopener norefe rrer" 

@@ -1,39 +1,67 @@
-import React,{useState,useEffect} from 'react'
+// hooks/useGithubStats.js
+import { useEffect } from "react";
 import axios from "axios";
+import { useGithub } from "../Context/githubContext";
 
-export default function GithubStats({username}) {
-  const [data,setData] = useState(null);
-  const [error,setError] = useState("");
+export function GithubStats({ username }) {
+  const { setStats } = useGithub();
 
-    // GET DATA FROM GITHUB
   useEffect(() => {
-    if(!username) return
-        const fetchData = async () =>{
+    if (!username) return;
+
+    const fetchData = async () => {
+      try {
+
+        const headers = {
+          Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`
+        }
+        const [userResponse, reposResponse] = await Promise.all([
+          axios.get(`https://api.github.com/users/${username}`),
+          axios.get(`https://api.github.com/users/${username}/repos`)
+        ]);
+
+        const user = userResponse.data;
+        const repoList = reposResponse.data;
+
+        const commitsCounts = await Promise.all(
+          repoList.map(async (repo) => {
             try {
-                const response = await axios.get(`https://api.github.com/users/${username}`)
-                setData(response.data)   
-            } catch (error) {
-                setError(error)
+              const commitsRes = await axios.get(
+                `https://api.github.com/repos/${username}/${repo.name}/commits?per_page=1`
+              );
+              const linkHeader = commitsRes.headers.link;
+              if (linkHeader) {
+                const match = linkHeader.match(/&page=(\d+)>; rel="last"/);
+                return match ? parseInt(match[1]) : commitsRes.data.length;
+              } else {
+                return commitsRes.data.length;
+              }
+            } catch {
+              return 0;
             }
-        };
-    fetchData()
-  },[username])
+          })
+        );
 
- 
-  if(error) return <div>Error:{error.message}</div>
-  if(!data) return <div>Error:Loading.....</div>
+        const total = commitsCounts.reduce((acc, count) => acc + count, 0);
 
-  return (
-    <div>
+        setStats({
+          user,
+          repos: repoList,
+          totalCommits: total,
+          error: ""
+        });
+      } catch (err) {
+        console.log(err)
+        setStats((prev) => ({
+          ...prev,
+          error: err.message     
+        }));
+      }
+    };
 
-        <h3>{data.login}</h3>
-        <p>Followers: {data.followers}</p>
-        <p>Public repos: {data.public_repos}</p>
-        <p>
-            Profile: <a href={data.html_url} target="_blank" rel="noreferrer">{data.html_url}</a>
-        </p>
+    fetchData();
+  }, [username, setStats]);
 
-    </div>
-  )
-
+  return null;
+  
 }

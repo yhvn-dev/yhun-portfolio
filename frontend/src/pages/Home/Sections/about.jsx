@@ -1,19 +1,24 @@
+import { useState } from "react"
 import Me_1 from "../../../assets/Images/Me 1.png"
-import GithubStats from "../../../services/GithubStats"
+import { GithubStats } from "../../../services/GithubStats"
+import { useGithub } from "../../../Context/githubContext"
 
 function About() {
+  const {stats,setStats} = useGithub();
+  
   return (
 
     <section className="sections column col-start-1 col-end-2 row-start-2 row-end-2 w-full  bg- ">
+
+        <GithubStats username="yhvn-dev"/>   
 
         {/* MAIN BOX */}
         <main className="flex flex-col items-center justify-start 
             col-start-2 col-end-2 row-start-2 row-end-3 
              h-full w-full rounded-2xl  p-1 ">
 
-         
                 <div className="center w-full h-[20%] ">
-                    <p className="text-2xl">About Me</p>
+                    <p className="monu-txt text-2xl">About Me</p>
                 </div>          
 
                 <div className="grid grid-cols-10 grid-rows-10 w-full h-[80%]
@@ -22,10 +27,21 @@ function About() {
                     <div className="relative p-4 gap-4 grid grid-rows-10 grid-cols-1 
                     col-start-1 col-end-8 row-start-1 row-end-7 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black] overflow-hidden">
 
-                        <header className="center rounded-[10px] row-start-1 row-end-4
-                         bg-[var(--dark-variant)]">
-                            design
+                        <header className="relative center w-full h-full rounded-[10px] row-start-1 row-end-4
+                         bg-[var(--dark-variant)] overflow-hidden p-4 border-2 border-[var(--metal-dark2)]">
+                           <div className="about-bg-header absolute rounded-[10px] w-[98%] h-[98%] overflow-hidden">
+                                <div className="absolute bg-[var(--dark-variant)] 
+                               right-0 top-0 rounded-bl-[90%] w-[50%] h-[90%]">
+                                      
+                                </div>
+                                <div className="absolute bg-[var(--dark-variant)]   rounded-tr-[90%] 
+                                 left-0 bottom-0  w-[50%] h-[90%]">
+                                            
+                                </div>
+                            </div>
+                            <div className="absolute bg-transparent backdrop-blur-[50px] rounded-[10px] center w-full h-full"></div>
                         </header>
+                        
 
                         {/* profile div */}
                         <div className="center absolute top-15 w-full h-[30%]
@@ -36,7 +52,7 @@ function About() {
                                 src={Me_1} 
                                 alt="Profile Picture"/>    
                             </div>
-                            <GithubStats username="yhvn-dev"/>                         
+                                            
                         </div>  
 
                         <div className="column-start p-4  row-start-4 row-span-full rounded-[10px]  
@@ -45,14 +61,25 @@ function About() {
                             <a className="text-sm text-[var(--metal-dark4)] mb-4">@__jhvn</a>
                             <p className="text-sm text-[var(--metal-dark4)]">Im Jhunguide Flores, a Fullstack Web Developer 
                             I build end-to-end solutions with precision and care. 
-                            I seamlessly integrate UI/UX design with backend development, security to create robust, user frienly applications.</p>
-
-                           <ul className="flex items-center justify-evenly mt-4 h-full w-full  list-style-type: circle;  rounded-[10px]">
-                                <li>JavaScript</li>
-                                <li>React</li>
-                                <li>Remote work</li>
-                            </ul>
-                            
+                            I seamlessly integrate UI/UX design with backend development and security to create robust, user frienly applications.</p>
+        
+                            {stats?.user && (
+                             <ul className={`flex items-center justify-evenly mt-4 h-full w-full 
+                              list-style-type: circle;  rounded-[10px] ${stats.error}`}>
+                                <p className="column transition-1 ease-in">
+                                    <span className="monu-txt text-3xl">{stats.user.followers}</span>
+                                    <span className="text-xs text-[var(--metal-dark4)]">Followers</span>
+                                </p>
+                                <p className="column transition-1 ease-in">
+                                    <span className="monu-txt text-3xl">{stats.repos.length}</span>                                 
+                                    <span className="text-xs text-[var(--metal-dark4)]">Repositories</span>
+                                </p>
+                                <p className="column transition-1 ease-in">
+                                    <span className="monu-txt text-3xl"> {stats.totalCommits}</span>                               
+                                    <span className="text-xs text-[var(--metal-dark4)]">Commits</span>
+                                </p>                       
+                            </ul>                      
+                            )}
                         </div>                        
 
                     </div>
