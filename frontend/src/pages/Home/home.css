@@ -101,99 +101,21 @@
 }
 
 
-@font-face {
-  font-family: "Monument Text";
-  src: url("./assets/Fonts/MonumentExtended-Regular.otf");
-}
-@font-face {
-  font-family: "Bebas Neue";
-  src: url("./assets/Fonts/BebasNeue-Regular.ttf");
+@keyframes scroll-stats {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("./assets/Fonts/Inter_18pt-Regular.ttf");
+.animate-scroll-stats {
+    @apply flex items-center justify-center py-2 rounded-[10px];
+    animation: scroll-stats 30s linear infinite;
+    width: max-content;
+    transition: 1s;
+}
+.animate-scroll-stats:hover {
+  animation-play-state: paused;
 }
 
-
-
-
-*{
-
-  font-family: "Inter";
-  margin: 0;
-  padding: 0;
-  color: var(--main-white);
-}
-
-body{
-  margin: 0;
-  padding: 0;
-
-}
-img{
-  @apply rounded-full object-cover  shadow-lg cursor-pointer;
-}
-
-a{
-  cursor: pointer;
-  text-decoration: none;
-}
-
-p{
-  text-align:start;
-  font-size: clamp(1rem, 8vw, 1rem); 
-}
-
-
-.center{
-  @apply flex items-center justify-center;
-}
-.column{
-  @apply flex flex-col items-center justify-center;
-}
-.column-start{
-  @apply flex flex-col items-start justify-start;
-}
-.sections{
-  @apply grid grid-cols-[1.5fr_7fr_1.5fr] grid-rows-[1fr_8fr_1fr];
-}
-
-
-svg{
-  fill: var(--metal-dark2);
-  width: 1.1rem;
-  height: 1.1rem;
-}
-
-svg:hover {
-    transition: 0.5s ease;
-    fill: var(--main-white--);
-}   
-body::-webkit-scrollbar{
-  background-color: var(--metal-dark5);
-}
-body::-webkit-scrollbar-thumb{
-  border-radius: 6px;
-  background-color: var(--metal-dark2);
-  border-left:4px solid var(--metal-dark5);
-  border-right:4px solid var(--metal-dark5);
-}
-.box-header{
-  background:linear-gradient(to right,var(--metal-dark4),rgb(192, 191, 191),gray);
-}
-
-.hook-txt{
-      font-family:"Monument Text";
-      background: linear-gradient(90deg, white, white,var(--white-blple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: 0px -2px 10px var(--main-white);
-}
-.hook-txt-1 {
-    font-size: var(--fns-default-up4-2);
-}
-.monu-txt{
-  font-family:"Monument Text";
+.about-bg-header {
+  background: linear-gradient(to right,var(--white-blple),white,var(--white-blple));
 }

@@ -45,15 +45,14 @@ function Hero() {
 
             
                     <div className="w-full h-full flex-col flex items-start justify-start p-4 ">                     
-                        <p className="hook-txt hook-txt-2 text-5xl px-12 py-8
-                        flex justify-end align-start text-[var(--metal-dark4)] w-[100%]">
-                            I DELIVER END-TO-END SOLUTIONS
+                        <p className="hook-txt hook-txt-1  px-12 py-8
+                        flex justify-end align-start w-full">
+                            I SHAPE DIGITAL SPACES     
                         </p>
-                        <p className="hook-txt  text-3xl 
-                        flex items-center justify-end text-[var(--metal-dark4)] px-12 w-[100%]">
+                        <p className="hook-txt text-3xl 
+                        flex items-center justify-end text-[var(--metal-dark4)] px-12 w-[100%] ">
                             with precision and clarity
-                        </p>
-                                   
+                        </p>                             
                     </div>
 
                     <div className="flex items-start justify-center h-[50%] w-full p-4">

@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import axios from "axios";
 import { useGithub } from "../Context/githubContext";
+import cachedStats from "../services/githubStats.json";
 
 export function GithubStats({ username }) {
   const { setStats } = useGithub();
@@ -11,13 +12,14 @@ export function GithubStats({ username }) {
 
     const fetchData = async () => {
       try {
-
         const headers = {
           Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`
-        }
+        };
+        
+        // ✅ use headers here
         const [userResponse, reposResponse] = await Promise.all([
-          axios.get(`https://api.github.com/users/${username}`),
-          axios.get(`https://api.github.com/users/${username}/repos`)
+          axios.get(`https://api.github.com/users/${username}`, {headers}),
+          axios.get(`https://api.github.com/users/${username}/repos`, {headers})
         ]);
 
         const user = userResponse.data;
@@ -27,7 +29,8 @@ export function GithubStats({ username }) {
           repoList.map(async (repo) => {
             try {
               const commitsRes = await axios.get(
-                `https://api.github.com/repos/${username}/${repo.name}/commits?per_page=1`
+                `https://api.github.com/repos/${username}/${repo.name}/commits?per_page=1`,
+                { headers }
               );
               const linkHeader = commitsRes.headers.link;
               if (linkHeader) {
@@ -51,10 +54,11 @@ export function GithubStats({ username }) {
           error: ""
         });
       } catch (err) {
-        console.log(err)
+        console.log(err);
+      
         setStats((prev) => ({
           ...prev,
-          error: err.message     
+          error: err.message
         }));
       }
     };
@@ -63,5 +67,4 @@ export function GithubStats({ username }) {
   }, [username, setStats]);
 
   return null;
-  
 }
