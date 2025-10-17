@@ -1,20 +1,23 @@
-import Header  from "../../components/Header/header"
-import Hero from "../../components/Hero/hero"
-import Sidebar from "../../components/Sidebar/sidebar"
-import Skills_Tech from "../../components/Skills_Tech/skills_tech"
-import Projects  from "../../components/Projects/projects"
+import Header  from "../Home/Sections/header"
+import Hero from "../Home/Sections/hero"
+import About from "../../pages/Home/Sections/about"
+import Sidebar from "../Home/Sections/sidebar"
+import Skills_Tech from "../Home/Sections/skills_tech"
+import "./../../App.css"
 
 function Home(){
 
     return(
 
-        <div className="wrapper">
+        <div className="wrapper grid 
+        grid-cols-[1fr] grid-rows-[100vh_200vh_400vh_100vh_100vh] bg-[var(--metal-dark5)] ">
 
+            <Header></Header>
             <Hero></Hero>
+            <About></About>
             <Sidebar></Sidebar>
             <Skills_Tech></Skills_Tech>
-            <Projects></Projects>
-
+         
         </div>
 
     )

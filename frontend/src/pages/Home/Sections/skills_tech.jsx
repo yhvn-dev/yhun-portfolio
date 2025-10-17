@@ -1,8 +1,6 @@
-import {motion} from "framer-motion"
-import wampp from "./../../assets/Images/Wamp.png"
-import vscode from "./../../assets/Images/Vscode.png"
-import './skills_tech.css'
-import useScrollAnimation from "../../hooks/userscroll_animation.jsx"
+import wampp from "../../../assets/Icons/wamp.svg"
+import vscode from "../../../assets/Icons/vscode.svg"
+import useScrollAnimation from "../../../hooks/userscroll_animation"
 
 
 function Skills_Tech(){
@@ -30,11 +28,11 @@ function Skills_Tech(){
 
                     <ol className="header_part left"> 
 
-                        <ul className="st_circ_div">
+                        <ol className="st_circ_div">
                             <div className="circ" id="a"></div>
                             <div className="circ" id="b"></div>
                             <div className="circ" id="c"></div>
-                        </ul>
+                        </ol>
 
                     </ol>
 
@@ -42,7 +40,7 @@ function Skills_Tech(){
 
                         <p>SKILLS</p> 
                         <p>&</p> 
-                        <p>TECHNOLOGIES</p>           
+                        <p className="">TECHNOLOGIES</p>           
 
                     </ol>
 

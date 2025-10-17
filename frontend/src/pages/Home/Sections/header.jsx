@@ -1,21 +1,16 @@
-
-import  st from "./header.module.css";
-
 function Header() {
-
 
     return(
   
-      <header className={`${st.comp} ${st.header_frame}`}>
+      <header className="flex  fixed top-0 left-0 w-full h-[2.5rem] z-20">
 
-        <div className={`${st.header_part} ${st.logo_div}`}>
-          <span id={st.logo_name}>yhun</span>
-          <span id={st.fullname}>Jhunguide Flores</span>
+        <div className="flex items-center justify-start w-full h-full">
+          <span className="text-lg m-4 p-4 ">yhun</span>
+          <span className="ml-4">Jhunguide Flores</span>
         </div>
+        
 
-        <nav className={`${st.header_part} ${st.header_nav}`}>
-
-          
+        <nav className="flex items-center justify-end h-full w-full ">
               <a 
               href="https://www.linkedin.com/in/jhunguide-flores" 
               target="_blank" 
@@ -29,7 +24,7 @@ function Header() {
 
               {/* GitHub Link */}
               <a cla
-              href="https://github.com/yhun-tech" 
+              href="https://github.com/yhvn-dev" 
               target="_blank" 
               rel="noopener norefe rrer" 
               id="header-github"
@@ -44,10 +39,8 @@ function Header() {
 
       </header>
     
-
     )
-      
-
+    
 }
 
 export default Header;
