@@ -11,7 +11,7 @@ function Home(){
     return(
 
         <div className="wrapper grid 
-        grid-cols-[1fr] grid-rows-[100vh_200vh_400vh_100vh_100vh] bg-[var(--metal-dark5)]">
+        grid-cols-[1fr] grid-rows-[100vh_200vh_100vh_100vh_100vh] bg-[var(--metal-dark5)]">
             <Header></Header>
             <Hero></Hero>
             <About></About>

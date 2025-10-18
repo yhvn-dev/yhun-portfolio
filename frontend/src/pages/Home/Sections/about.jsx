@@ -1,34 +1,13 @@
 import { GithubStats } from "../../../services/GithubStats";
 import { useGithub } from "../../../Context/githubContext";
-
+import { Tech_Stack, Social_Media } from "../../../data/image_resources";
 import Me_1 from "../../../assets/Images/Me 1.png";
-import Github from "../../../assets/Icons/GITHUB.jpg";
-import Linkedin from "../../../assets/Icons/LINKEDIN.jpg";
-import Instagram from "../../../assets/Icons/INSTAGRAM.jpg";
-import Facebook from "../../../assets/Icons/FACEBOOK.jpg";
-import PostgreSQL from "../../../assets/Icons/POSTGRE SQL.png"
-import ExpressJS from "../../../assets/Icons/EXPRESS JS.png"
-import ReactJS from "../../../assets/Icons/REACT JS.png"
-import NodeJS from "../../../assets/Icons/NODE JS.png"
+
+import * as Animation from "../../../hooks/animations"
 
 function About() {
   const { stats } = useGithub();
-  
-  const Social_Media = [
-    { src: Github, label: "Github", url: "https://github.com/yhvn-dev" },
-    { src: Linkedin, label: "LinkedIn", url: "https://linkedin.com/in/your-profile" },
-    { src: Instagram, label: "Instagram", url: "https://instagram.com/__jhvn" },
-    { src: Facebook, label: "Facebook", url: "https://facebook.com/your-profile" },
-  ];
-
-  const Tech_Stack = [
-    {src: PostgreSQL, label: "PostgreSQL"},
-    {src: ExpressJS, label: "ExpressJS"},
-    {src: ReactJS, label: "ReactJs"},
-    {src: NodeJS, label: "NodeJs"},
-  ];
-
-
+      
   return (
     <section className="sections column col-start-1 col-end-2 row-start-2 row-end-2 w-full">
    
@@ -126,55 +105,55 @@ function About() {
           </div>
 
 
-          {/* TECH STACK */}
-          <div className="column col-start-8 col-end-11 row-start-1 row-end-6 
+          {/* TECH STACK  ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== */}
+          <div className="flex flex-col items-center justify-start col-start-8 col-end-11 row-start-1 row-end-7
           border-2 border-[var(--metal-dark2)] rounded-[10px] 
           shadow-[5px_5px_20px_1px_black] p-4 gap-4">
 
-            <div className="center w-full h-[15%] bg-[var(--dark-variant)] 
+            <div className="center w-full p-4 bg-[var(--dark-variant)] 
             rounded-[10px] border-2 border-[var(--metal-dark2)] 
             shadow-[5px_5px_10px_1px_black]">
               Tech Stack
             </div>
 
-            <div className="relative center w-full h-[300px] 
-            rounded-[10px] overflow-hidden">
-
-              <div className="flex items-center justify-center flex-col 
-              animate-scroll-stack  w-full">
-                {[...Array(2)].map((_, repeatIdx) =>
-                  Tech_Stack.map((item, idx) => (
-                    <a
-                      key={`stack-${repeatIdx}-${idx}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 my-4  flex flex-col items-center justify-center  rounded-[10px]"
-                    >
-                      <img
-                        src={item.src}
-                        className="w-12 p-2 h-auto mx-4 rounded-[16px] bg-[var(--moon-phases-e))]
-                        shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
-                      />
-                      <span className="text-xs text-[var(--metal-dark4)] mt-2 transition-transform duration-500 hover:text-[var(--white-blple)]">
-                        {item.label}
-                      </span>
-                    </a>
-                  ))
-                )}
-              </div>
-            </div>
+            <Animation.TechStackAnimation/>
+              
           </div>
-                              
 
-          <div className="col-start-4 col-end-11 row-start-7 row-end-11 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black]">
-            
+                   
+          {/* DESCRIPTION */}
+          <div className="flex items-start justify-start p-4 
+          col-start-4 col-end-11 row-start-7 row-end-11 border-2 border-[var(--metal-dark2)] 
+          rounded-[10px] shadow-[5px_5px_20px_1px_black]">
+
+            Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
+            web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
+            I also work with other technologies such as PHP,Laravel and Python and had experience using Java
+            and Visual Basic.I started out using PHP and other langauges where I learned about the fundamentals of basic web
+            development. Over time, I shifted my focuses to the PERN Stack because I enjoy creating modern,
+            fast, scalable and high performing web applications. My experiences using these technologies gave
+            me a sense of stabilty and commitment to modern web development, enhance my understanding of building 
+            dynamic web applications. Beyod my current stack, my background as a developer also strengthen 
+            my adaptability ---- allowing me to learn and work with different technologies in order to build not just web applications
+            but also desktop and embeded systems when needed. 
 
           </div>
-          <div className="col-start-1 col-end-4 row-start-7 row-end-7 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black]">
+          <div className="col-start-1 col-end-4 row-start-7 row-end-9
+          border-2 border-[var(--metal-dark2)] rounded-[10px] 
+          shadow-[5px_5px_20px_1px_black] ">
             tags
           </div>
-          <div className="col-start-1 col-end-4 row-start-8 row-end-11 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black]">
-            action
+          <div className="grid grid-cols-2 grid-rows-2 gap-4 justify-end w-full h-full col-start-1 col-end-4 
+          row-start-9 row-end-11 rounded-[10px] ">
+              <a className="center px-4 p-1 border-[1px] rounded-[10px]">
+                <p className="text-sm">Download My Resume</p>
+              </a>
+              <a className="center px-4 p-1 border-[1px] rounded-[10px]">
+                <p className="text-sm">Contact Me</p>
+              </a>
+              <a className="center px-4 p-1 border-[1px] rounded-[10px]">
+                <p className="text-sm">View Projects</p>
+              </a>
           </div>
           
         </div>

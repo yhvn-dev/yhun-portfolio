@@ -1,5 +1,5 @@
 
-import useScrollAnimation from "../../../hooks/userscroll_animation";
+import {useScrollAnimation} from "../../../hooks/animations";
 function Hero() {
   
     useScrollAnimation("main_wrapper")
@@ -7,15 +7,14 @@ function Hero() {
     useScrollAnimation("circ")
 
     return (
-    
         <>
         <section className="sections  w-full hero 
         col-start-1 col-end-1 row-start-1 row-end-2
         ">
-        
+
             {/* HERO BACKDROP */}
             <div className="relative center  col-start-1 col-end-4 row-start-1 row-end-4 l ">                 
-                <div  className="center bd_lights absolute   
+                <div className="center bd_lights absolute   
                 bg-[var(--metal-dark5)] shadow-[50px_0px_10000px_2px_gray,-50px_0px_10000px_2px_gray]
                  top-[30%] rounded-br-full rounded-bl-full h-[50%] w-[50%]">          
                 </div>
@@ -55,20 +54,9 @@ function Hero() {
                         </p>                             
                     </div>
 
-                    <div className="flex items-start justify-center h-[50%] w-full p-4">
-
-                        <ul className="flex item-center justify-start w-full px-12">
-                            <a className="flex items-center justify-center flex-row-reverse
-                             border-[1px] rounded-[10px] border-[var(--metal-dark4)] px-4 py-1" >
-                                <p className=" border-1 border-[var(--metal-dark4)] mx-2  rounded-[10px]">More</p>
-                                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>                                 
-                            </a>
-                        </ul>         
-
-                        <ul className="flex flex-col items-end justify-center h-full px-12 w-full">
+                    <div className="flex items-start justify-center flex-col h-[50%] w-full p-4">
                             <i  className="text-[var(--metal-dark4)] text-sm">College Student At Sariaya, Quezon Philippines</i>
-                            <i  className="text-[var(--metal-dark4)] text-sm">jhunguidef@gmail.com</i>
-                        </ul>
+                            <i  className="text-[var(--metal-dark4)] text-sm">jhunguidef@gmail.com</i>         
                     </div>
 
                 </div>
