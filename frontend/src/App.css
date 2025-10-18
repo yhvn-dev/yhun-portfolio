@@ -132,7 +132,7 @@ body{
 
 }
 img{
-  @apply rounded-full object-cover  shadow-lg cursor-pointer;
+  @apply cursor-pointer;
 }
 
 a{

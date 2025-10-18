@@ -105,6 +105,12 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } 
 }
+@keyframes scroll-stack {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); } 
+}
+
+
 
 .animate-scroll-stats {
     @apply flex items-center justify-center py-2 rounded-[10px];
@@ -115,6 +121,18 @@
 .animate-scroll-stats:hover {
   animation-play-state: paused;
 }
+
+.animate-scroll-stack {
+    animation: scroll-stack 20s linear infinite;
+    width: max-content;
+    transition: 1s;
+}
+.animate-scroll-stack:hover {
+  animation-play-state: paused;
+}
+
+
+
 
 .about-bg-header {
   background: linear-gradient(to right,var(--white-blple),white,var(--white-blple));

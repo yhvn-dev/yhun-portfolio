@@ -6,24 +6,35 @@ import Github from "../../../assets/Icons/GITHUB.jpg";
 import Linkedin from "../../../assets/Icons/LINKEDIN.jpg";
 import Instagram from "../../../assets/Icons/INSTAGRAM.jpg";
 import Facebook from "../../../assets/Icons/FACEBOOK.jpg";
+import PostgreSQL from "../../../assets/Icons/POSTGRE SQL.png"
+import ExpressJS from "../../../assets/Icons/EXPRESS JS.png"
+import ReactJS from "../../../assets/Icons/REACT JS.png"
+import NodeJS from "../../../assets/Icons/NODE JS.png"
 
 function About() {
   const { stats } = useGithub();
   
+  const Social_Media = [
+    { src: Github, label: "Github", url: "https://github.com/yhvn-dev" },
+    { src: Linkedin, label: "LinkedIn", url: "https://linkedin.com/in/your-profile" },
+    { src: Instagram, label: "Instagram", url: "https://instagram.com/__jhvn" },
+    { src: Facebook, label: "Facebook", url: "https://facebook.com/your-profile" },
+  ];
 
- const Social_Media = [
-  { src: Github, label: "Github", url: "https://github.com/yhvn-dev" },
-  { src: Linkedin, label: "LinkedIn", url: "https://linkedin.com/in/your-profile" },
-  { src: Instagram, label: "Instagram", url: "https://instagram.com/__jhvn" },
-  { src: Facebook, label: "Facebook", url: "https://facebook.com/your-profile" },
-];
+  const Tech_Stack = [
+    {src: PostgreSQL, label: "PostgreSQL"},
+    {src: ExpressJS, label: "ExpressJS"},
+    {src: ReactJS, label: "ReactJs"},
+    {src: NodeJS, label: "NodeJs"},
+  ];
+
 
   return (
     <section className="sections column col-start-1 col-end-2 row-start-2 row-end-2 w-full">
    
       <GithubStats username="yhvn-dev"/>
       
-      {/* MAIN BOX */}
+      {/* MAIN BOX   */}
       <main className="flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
         {/* Header */}
         <div className="center w-full h-[20%]">
@@ -37,12 +48,19 @@ function About() {
             {/* CARD */}
           <div className="relative p-4 gap-4 grid grid-rows-10 grid-cols-1 col-start-1 col-end-8 row-start-1 row-end-7 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black] overflow-hidden">
             {/* Header Background */}
-            <header className="relative center w-full h-full rounded-[10px] row-start-1 row-end-4 bg-[var(--dark-variant)] overflow-hidden p-4 border-2 border-[var(--metal-dark2)]">
+
+            <header className="relative center w-full h-full rounded-[10px] 
+            row-start-1 row-end-4 bg-[var(--dark-variant)] 
+            overflow-hidden p-4 border-2 border-[var(--metal-dark2)]
+            shadow-[5px_5px_10px_1px_black]
+            ">
+
               <div className="about-bg-header absolute rounded-[10px] w-[98%] h-[98%] overflow-hidden">
                 <div className="absolute bg-[var(--dark-variant)] right-0 top-0 rounded-bl-[90%] w-[50%] h-[90%]"></div>
                 <div className="absolute bg-[var(--dark-variant)] rounded-tr-[90%] left-0 bottom-0 w-[50%] h-[90%]"></div>
               </div>
               <div className="absolute bg-transparent backdrop-blur-[50px] rounded-[10px] center w-full h-full"></div>
+
             </header>
 
             {/* Profile Image */}
@@ -75,33 +93,31 @@ function About() {
                             href={item.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center justify-center min-w-[175px] rounded-[10px]"
-                            >
-                            <img
-                                src={item.src}
-                                className="w-8 h-8 mx-4 shadow-lg transition-transform duration-500 1s hover:scale-105 hover:shadow-2xl"
-                            />
-                            <span className="text-xs text-[var(--metal-dark4)] mt-2 
+                            className="flex flex-col items-center justify-center min-w-[175px] rounded-[10px]">
+                              <img
+                                  src={item.src}
+                                  className="w-8 h-8 mx-4 shadow-lg transition-transform duration-500 1s hover:scale-105 hover:shadow-2xl"/>
+                              <span className="text-xs text-[var(--metal-dark4)] mt-2 
                             transition-transform duration-500 hover:text-[var(--white-blple)]">{item.label}</span>
                             </a>
                         ))
                         )}
                     </div>
-                    </div>
+                  </div>
               ) : (
                 stats?.user && (
                   <ul className="flex items-center justify-evenly mt-4 h-full w-full list-none rounded-[10px]">
                     <li className="column transition-1 ease-in">
-                      <span className="monu-txt text-3xl">{stats.user.followers}</span>
-                      <span className="text-xs text-[var(--metal-dark4)]">Followers</span>
+                      <span className="monu-txt text-3xl hover:text-white">{stats.user.followers}</span>
+                      <span className="text-xs text-[var(--metal-dark4)] hover:text-[var(--white-blple)]">Followers</span>
                     </li>
                     <li className="column transition-1 ease-in">
-                      <span className="monu-txt text-3xl">{stats.repos.length}</span>
-                      <span className="text-xs text-[var(--metal-dark4)]">Repositories</span>
+                      <span className="monu-txt text-3xl  hover:text-white">{stats.repos.length}</span>
+                      <span className="text-xs text-[var(--metal-dark4)] hover:text-[var(--white-blple)]">Repositories</span>
                     </li>
                     <li className="column transition-1 ease-in">
-                      <span className="monu-txt text-3xl">{stats.totalCommits}</span>
-                      <span className="text-xs text-[var(--metal-dark4)]">Commits</span>
+                      <span className="monu-txt text-3xl hover:text-white">{stats.totalCommits}</span>
+                      <span className="text-xs text-[var(--metal-dark4)] hover:text-[var(--white-blple)]">Commits</span>
                     </li>
                   </ul>
                 )
@@ -111,11 +127,48 @@ function About() {
 
 
           {/* TECH STACK */}
-          <div className="col-start-8 col-end-11 row-start-1 row-end-6 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black]">
-            tech stack
+          <div className="column col-start-8 col-end-11 row-start-1 row-end-6 
+          border-2 border-[var(--metal-dark2)] rounded-[10px] 
+          shadow-[5px_5px_20px_1px_black] p-4 gap-4">
+
+            <div className="center w-full h-[15%] bg-[var(--dark-variant)] 
+            rounded-[10px] border-2 border-[var(--metal-dark2)] 
+            shadow-[5px_5px_10px_1px_black]">
+              Tech Stack
+            </div>
+
+            <div className="relative center w-full h-[300px] 
+            rounded-[10px] overflow-hidden">
+
+              <div className="flex items-center justify-center flex-col 
+              animate-scroll-stack  w-full">
+                {[...Array(2)].map((_, repeatIdx) =>
+                  Tech_Stack.map((item, idx) => (
+                    <a
+                      key={`stack-${repeatIdx}-${idx}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 my-4  flex flex-col items-center justify-center  rounded-[10px]"
+                    >
+                      <img
+                        src={item.src}
+                        className="w-12 p-2 h-auto mx-4 rounded-[16px] bg-[var(--moon-phases-e))]
+                        shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl"
+                      />
+                      <span className="text-xs text-[var(--metal-dark4)] mt-2 transition-transform duration-500 hover:text-[var(--white-blple)]">
+                        {item.label}
+                      </span>
+                    </a>
+                  ))
+                )}
+              </div>
+            </div>
           </div>
+                              
+
           <div className="col-start-4 col-end-11 row-start-7 row-end-11 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black]">
-            description
+            
+
           </div>
           <div className="col-start-1 col-end-4 row-start-7 row-end-7 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black]">
             tags
@@ -123,9 +176,13 @@ function About() {
           <div className="col-start-1 col-end-4 row-start-8 row-end-11 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black]">
             action
           </div>
+          
         </div>
+
       </main>
+      
     </section>
+    
   );
 }
 
