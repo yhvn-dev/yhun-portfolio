@@ -1,9 +1,12 @@
 import { GithubStats } from "../../../services/GithubStats";
 import { useGithub } from "../../../Context/githubContext";
-import { Tech_Stack, Social_Media } from "../../../data/image_resources";
 import Me_1 from "../../../assets/Images/Me 1.png";
+import { File } from "react-feather"
 
 import * as Animation from "../../../hooks/animations"
+
+
+
 
 function About() {
   const { stats } = useGithub();
@@ -13,9 +16,11 @@ function About() {
    
       <GithubStats username="yhvn-dev"/>
       
+      
       {/* MAIN BOX   */}
       <main className="flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
-        {/* Header */}
+
+        {/* Title */}
         <div className="center w-full h-[20%]">
           <p className="monu-txt text-2xl">About Me</p>
         </div>
@@ -63,26 +68,7 @@ function About() {
 
               {/* Social Media / Stats */}
               {stats?.error ? (
-                <div className="center relative w-full overflow-hidden h-full rounded-[10px]">
-                    <div className="flex animate-scroll-stats ">
-                        {[...Array(4)].map((_, repeatIdx) =>
-                        Social_Media.map((item, idx) => (
-                            <a
-                            key={`social-${repeatIdx}-${idx}`}
-                            href={item.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex flex-col items-center justify-center min-w-[175px] rounded-[10px]">
-                              <img
-                                  src={item.src}
-                                  className="w-8 h-8 mx-4 shadow-lg transition-transform duration-500 1s hover:scale-105 hover:shadow-2xl"/>
-                              <span className="text-xs text-[var(--metal-dark4)] mt-2 
-                            transition-transform duration-500 hover:text-[var(--white-blple)]">{item.label}</span>
-                            </a>
-                        ))
-                        )}
-                    </div>
-                  </div>
+               <Animation.SociaMediaAnimation></Animation.SociaMediaAnimation>
               ) : (
                 stats?.user && (
                   <ul className="flex items-center justify-evenly mt-4 h-full w-full list-none rounded-[10px]">
@@ -144,16 +130,32 @@ function About() {
             tags
           </div>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 justify-end w-full h-full col-start-1 col-end-4 
-          row-start-9 row-end-11 rounded-[10px] ">
-              <a className="center px-4 p-1 border-[1px] rounded-[10px]">
-                <p className="text-sm">Download My Resume</p>
-              </a>
-              <a className="center px-4 p-1 border-[1px] rounded-[10px]">
-                <p className="text-sm">Contact Me</p>
-              </a>
-              <a className="center px-4 p-1 border-[1px] rounded-[10px]">
-                <p className="text-sm">View Projects</p>
-              </a>
+          row-start-9 row-end-11 rounded-[10px]">
+              <div className="center h-full w-full rounded-[10px] ">
+                <a className="column h-full w-full ">
+                  <ion-icon className="text-3xl" name="arrow-down-circle-outline"></ion-icon>
+                  <p className="text-center text-[0.8rem]">Download My Resume</p>
+                </a>
+              </div>
+
+              {/*  */}
+              <div className="center h-full w-full rounded-[10px] ">
+                <a className="column h-full w-full ">
+                  <ion-icon  className="text-3xl"  name="call-outline"></ion-icon>
+                  <p className="text-center text-[0.8rem]">Contact Me</p>
+                </a>
+              </div>
+
+              {/*  */}
+              <div className="center h-full w-full rounded-[10px] ">
+                <a className="column h-full w-full ">
+                <ion-icon  className="text-3xl" name="layers-outline"></ion-icon> 
+                  <p className="text-center text-[0.8rem]">View Projects</p>
+                </a>
+              </div>
+
+            
+              
           </div>
           
         </div>

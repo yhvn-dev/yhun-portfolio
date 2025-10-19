@@ -14,9 +14,11 @@
     "@emotion/styled": "^11.14.1",
     "@tailwindcss/vite": "^4.1.14",
     "axios": "^1.12.2",
+    "feather-icons": "^4.29.2",
     "framer-motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-feather": "^2.0.10",
     "react-router-dom": "^7.9.4"
   },
   "devDependencies": {

@@ -140,11 +140,14 @@ a{
   text-decoration: none;
 }
 
+
 p{
   text-align:start;
   font-size: clamp(1rem, 8vw, 1rem); 
 }
-
+svg{
+  @apply flex items-center justify-center;
+}
 
 .center{
   @apply flex items-center justify-center;
