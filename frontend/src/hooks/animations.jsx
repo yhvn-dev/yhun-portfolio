@@ -153,10 +153,10 @@ export function TechStackAnimation() {
   const firstBatchRef = useRef(null);
   const isPausedRef = useRef(false);
 
-  console.log("Before render:", containerRef.current);
-  console.log("Before render:", contentRef.current);
-  console.log("Before render:", firstBatchRef.current);
-  console.log("Before render:", isPausedRef.current);
+  // console.log("Before render:", containerRef.current);
+  // console.log("Before render:", contentRef.current);
+  // console.log("Before render:", firstBatchRef.current);
+  // console.log("Before render:", isPausedRef.current);
 
   useEffect(() => {
     const container = containerRef.current;

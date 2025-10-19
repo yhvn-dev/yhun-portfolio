@@ -9,8 +9,7 @@ function Hero() {
     return (
         <>
         <section className="sections  w-full hero 
-        col-start-1 col-end-1 row-start-1 row-end-2
-        ">
+        col-start-1 col-end-1 row-start-1 row-end-2">
 
             {/* HERO BACKDROP */}
             <div className="relative center  col-start-1 col-end-4 row-start-1 row-end-4 l ">                 
@@ -23,7 +22,7 @@ function Hero() {
             
             {/* MAIN BOX */}
           <main className="z-10 flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 
-            center bg-[var(--metal-dark5)] border-4  border-[var(--dark-variant)]  h-full w-full rounded-2xl overflow-hidden">
+            center bg-[var(--metal-dark5)] border-4  border-[var(--metal-dark2)]  h-full w-full rounded-2xl overflow-hidden">
         
                 <div className="box-header w-full h-[3rem] border-[1px] border-[var(--dark-variant)]
                     flex justify-center items-center">
