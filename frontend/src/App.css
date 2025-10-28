@@ -119,32 +119,37 @@
 
 
 *{
-
   font-family: "Inter";
-  margin: 0;
-  padding: 0;
-  color: var(--main-white);
 }
 
-body{
-  margin: 0;
-  padding: 0;
 
+
+body.light{
+  @apply bg-[var(--main-white)];
 }
+body.light .hero-bd{
+  transition: 1s;
+  @apply bg-[var(--main-white)];
+}
+
+
+body.light .dmode-box {
+  @apply flex  items-center justify-end ;
+}
+.dmode-box{
+  transition: 1s ease;
+}
+
+
 img{
   @apply cursor-pointer;
 }
-
 a{
   cursor: pointer;
   text-decoration: none;
 }
 
 
-p{
-  text-align:start;
-  font-size: clamp(1rem, 8vw, 1rem); 
-}
 svg{
   @apply flex items-center justify-center;
 }
@@ -163,16 +168,14 @@ svg{
 }
 
 
-svg{
-  fill: var(--metal-dark2);
-  width: 1.1rem;
-  height: 1.1rem;
-}
 
 svg:hover {
     transition: 0.5s ease;
     fill: var(--main-white--);
 }   
+
+
+
 body::-webkit-scrollbar{
   background-color: var(--metal-dark5);
 }
@@ -202,4 +205,7 @@ body::-webkit-scrollbar-thumb{
 }
 .monu-txt{
   font-family:"Monument Text";
+}
+.JHVN-TEXT{
+   font-family:"Monument Text";
 }

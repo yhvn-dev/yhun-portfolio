@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Social_Media, Tech_Stack } from "../data/image_resources";
+import Jhvn from "../assets/Images/jhvn_1_LOGO.png"
+
 
 export function useScrollAnimation(className, options = { threshold: 0.2 }) {
   const elementsRef = useRef([]);
@@ -255,6 +257,81 @@ export function TechStackAnimation() {
             ))}
           </div>
         </div>
+      </div>
+    </div>
+  );
+
+
+}
+
+
+export function NameAnimation() {
+  const NameContainerRef = useRef(null);
+  const NameContentRef = useRef(null);
+  const firstBatchRef = useRef(null);
+  const isPausedRef = useRef(false);
+
+  useEffect(() => {
+    const container = NameContainerRef.current;
+    const content = NameContentRef.current;
+    const firstBatch = firstBatchRef.current;
+
+    if (!container || !content || !firstBatch) return;
+
+    let scrollAmount = 0;
+    let animationFrame;
+    const speed = 1;
+
+    const scroll = () => {
+      if (!isPausedRef.current) {
+        scrollAmount += speed;
+
+        const resetPoint = firstBatch.offsetWidth;
+
+        if (scrollAmount >= resetPoint) {
+          scrollAmount -= resetPoint;
+        }
+
+        content.style.transform = `translateX(-${scrollAmount}px)`;
+      }
+
+      animationFrame = requestAnimationFrame(scroll);
+    };
+
+    animationFrame = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
+
+
+  return (
+    <div
+      ref={NameContainerRef}
+      className="relative flex items-center justify-center w-full h-full overflow-hidden rounded-[10px] 
+      col-start-1 col-end-4 row-start-2 row-end-2"
+    >
+      <div
+        ref={NameContentRef}
+        className="flex items-center justify-center gap-8 min-w-max "
+      >
+        {/* Batch items */}
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={i}
+            ref={i === 0 ? firstBatchRef : null}
+            className="flex items-center justify-center text-[16.08rem]  w-auto h-auto rounded-[10px] shrink-0"
+          >
+            <img
+              src={Jhvn}
+              className="w-[40vw] max-w-[180px] h-auto object-contain"
+              alt="Jhvn"
+            />
+            <p className="JHVN-TEXT text-white text-[16.08rem] leading-none whitespace-nowrap">
+              JHVN
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

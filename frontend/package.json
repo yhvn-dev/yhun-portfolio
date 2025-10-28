@@ -16,6 +16,7 @@
     "axios": "^1.12.2",
     "feather-icons": "^4.29.2",
     "framer-motion": "^12.23.12",
+    "lucide-react": "^0.548.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-feather": "^2.0.10",

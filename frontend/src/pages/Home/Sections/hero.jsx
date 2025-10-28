@@ -8,20 +8,19 @@ function Hero() {
 
     return (
         <>
-        <section className="sections  w-full hero 
+        <section className="sections w-full hero 
         col-start-1 col-end-1 row-start-1 row-end-2">
 
             {/* HERO BACKDROP */}
-            <div className="relative center  col-start-1 col-end-4 row-start-1 row-end-4 l ">                 
+           <div className="hero-bd relative center  col-start-1 col-end-4 row-start-1 row-end-4 l ">                 
                 <div className="center bd_lights absolute   
                 bg-[var(--metal-dark5)] shadow-[50px_0px_10000px_2px_gray,-50px_0px_10000px_2px_gray]
-                 top-[30%] rounded-br-full rounded-bl-full h-[50%] w-[50%]">          
+                    top-[30%] rounded-br-full rounded-bl-full h-[50%] w-[50%]">          
                 </div>
-            </div>
-            
-            
+            </div>            
+
             {/* MAIN BOX */}
-          <main className="z-10 flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 
+          <main className="hero-main-box z-10 flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 
             center bg-[var(--metal-dark5)] border-4  border-[var(--metal-dark2)]  h-full w-full rounded-2xl overflow-hidden">
         
                 <div className="box-header w-full h-[3rem] border-[1px] border-[var(--dark-variant)]

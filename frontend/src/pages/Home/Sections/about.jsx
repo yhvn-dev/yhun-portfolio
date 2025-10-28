@@ -1,11 +1,9 @@
 import { GithubStats } from "../../../services/GithubStats";
 import { useGithub } from "../../../Context/githubContext";
 import Me_1 from "../../../assets/Images/Me 1.png";
-import { File } from "react-feather"
+import {FileUser,Phone,Lightbulb} from "lucide-react"
 
 import * as Animation from "../../../hooks/animations"
-
-
 
 
 function About() {
@@ -22,7 +20,7 @@ function About() {
 
         {/* Title */}
         <div className="center w-full h-[20%]">
-          <p className="monu-txt text-2xl">About Me</p>
+          <p className="monu-txt text-2xl text-[var(--main-white)]">About Me</p>
         </div>
 
         {/* Grid Layout */}
@@ -36,8 +34,7 @@ function About() {
             <header className="relative center w-full h-full rounded-[10px] 
             row-start-1 row-end-4 bg-[var(--dark-variant)] 
             overflow-hidden p-4 border-2 border-[var(--metal-dark2)]
-            shadow-[5px_5px_10px_1px_black]
-            ">
+            shadow-[5px_5px_10px_1px_black">
 
               <div className="about-bg-header absolute rounded-[10px] w-[98%] h-[98%] overflow-hidden">
                 <div className="absolute bg-[var(--dark-variant)] right-0 top-0 rounded-bl-[90%] w-[50%] h-[90%]"></div>
@@ -60,7 +57,7 @@ function About() {
 
             {/* Info Section */}
             <div className="column-start p-4 row-start-4 row-span-full rounded-[10px] bg-[var(--dark-variant)]">
-              <p className="text-2xl mt-10">Jhunguide Flores</p>
+              <p className="text-2xl mt-10 text-[var(--main-white)]">Jhunguide Flores</p>
               <a className="text-sm text-[var(--metal-dark4)] mb-4">@__jhvn</a>
               <p className="text-sm text-[var(--metal-dark4)]">
                 I build end-to-end solutions with precision and care. I seamlessly integrate UI/UX design with backend development and security to create robust, user-friendly applications.
@@ -73,15 +70,15 @@ function About() {
                 stats?.user && (
                   <ul className="flex items-center justify-evenly mt-4 h-full w-full list-none rounded-[10px]">
                     <li className="column transition-1 ease-in">
-                      <span className="monu-txt text-3xl hover:text-white">{stats.user.followers}</span>
+                      <span className="monu-txt text-3xl text-[var(--main-white)] hover:text-white">{stats.user.followers}</span>
                       <span className="text-xs text-[var(--metal-dark4)] hover:text-[var(--white-blple)]">Followers</span>
                     </li>
                     <li className="column transition-1 ease-in">
-                      <span className="monu-txt text-3xl  hover:text-white">{stats.repos.length}</span>
+                      <span className="monu-txt text-3xl text-[var(--main-white)]  hover:text-white">{stats.repos.length}</span>
                       <span className="text-xs text-[var(--metal-dark4)] hover:text-[var(--white-blple)]">Repositories</span>
                     </li>
                     <li className="column transition-1 ease-in">
-                      <span className="monu-txt text-3xl hover:text-white">{stats.totalCommits}</span>
+                      <span className="monu-txt text-3xl text-[var(--main-white)] hover:text-white ">{stats.totalCommits}</span>
                       <span className="text-xs text-[var(--metal-dark4)] hover:text-[var(--white-blple)]">Commits</span>
                     </li>
                   </ul>
@@ -98,7 +95,7 @@ function About() {
 
             <div className="center w-full p-4 bg-[var(--dark-variant)] 
             rounded-[10px] border-2 border-[var(--metal-dark2)] 
-            shadow-[5px_5px_10px_1px_black]">
+            shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]">
               Tech Stack
             </div>
 
@@ -110,7 +107,7 @@ function About() {
           {/* DESCRIPTION */}
           <div className="flex items-start justify-start p-4 
           col-start-4 col-end-11 row-start-7 row-end-11 border-2 border-[var(--metal-dark2)] 
-          rounded-[10px] shadow-[5px_5px_20px_1px_black]">
+          rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)]">
 
             Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
             web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
@@ -129,28 +126,31 @@ function About() {
           shadow-[5px_5px_20px_1px_black] ">
             tags
           </div>
+
+          
           <div className="grid grid-cols-2 grid-rows-2 gap-4 justify-end w-full h-full col-start-1 col-end-4 
           row-start-9 row-end-11 rounded-[10px]">
               <div className="center h-full w-full rounded-[10px] ">
                 <a className="column h-full w-full ">
-                  <ion-icon className="text-3xl" name="arrow-down-circle-outline"></ion-icon>
-                  <p className="text-center text-[0.8rem]">Download My Resume</p>
+                  <FileUser fill="var(--main-white)" />
+                  <p className="text-center text-[0.7rem] text-[var(--main-white)]">Download My Resume</p>
                 </a>
               </div>
 
               {/*  */}
               <div className="center h-full w-full rounded-[10px] ">
                 <a className="column h-full w-full ">
-                  <ion-icon  className="text-3xl"  name="call-outline"></ion-icon>
-                  <p className="text-center text-[0.8rem]">Contact Me</p>
+                  <Phone fill="var(--main-white)"/>
+              
+                  <p className="text-center text-[0.7rem] text-[var(--main-white)]">Contact Me</p>
                 </a>
               </div>
 
               {/*  */}
               <div className="center h-full w-full rounded-[10px] ">
                 <a className="column h-full w-full ">
-                <ion-icon  className="text-3xl" name="layers-outline"></ion-icon> 
-                  <p className="text-center text-[0.8rem]">View Projects</p>
+                <Lightbulb size={30} fill="var(--main-white)"/>
+                  <p className="text-center text-[0.7rem] text-[var(--main-white)]">View Projects</p>
                 </a>
               </div>
 

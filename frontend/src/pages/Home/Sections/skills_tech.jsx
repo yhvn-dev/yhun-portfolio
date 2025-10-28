@@ -9,22 +9,20 @@ function Skills_Tech(){
 
             {/* MAIN BOX   */}
             <main className="flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
-
                 {/* Header */}
                 <div className="center w-full h-[20%]">
-                    <p className="monu-txt text-2xl">Skills & Technologies</p>
+                    <p className="monu-txt text-2xl text-[var(--main-white)]">Skills & Technologies</p>
                 </div>
         
             {/* Grid Layout */}
             <div className="grid grid-cols-10 grid-rows-10 w-full h-[80%] rounded-[10px] gap-4 ">
-
             
                  {/* FRONTEND */}
                 <div className="flex flex-col items-center justify-start 
                     col-start-1 col-end-9 row-start-1 row-end-6
                     border-2 border-[var(--metal-dark2)] rounded-[10px] 
                     shadow-[5px_5px_20px_1px_black] p-4 gap-4">
-                    <div className="center w-full h-[15%] bg-[var(--dark-variant)] 
+                    <div className="text-white center w-full h-[15%] bg-[var(--dark-variant)] 
                     rounded-[10px] border-2 border-[var(--metal-dark2)] shadow-[5px_5px_10px_1px_black]">
                     Frontend
                     </div>
@@ -38,18 +36,21 @@ function Skills_Tech(){
                                 className="w-12 h-auto object-contain p-2 bg-[var(--dark-variant)]
                                 rounded-2xl transition-all duration-300 hover:scale-105 "
                             />
-                            <p className="text-[0.7rem] text-center">{item.label}</p>
+                            <p className="tech-label text-[0.7rem] text-center">{item.label}</p>
                         </div>
                     ))}
                     </div>
                 </div>
+
+
+
 
                 {/* TOOLS */}
                 <div className="flex flex-col items-center justify-start 
                     col-start-9 col-end-12 row-start-1 row-end-11
                     border-2 border-[var(--metal-dark2)] rounded-[10px] 
                     shadow-[5px_5px_20px_1px_black] p-4 gap-4">
-                    <div className="center w-full  p-1 bg-[var(--dark-variant)] 
+                    <div className="text-white center w-full  p-1 bg-[var(--dark-variant)] 
                     rounded-[10px] border-2 border-[var(--metal-dark2)] shadow-[5px_5px_10px_1px_black]">
                     Tools
                     </div>
@@ -62,18 +63,20 @@ function Skills_Tech(){
                                 className="w-12 h-auto object-contain p-2 bg-[var(--dark-variant)]
                                 rounded-2xl transition-all duration-300 hover:scale-105  "
                             />
-                            <p className="text-[0.7rem]  text-center">{item.label}</p>
+                            <p className="tech-label text-[0.7rem] text-center text-[var(--main-white)]">{item.label}</p>
                         </div>
                     ))}
                     </div>
                 </div>
+
+
 
                 {/* BACKEND */}
                 <div className="flex flex-col items-center justify-start 
                     col-start-3 col-end-9 row-start-6 row-end-11
                     border-2 border-[var(--metal-dark2)] rounded-[10px] 
                     shadow-[5px_5px_20px_1px_black] p-4 gap-4">
-                    <div className="center w-full  p-1 bg-[var(--dark-variant)] 
+                    <div className="text-white center w-full  p-1 bg-[var(--dark-variant)] 
                     rounded-[10px] border-2 border-[var(--metal-dark2)] shadow-[5px_5px_10px_1px_black]">
                     Backend
                     </div>
@@ -86,7 +89,7 @@ function Skills_Tech(){
                             className="w-12 h-auto object-contain p-2 bg-[var(--dark-variant)]
                                 rounded-2xl transition-all duration-300 hover:scale-105 "
                         />
-                        <p className="text-[0.7rem] text-center">{item.label}</p>
+                        <p className="tech-label text-[0.7rem] text-center">{item.label}</p>
                         </div>
                     ))}
                     </div>
@@ -97,7 +100,7 @@ function Skills_Tech(){
                     col-start-1 col-end-3 row-start-6 row-end-11
                     border-2 border-[var(--metal-dark2)] rounded-[10px] 
                     shadow-[5px_5px_20px_1px_black] p-4 gap-4">
-                    <div className="center w-full p-1 bg-[var(--dark-variant)] 
+                    <div className="text-white center w-full p-1 bg-[var(--dark-variant)] 
                     rounded-[10px] border-2 border-[var(--metal-dark2)] shadow-[5px_5px_10px_1px_black]">
                         Database
                     </div>
@@ -110,12 +113,11 @@ function Skills_Tech(){
                             className="w-12 h-auto object-contain p-2 bg-[var(--dark-variant)]
                             rounded-2xl transition-all duration-300 hover:scale-105 "
                         />
-                        <p className="text-[0.7rem] text-center">{item.label}</p>
+                        <p className="tech-label text-[0.7rem] text-center">{item.label}</p>
                         </div>
                     ))}
                     </div>
-                </div>
-            
+                </div>    
             </div>
             
             </main>
