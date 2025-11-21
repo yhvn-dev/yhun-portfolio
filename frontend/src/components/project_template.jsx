@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, ChevronLeft, ChevronRight, RotateCw, Home } from 'lucide-react';
+import { Search, ChevronLeft, ChevronRight, RotateCw, Home,Minimize,Minimize2,Maximize2,X} from 'lucide-react';
 
 export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultValue,Project_Descr,Tech_Stack}){
     const [activeTab, setActiveTab] = useState(0);
@@ -126,5 +126,129 @@ export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultVa
       </div>
         </>
     )
+}
 
+
+
+export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultValue,Project_Descr,Tech_Stack}){
+    const [activeView, setActiveView] = useState('dashboard');
+    const [activeFile, setActiveFile] = useState('overview');
+  
+    const menuItems = [
+        { id: 'dashboard', label: 'Dashboard' },
+        { id: 'documentation', label: 'Documentation' }
+    ];
+
+    return(
+    <>
+      {/* Header Section */}
+      <div className="flex items-center justify-center flex-col w-[80%] h-[20%] overflow-hidden py-6">  
+        <div>
+            {Project_Logo}
+        </div>
+        <span className="NODELAB_TEXT bg-transparent text-[var(--main-white)] tracking-wide my-2">{Project_Name}</span> 
+      </div>
+
+      {/* Desktop Window Frame */}
+      <div className="flex flex-col items-center justify-start h-full w-[80%] rounded-xl overflow-hidden relative 
+      border border-gray-700 shadow-[0_20px_60px_rgba(0,0,0,0.7)] bg-amber-700">
+
+        {/* Window Title Bar */}
+        <div className="flex items-center justify-between w-full h-10 bg-gradient-to-b from-[#3a3a3a] to-[#2d2d2d] border-b border-gray-700/50 px-4">
+          <div className="flex items-center gap-3">
+            <div className="w-3 h-3 rounded-full bg-[#ff5f57] hover:bg-[#ff6b63] cursor-pointer"></div>
+            <div className="w-3 h-3 rounded-full bg-[#febc2e] hover:bg-[#ffc93a] cursor-pointer"></div>
+            <div className="w-3 h-3 rounded-full bg-[#28c840] hover:bg-[#34d84c] cursor-pointer"></div>
+          </div>
+          
+          <div className="flex items-center gap-2">
+            <span className="text-gray-300 text-sm font-medium">{Project_Name}</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button className="w-7 h-7 rounded hover:bg-gray-600/50 flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+              <Minimize2 size={12} />
+            </button>
+            <button className="w-7 h-7 rounded hover:bg-gray-600/50 flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+              <Maximize2 size={12} />
+            </button>
+            <button className="w-7 h-7 rounded hover:bg-red-500/50 flex items-center justify-center text-gray-400 hover:text-white transition-colors">
+              <X size={14} />
+            </button>
+          </div>
+        </div>
+
+    
+     
+      
+        {/* Content Area with Sidebar */}
+        <div className="flex flex-col items-center justify-end w-full h-full bg-[#1a1a1a] ">
+
+
+        <div className="flex-1 flex items-center justify-center overflow-hidden">
+            {activeView === 'dashboard' ? (
+              <img
+                src={Project_Img}
+                className="w-full h-90 "
+                alt="Desktop Application"
+              />
+            ) : activeView === 'features' ? (
+              <div className="text-center p-8">
+                <p className="text-white text-lg mb-2">✨ Features</p>
+                <p className="text-gray-400 text-sm">Project features and capabilities</p>
+              </div>
+            ) : activeView === 'documentation' ? (
+              <div className="text-center p-8">
+                <p className="text-white text-lg mb-2">📄 Documentation</p>
+                <p className="text-gray-400 text-sm">Technical documentation and guides</p>
+              </div>
+            ) : (
+              <div className="text-center p-8">
+                <p className="text-white text-lg mb-2">
+                  📋 {files.find(f => f.id === activeFile)?.label}
+                </p>
+                <p className="text-gray-400 text-sm">File content viewer</p>
+              </div>
+            )}
+            </div> 
+
+              {/* Bottom Taskbar */}
+            <nav className="w-full h-[3rem] bg-[#252525] border-t border-gray-700/50 flex gap-3 justify-center items-center">
+              <div className="text-xs text-gray-400 font-semibold">PROJECT</div>
+
+              {menuItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setActiveView(item.id)}
+                  className={`px-4 py-2 rounded text-xs transition-all ${
+                    activeView === item.id
+                      ? 'bg-blue-600/20 text-blue-400 border-b-2 border-blue-500'
+                      : 'text-gray-400 hover:text-white hover:bg-gray-700/30'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </nav>
+
+
+        </div>
+  
+      
+      </div>
+
+      {/* Project Description Section */}
+      <div className="flex flex-col items-start justify-start w-[80%] bg-transparent h-[70%] py-6 px-0 overflow-y-auto">
+        <h2 className="text-xl font-semibold text-white mb-3">
+          Application Overview
+        </h2>
+        <p className="text-sm text-gray-300 leading-relaxed mb-4">
+          {Project_Descr}
+        </p>
+        <div>
+          {Tech_Stack}
+        </div>
+      </div>
+    </>
+    )
 }

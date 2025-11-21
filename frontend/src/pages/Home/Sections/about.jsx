@@ -10,13 +10,13 @@ function About() {
   const { stats } = useGithub();
       
   return (
-    <section className="sections column col-start-1 col-end-2 row-start-2 row-end-2 w-full">
+    <section className="bg-transparent sections column col-start-1 col-end-2 row-start-2 row-end-2 w-full">
    
       <GithubStats username="yhvn-dev"/>
       
       
       {/* MAIN BOX   */}
-      <main className="flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
+      <main className="bg-transparent flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
 
         {/* Title */}
         <div className="center w-full h-[20%]">

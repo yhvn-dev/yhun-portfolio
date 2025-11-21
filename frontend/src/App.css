@@ -82,6 +82,7 @@
     --fns-default-up4-2:4.23rem;
     --fns-default-up-6-8:6.84rem;
     --fns-up-8-96:8.96rem;
+    --fns-up-9-54:9.54rem;
     --fns-deafult-up-11-08:11.08rem;
 
 
@@ -197,9 +198,9 @@ body::-webkit-scrollbar-thumb{
       background-clip: text;
       text-shadow: 0px -2px 10px var(--main-white);
 }
-.hook-txt-1 {
-    font-size: var(--fns-default-up4-2);
-}
+
+
+
 .hook-txt-2 {
     font-size: var(--fns-default-up-6-8);
 }

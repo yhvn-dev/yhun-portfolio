@@ -1,7 +1,7 @@
 import Meloniche_Logo from "../../../../assets/Images/meloniche_images/MELONICHE LOGO.png"
 import Meloniche_Front from "../../../../assets/Images/meloniche_images/Feed Overview.png"
 
-import { ProjectTemplate } from '../../../../components/project_template'
+import { Desktop_Template } from '../../../../components/project_template'
 
 function Meloniche() {
   return (
@@ -10,16 +10,17 @@ function Meloniche() {
        overflow-hidden border-8 border-[var(--metal-dark1)] rounded-2xl
        bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] cursor-pointer'>
 
-          <ProjectTemplate
-                     Project_Logo={<img className="w-12 h-8" src={Meloniche_Logo}/>} 
-                     Project_Name={<p className="MELONICHE_TEXT">MELONICHE</p>} 
-                     Project_Img={Meloniche_Front}
-                     defaultValue={"heartelect.com/ptrs"}C
-                     Project_Descr={<p>Description</p>}
-                     Tech_Stack={<p>Tech Stack</p>}
-                    /> 
 
-        
+    <Desktop_Template
+            Project_Logo={<img className="w-20 h-10 " src={Meloniche_Logo}/>} 
+            Project_Name={<p className="MELONICHE_TEXT">MELONICHE</p>}
+            Project_Img={Meloniche_Front}
+            defaultValue={"Melonciche"}
+            Project_Descr={<p>Description</p>}
+            Tech_Stack={<p>Tech Stack</p>}
+          /> 
+
+    
     </main >
   )
 }

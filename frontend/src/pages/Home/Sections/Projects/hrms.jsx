@@ -11,7 +11,8 @@ function Hrms() {
     <main className="h-full flex flex-col items-center justify-start
        col-start-1 col-end-3 row-start-2 row-end-2
        overflow-hidden border-8 border-[var(--metal-dark1)] rounded-2xl
-       bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] cursor-pointer">
+       bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] cursor-pointer 
+       shadow-[0px_14px_5px_1px] shadow-black">
  
         <ProjectTemplate
            Project_Logo={<img className="w-18 h-10" src={HRMS_Logo}/>} 

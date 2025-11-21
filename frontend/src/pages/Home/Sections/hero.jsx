@@ -1,5 +1,6 @@
-
 import {useScrollAnimation} from "../../../hooks/animations";
+
+
 function Hero() {
   
     useScrollAnimation("main_wrapper")
@@ -12,54 +13,52 @@ function Hero() {
         col-start-1 col-end-1 row-start-1 row-end-2">
 
             {/* HERO BACKDROP */}
-           <div className="hero-bd relative center  col-start-1 col-end-4 row-start-1 row-end-4 l ">                 
-                <div className="center bd_lights absolute   
-                bg-[var(--metal-dark5)] shadow-[50px_0px_10000px_2px_gray,-50px_0px_10000px_2px_gray]
+           <div className="z-[5rem] hero-bd relative center col-start-1 col-end-4 row-start-1 row-end-4 l ">                 
+                <div className="center  absolute   
+                shadow-[50px_0px_10000px_2px_gray,-50px_0px_10000px_2px_gray]
                     top-[30%] rounded-br-full rounded-bl-full h-[50%] w-[50%]">          
                 </div>
-            </div>            
+            </div>   
+    
+            <div className="sections col-start-1 col-end-4 row-start-1 row-end-4  backdrop-blur-[50px]">
+                    
+                {/* MAIN BOX */}
+                <main className="hero-main-box flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 
+                    center bg-[var(--metal-dark5)] border-r-5 border-l-5 border-t-5 border-[var(--metal-dark2)] shadow-[0px_10px_5px_0px_rgba(0,0,0,0.8)]
+                    h-full w-full rounded-2xl overflow-hidden">
+                
+                        <div className="box-header w-full h-[3rem] border-[1px] border-[var(--dark-variant)]
+                            flex justify-center items-center">
+                            <ul className="flex items-center justify-start w-full h-full 
+                            px-4  rounded-[10px]">
+                                <div className="circ w-[0.8rem] h-[0.8rem] rounded-full
+                                bg-red-500 mx-1"></div>
+                                <div className="circ w-[0.8rem] h-[0.8rem] rounded-full
+                                bg-orange-500 mx-1"></div>
+                                <div className="circ w-[0.8rem] h-[0.8rem] rounded-full
+                                bg-green-500 mx-1" ></div>
+                            </ul>
 
-            {/* MAIN BOX */}
-          <main className="hero-main-box z-10 flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 
-            center bg-[var(--metal-dark5)] border-4  border-[var(--metal-dark2)]  h-full w-full rounded-2xl overflow-hidden">
+                        </div>                
+
+                        <div className="flex column flex-col items-center center h-full  w-full">
         
-                <div className="box-header w-full h-[3rem] border-[1px] border-[var(--dark-variant)]
-                    flex justify-center items-center">
+                            <div className="w-full  flex-col flex items-start justify-start px-4 py-16 ">                     
+                                <p className="hook-txt text-[7rem] text-start w-full center">HI I'M JHUN</p>
+                                <p className=" text-start w-full text-[var(--metal-dark4)]  mx-4">Full-Stack Web Developer </p>  
+                                <p className=" text-start w-full text-[var(--metal-dark4)] text-xs mx-4"> Building Scalable & Responsive Web Applications</p>                                   
+                            </div>
 
-                    <ul className="flex items-center justify-start w-full h-full 
-                    px-4  rounded-[10px]">
-                        <div className="circ w-[0.8rem] h-[0.8rem] rounded-full
-                         bg-red-500 mx-1"></div>
-                        <div className="circ w-[0.8rem] h-[0.8rem] rounded-full
-                         bg-orange-500 mx-1"></div>
-                        <div className="circ w-[0.8rem] h-[0.8rem] rounded-full
-                         bg-green-500 mx-1" ></div>
-                    </ul>
+                            <div className="flex items-end justify-center flex-col h-[50%] w-full p-4 ">
+                                    <i  className="text-[var(--metal-dark4)] text-sm">College Student At Sariaya, Quezon Philippines</i>
+                                    <i  className="text-[var(--metal-dark4)] text-sm">jhunguidef@gmail.com</i>         
+                            </div>
 
-                </div>                
+                        </div>
+                    
+                    </main> 
 
-                <div className="flex column flex-col items-center center h-full p-4">
-
-            
-                    <div className="w-full h-full flex-col flex items-start justify-start p-4 ">                     
-                        <p className="hook-txt hook-txt-1  px-12 py-8
-                        flex justify-end align-start w-full">
-                            I SHAPE DIGITAL SPACES     
-                        </p>
-                        <p className="hook-txt text-3xl 
-                        flex items-center justify-end text-[var(--metal-dark4)] px-12 w-[100%] ">
-                            with precision and clarity
-                        </p>                             
-                    </div>
-
-                    <div className="flex items-start justify-center flex-col h-[50%] w-full p-4">
-                            <i  className="text-[var(--metal-dark4)] text-sm">College Student At Sariaya, Quezon Philippines</i>
-                            <i  className="text-[var(--metal-dark4)] text-sm">jhunguidef@gmail.com</i>         
-                    </div>
-
-                </div>
-              
-            </main> 
+                 </div>
     
         </section>
       

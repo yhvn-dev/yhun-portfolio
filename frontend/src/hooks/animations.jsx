@@ -214,7 +214,7 @@ export function TechStackAnimation() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 h-full ">
+    <div className="flex flex-col items-center justify-center p-4 h-[80%]">
 
       <div
         ref={containerRef}
@@ -232,7 +232,7 @@ export function TechStackAnimation() {
                   src={item.src}
                   alt={item.label}
                   className="w-12 h-auto p-2 bg-[var(--moon-phases-e)] rounded-2xl  transition-all duration-300 hover:scale-110"/>
-                <span className="text-xs mt-2 font-medium transition-colors duration-300 hover:text-white">
+                <span className="text-xs text-[var(--white-blple)] mt-2 font-medium transition-colors duration-300 hover:text-white">
                   {item.label}
                 </span>
               </div>
@@ -250,7 +250,7 @@ export function TechStackAnimation() {
                   alt={item.label}
                   className="w-12 h-auto p-2 bg-[var(--moon-phases-e)] rounded-2xl transition-all duration-300 hover:scale-110"
                 />
-                <span className="text-xs mt-2 font-medium transition-colors duration-300 hover:text-white">
+                <span className="text-xs text-[var(--white-blple)] mt-2 font-medium transition-colors duration-300 hover:text-white">
                   {item.label}
                 </span>
               </div>
@@ -309,14 +309,14 @@ export function NameAnimation() {
     <div
       ref={NameContainerRef}
       className="relative flex items-center justify-center w-full h-full overflow-hidden rounded-[10px] 
-      col-start-1 col-end-4 row-start-2 row-end-2"
-    >
+      col-start-1 col-end-4 row-start-2 row-end-2">
+
       <div
         ref={NameContentRef}
-        className="flex items-center justify-center gap-8 min-w-max "
-      >
+        className="flex items-center justify-center gap-8 min-w-max ">
+
         {/* Batch items */}
-        {[...Array(4)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <div
             key={i}
             ref={i === 0 ? firstBatchRef : null}
@@ -324,7 +324,7 @@ export function NameAnimation() {
           >
             <img
               src={Jhvn}
-              className="w-[40vw] max-w-[180px] h-auto object-contain"
+              className="w-100 max-w-[180px] h-auto object-contain mx-24"
               alt="Jhvn"
             />
             <p className="JHVN-TEXT text-white text-[16.08rem] leading-none whitespace-nowrap">
