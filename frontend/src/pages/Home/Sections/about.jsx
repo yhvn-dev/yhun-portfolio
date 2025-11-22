@@ -10,13 +10,15 @@ function About() {
   const { stats } = useGithub();
       
   return (
-    <section className="bg-transparent sections column col-start-1 col-end-2 row-start-2 row-end-2 w-full">
+    <section className="sections column col-start-1 col-end-2 row-start-2 row-end-2 
+    ">
    
       <GithubStats username="yhvn-dev"/>
       
-      
       {/* MAIN BOX   */}
-      <main className="bg-transparent flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
+      <main className="flex flex-col items-center justify-start 
+      col-start-2 col-end-2 row-start-2 row-end-3 h-full 
+      w-full rounded-2xl p-1  ">
 
         {/* Title */}
         <div className="center w-full h-[20%]">
@@ -108,18 +110,17 @@ function About() {
           <div className="flex items-start justify-start p-4 
           col-start-4 col-end-11 row-start-7 row-end-11 border-2 border-[var(--metal-dark2)] 
           rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)]">
-
-            Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
-            web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
-            I also work with other technologies such as PHP,Laravel and Python and had experience using Java
-            and Visual Basic.I started out using PHP and other langauges where I learned about the fundamentals of basic web
-            development. Over time, I shifted my focuses to the PERN Stack because I enjoy creating modern,
-            fast, scalable and high performing web applications. My experiences using these technologies gave
-            me a sense of stabilty and commitment to modern web development, enhance my understanding of building 
-            dynamic web applications. Beyod my current stack, my background as a developer also strengthen 
-            my adaptability ---- allowing me to learn and work with different technologies in order to build not just web applications
-            but also desktop and embeded systems when needed. 
-
+              <p className="text-sm">
+                  Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
+                web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
+                I also work with other technologies such as PHP,Laravel and Python and had experience using Java
+                and Visual Basic.I started out using PHP and other langauges where I learned about the fundamentals of basic web
+                development. Over time, I shifted my focuses to the PERN Stack because I enjoy creating modern,
+                fast, scalable and high performing web applications. My experiences using these technologies gave
+                me a sense of stabilty and commitment to modern web development, enhance my understanding of building 
+                dynamic web applications. Beyod my current stack, my background as a developer also strengthen 
+                my adaptability ---- allowing me to learn and work with different technologies.
+              </p>          
           </div>
           <div className="col-start-1 col-end-4 row-start-7 row-end-9
           border-2 border-[var(--metal-dark2)] rounded-[10px] 

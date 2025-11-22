@@ -10,17 +10,10 @@ function Hero() {
     return (
         <>
         <section className="sections w-full hero 
-        col-start-1 col-end-1 row-start-1 row-end-2">
+        col-start-1 col-end-1 row-start-1 row-end-2 relative ">
 
-            {/* HERO BACKDROP */}
-           <div className="z-[5rem] hero-bd relative center col-start-1 col-end-4 row-start-1 row-end-4 l ">                 
-                <div className="center  absolute   
-                shadow-[50px_0px_10000px_2px_gray,-50px_0px_10000px_2px_gray]
-                    top-[30%] rounded-br-full rounded-bl-full h-[50%] w-[50%]">          
-                </div>
-            </div>   
-    
-            <div className="sections col-start-1 col-end-4 row-start-1 row-end-4  backdrop-blur-[50px]">
+         
+            <div className="sections col-start-1 col-end-4 row-start-1 row-end-4  backdrop-blur-[200px]">
                     
                 {/* MAIN BOX */}
                 <main className="hero-main-box flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 

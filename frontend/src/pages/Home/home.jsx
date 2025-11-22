@@ -10,10 +10,9 @@ import "./../../App.css"
 import "./home.css"
 
 function Home(){
-
     return(
         <div className="wrapper grid 
-        grid-cols-[1fr] grid-rows-[100vh_200vh_150vh_1000vh_100vh_100vh] bg-[var(--metal-dark5)] ">
+        grid-cols-[1fr] grid-rows-[auto_auto_150vh_auto_auto_auto] bg-[var(--metal-dark5)]">
             <Header></Header>
             <Sidebar></Sidebar>
             <Hero></Hero>

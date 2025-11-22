@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Search, ChevronLeft, ChevronRight, RotateCw, Home,Minimize,Minimize2,Maximize2,X} from 'lucide-react';
 
-export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultValue,Project_Descr,Tech_Stack}){
+export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultValue,ProjectName2,Project_Descr,Tech_Stack}){
     const [activeTab, setActiveTab] = useState(0);
   
     const tabs = [
@@ -23,7 +23,7 @@ export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultVa
 
       {/* Browser Frame with Shiny Border */}
       <div className="flex flex-col items-center justify-start h-full w-[80%] rounded-2xl overflow-hidden relative 
-      border-4 border-[var(--metal-dark1)]">
+      border-4 border-[var(--metal-dark1)] ">
 
         {/* Tab Bar (Row 1) */}
         <div className="flex items-center justify-start w-full h-10 bg-gradient-to-b from-[#2d2d2d] to-[#252525] border-b border-gray-700/50">
@@ -114,13 +114,13 @@ export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultVa
 
         {/* Project Description Section */}
       <div className="flex flex-col items-start justify-start w-[80%] bg-transparent h-[70%] py-6 px-0 overflow-y-auto">
-          <h2 className="text-xl font-semibold text-white mb-3 bg-gradient-to-r bg-clip-text text-transparent">
-            Project Overview
+          <h2 className="text-xl font-semibold text-[var(--main-white)] mb-3">
+            {ProjectName2}
           </h2>
           <p className="text-sm text-gray-300 leading-relaxed mb-4">
             {Project_Descr}
           </p>
-          <div>
+          <div className="center-l py-4  w-full">
             {Tech_Stack}
           </div>
       </div>
@@ -130,7 +130,7 @@ export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultVa
 
 
 
-export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultValue,Project_Descr,Tech_Stack}){
+export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultValue,ProjectName2,Project_Descr,Tech_Stack}){
     const [activeView, setActiveView] = useState('dashboard');
     const [activeFile, setActiveFile] = useState('overview');
   
@@ -177,8 +177,6 @@ export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultV
             </button>
           </div>
         </div>
-
-    
      
       
         {/* Content Area with Sidebar */}
@@ -231,16 +229,13 @@ export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultV
               ))}
             </nav>
 
-
         </div>
-  
-      
       </div>
 
       {/* Project Description Section */}
       <div className="flex flex-col items-start justify-start w-[80%] bg-transparent h-[70%] py-6 px-0 overflow-y-auto">
         <h2 className="text-xl font-semibold text-white mb-3">
-          Application Overview
+            {ProjectName2}
         </h2>
         <p className="text-sm text-gray-300 leading-relaxed mb-4">
           {Project_Descr}

@@ -47,7 +47,6 @@ export const Tech_Stack = [
     {src: NodeJS, label: "NodeJs"},
   ];
 
-  
 
 export const FrontEnd = [
    {src: Html, label: "HTML5"},
@@ -65,8 +64,8 @@ export const BackEnd = [
     {src: Php, label: "Php"},
     {src: Laravel, label: "Laravel"},
     {src: Python, label: "Python"},
-    {src: Visual_Basic, label: "Visual Basic"}, 
-    {src: Java, label: "Java"},
+    {src: Visual_Basic, label: "VisualBasic"}, 
+    
 ]
 
 export const Tools = [

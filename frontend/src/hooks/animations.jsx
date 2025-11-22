@@ -320,13 +320,13 @@ export function NameAnimation() {
           <div
             key={i}
             ref={i === 0 ? firstBatchRef : null}
-            className="flex items-center justify-center text-[16.08rem]  w-auto h-auto rounded-[10px] shrink-0"
+            className="flex items-center justify-center text-[16.08rem]  w-auto h-auto rounded-[10px] shrink-0 "
           >
             <img
               src={Jhvn}
-              className="w-100 max-w-[180px] h-auto object-contain mx-24"
+              className="w-100 max-w-[180px] h-auto object-contain mx-24 rounded-2xl mb-4"
               alt="Jhvn"
-            />
+            />  
             <p className="JHVN-TEXT text-white text-[16.08rem] leading-none whitespace-nowrap">
               JHVN
             </p>

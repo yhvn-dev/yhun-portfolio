@@ -98,9 +98,7 @@
     --szd-6-8:6.84rem;
     --sz-8-96:8.96rem;
     --szd-11-08:11.08rem;
-
 }
-
 
 @font-face {
   font-family: "Monument Text";
@@ -115,9 +113,6 @@
   font-family: "Inter";
   src: url("./assets/Fonts/Inter_18pt-Regular.ttf");
 }
-
-
-
 
 *{
   font-family: "Inter";
@@ -165,7 +160,7 @@ svg{
   @apply flex flex-col items-start justify-start;
 }
 .sections{
-  @apply grid grid-cols-[1.5fr_7fr_1.5fr] grid-rows-[1fr_8fr_1fr] h-full w-full;
+  @apply grid grid-cols-[1.5fr_7fr_1.5fr] grid-rows-[1fr_9fr_1fr] h-full w-full;
 }
 
 
