@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Search, ChevronLeft, ChevronRight, RotateCw, Home,Minimize,Minimize2,Maximize2,X} from 'lucide-react';
 
-export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultValue,ProjectName2,Project_Descr,Tech_Stack}){
+export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultValue,ProjectName2,Project_Descr,Tech_Stack,Resources}){
     const [activeTab, setActiveTab] = useState(0);
   
     const tabs = [
@@ -105,7 +105,7 @@ export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultVa
             ) : activeTab === 1 ? (
               <p className="text-white">Documentation</p>
             ) : (
-              <p className="text-white">Resources</p>
+              <div className="text-white center full  column">{Resources}</div>
           )}
         </div>
         
@@ -130,13 +130,12 @@ export function ProjectTemplate({Project_Logo,Project_Name,Project_Img,defaultVa
 
 
 
-export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultValue,ProjectName2,Project_Descr,Tech_Stack}){
+export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultValue,ProjectName2,Resources,Project_Descr,Tech_Stack}){
     const [activeView, setActiveView] = useState('dashboard');
-    const [activeFile, setActiveFile] = useState('overview');
-  
     const menuItems = [
         { id: 'dashboard', label: 'Dashboard' },
-        { id: 'documentation', label: 'Documentation' }
+        { id: 'documentation', label: 'Documentation' },
+        { id: 'resources', label: 'Resources' }
     ];
 
     return(
@@ -183,7 +182,7 @@ export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultV
         <div className="flex flex-col items-center justify-end w-full h-full bg-[#1a1a1a] ">
 
 
-        <div className="flex-1 flex items-center justify-center overflow-hidden">
+          <div className="flex-1 flex items-center justify-center overflow-hidden">
             {activeView === 'dashboard' ? (
               <img
                 src={Project_Img}
@@ -200,14 +199,16 @@ export function Desktop_Template({Project_Logo,Project_Name,Project_Img,defaultV
                 <p className="text-white text-lg mb-2">📄 Documentation</p>
                 <p className="text-gray-400 text-sm">Technical documentation and guides</p>
               </div>
+            ) : activeView === "resources" ? (
+                <div className="text-white center full  column">{Resources}</div>
             ) : (
-              <div className="text-center p-8">
-                <p className="text-white text-lg mb-2">
-                  📋 {files.find(f => f.id === activeFile)?.label}
-                </p>
-                <p className="text-gray-400 text-sm">File content viewer</p>
-              </div>
+              <>
+              </>
             )}
+
+
+
+
             </div> 
 
               {/* Bottom Taskbar */}

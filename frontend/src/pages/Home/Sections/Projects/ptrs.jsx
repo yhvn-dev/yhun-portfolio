@@ -2,6 +2,8 @@ import PTRS_Logo from "../../../../assets/Images/ptrs_images/HEART ELECT FULL.pn
 import PTRS_Db from "../../../../assets/Images/ptrs_images/ptrs 2.png"
 import { Desktop_Template } from "../../../../components/project_template"
 import {FrontEnd,BackEnd,Database} from "../../../../data/image_resources"
+import Github from "../../../../assets/Icons/GITHUB.png"
+
 function Ptrs() {
   return (
     
@@ -14,6 +16,12 @@ function Ptrs() {
              Project_Name="Heart Elect"
              Project_Img={PTRS_Db}
              ProjectName2={"Heart Elect - Political Track Record System"}
+             Resources={<>
+                <a href="https://github.com/yhvn-dev/Political-Track-Record-System.git" target="blank">
+                  <img src={Github} className="w-14 h-14 p-2 bg-[var(--main-white)] rounded-2xl"/>
+               </a>                    
+                <p className="text-sm my-4 text-[var(--main-white)]">View On Github</p>
+             </>}
              defaultValue={"heartelect.com/ptrs"}
              Project_Descr={
              <p>

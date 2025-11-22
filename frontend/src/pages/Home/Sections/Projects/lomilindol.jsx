@@ -2,6 +2,7 @@
 import { ProjectTemplate } from '../../../../components/project_template';
 import { BackEnd,FrontEnd,Database } from '../../../../data/image_resources';
 import  LOMINLINDOL_Frontpage from "../../../../assets/Images/lomilindol/Settings Dark A.png"
+import Github from "../../../../assets/Icons/GITHUB.png"
 
 function Lomilindol() {
   return (
@@ -16,6 +17,13 @@ function Lomilindol() {
           Project_Img={LOMINLINDOL_Frontpage}
           ProjectName2={"LOMILINDOL - An Earthquake Monitoring System With Real Time Alerts"}
           defaultValue={"lomilindol.monitor.com"}
+          Resources={ <>
+                      <a href="https://github.com/ianpurifying/quake.git" target="blank">
+                        <img src={Github} className="w-14 h-14 p-2 bg-[var(--main-white)] rounded-2xl"/>
+                      </a>           
+                      <p className="text-sm my-4 text-[var(--main-white)]">View On Github</p>
+                    </>
+                          }
           Project_Descr={
           <p>
             Awarded 3rd Place in the openIT hackathon on November,20,2025.

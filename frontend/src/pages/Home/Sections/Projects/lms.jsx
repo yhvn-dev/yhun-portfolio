@@ -1,6 +1,8 @@
 import VB2 from "../../../../assets/Images/lms_images/[VB 2]Dashboard.png"
 import { Desktop_Template } from "../../../../components/project_template"
 import { BackEnd,Database } from "../../../../data/image_resources"
+import Github from "../../../../assets/Icons/GITHUB.png"
+
 
 function Lms() {
   return (
@@ -15,6 +17,14 @@ function Lms() {
              Project_Img={VB2}
              defaultValue={"heartelect.com/ptrs"}
              ProjectName2={"Celestial Catalog - Library Management System"}
+            Resources={
+              <>           
+                <a href="https://github.com/yhvn-dev/Celestial_Catalog.git" target="blank">
+                    <img src={Github} className="w-14 h-14 p-2 bg-[var(--main-white)] rounded-2xl"/>
+                  </a>             
+                  <p className="text-sm my-4 text-[var(--main-white)]">View On Github</p>                        
+              </>
+            }
              Project_Descr={           
               <>
                 A Desktop based Library Management application powered by VB.NET and MYSQL to simplify book organization, 

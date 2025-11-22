@@ -1,7 +1,7 @@
 import Meloniche_Logo from "../../../../assets/Images/meloniche_images/MELONICHE LOGO.png"
 import Meloniche_Front from "../../../../assets/Images/meloniche_images/Feed Overview.png"
-
 import { Desktop_Template } from '../../../../components/project_template'
+import Github from "../../../../assets/Icons/GITHUB.png"
 
 function Meloniche() {
   return (
@@ -16,6 +16,14 @@ function Meloniche() {
             Project_Name={<p className="MELONICHE_TEXT">MELONICHE</p>}
             Project_Img={Meloniche_Front}
             defaultValue={"Melonciche"}
+            Resources={
+                  <>
+                      <a href="https://github.com/yhvn-dev/Meloniche-Music-Player-.git" target="blank">
+                          <img src={Github} className="w-14 h-14 p-2 bg-[var(--main-white)] rounded-2xl"/>
+                       </a>             
+                       <p className="text-sm my-4 text-[var(--main-white)]">View On Github</p>
+                  </>
+                      }
             Project_Descr={<p>Description</p>}
             Tech_Stack={<p>Tech Stack</p>}
           /> 

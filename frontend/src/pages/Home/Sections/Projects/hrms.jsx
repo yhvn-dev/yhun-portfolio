@@ -2,7 +2,7 @@ import HRMS_Logo from "../../../../assets/Images/hrms_images/NodeLab LOGO 1.png"
 import HRMS_Front from "../../../../assets/Images/hrms_images/d-hrms-front-1.png"
 import { ProjectTemplate } from '../../../../components/project_template';
 import {FrontEnd, BackEnd, Database } from "../../../../data/image_resources";
-
+import Github from "../../../../assets/Icons/GITHUB.png"
 
 function Hrms() {
   
@@ -19,6 +19,15 @@ function Hrms() {
            Project_Name={<p className="NODELAB_TEXT">NODELAB</p>} 
            Project_Img={HRMS_Front}
            defaultValue={"nodelab.hrms"}
+              Resources={
+                <>
+                <a href="https://github.com/yhvn-dev/Human-Resource-Management-System-HRMS-.git" target="blank">
+                  <img src={Github} className="w-14 h-14 p-2 bg-[var(--main-white)] rounded-2xl"/>
+                </a>                    
+                <p className="text-sm my-4 text-[var(--main-white)]">View On Github</p>
+
+                 </>
+              }
            Project_Descr={<p>A Web based Human Resource Management System, powered by HTML,CSS,Javascript, Php and MYSQL. 
            Designed to make recruitment, employee management, and HR workflows more efficient. 
            It allows HR staff to manage job postings, track applicants, and maintain employee records, while providing employees and job seekers with an organized, user-friendly platform for accessing information. Built to reduce manual work, improve accuracy, and support efficient HR operations in the digital age. </p>}

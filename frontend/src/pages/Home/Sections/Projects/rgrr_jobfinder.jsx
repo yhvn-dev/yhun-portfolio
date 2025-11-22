@@ -5,7 +5,7 @@ import { ProjectTemplate } from '../../../../components/project_template';
 import { BackEnd } from "../../../../data/image_resources";
 import { FrontEnd } from "../../../../data/image_resources";
 import { Database } from "../../../../data/image_resources"
-
+import Github  from "../../../../assets/Icons/GITHUB.png"
 
 function Rgrr_jobfinder() {
   return (
@@ -19,6 +19,13 @@ function Rgrr_jobfinder() {
           Project_Name={<p>RGRR Internship Hub</p>} 
           Project_Img={RGRR_Front}
           defaultValue={"rgrr.internship.com"}
+          Resources={ <>
+              <a href="https://github.com/rgrr-webmaker/RGRR-Internship-Hub-jhun.git" target="blank">
+                <img src={Github} className="w-14 h-14 p-2 bg-[var(--main-white)] rounded-2xl"/>
+              </a>           
+              <p className="text-sm my-4 text-[var(--main-white)]">View On Github</p>
+            </>
+            }
           Project_Descr={<p>
             Built with TailwindCSS, Laravel, and MySQL, this Student Job Internship Hiring System was developed for RGRR Webmaker to streamline the internship application process. The platform allows students to browse available internship opportunities offered by the company, view detailed job descriptions, and submit their applications through a simplified and user-friendly interface. Administrators can manage job postings, review applicants, and maintain records efficiently, making the system a practical tool for connecting students with real industry experience.
           </p>}
