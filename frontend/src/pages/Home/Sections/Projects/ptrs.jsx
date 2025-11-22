@@ -7,7 +7,7 @@ import Github from "../../../../assets/Icons/GITHUB.png"
 function Ptrs() {
   return (
     
-    <main className="h-full flex flex-col items-center justify-start
+    <main className="h-full flex flex-col items-center justify-evenly
          col-start-1 col-end-3 row-start-5 row-end-5
          overflow-hidden border-8 border-[var(--metal-dark1)] rounded-2xl
          bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] cursor-pointer">
@@ -35,30 +35,37 @@ function Ptrs() {
              Tech_Stack={
                 <div className="flex gap-8">
                       {BackEnd.filter(item => item.label === "Python").map((item, index) => (
-                      <img 
-                        key={index} 
-                        src={item.src} 
-                        className="w-10 h-10" 
-                        alt={item.label}
-                      />
+                        <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                          <img 
+                            key={index} 
+                            src={item.src} 
+                            className="w-6 h-6" 
+                            alt={item.label}
+                          />
+                        </div>        
                     ))}
-                          {FrontEnd.filter(item => item.label === "CustomTkinter").map((item, index) => (
-                      <img 
-                        key={index} 
-                        src={item.src} 
-                        className="w-8 h-8" 
-                        alt={item.label}
-                      />
+                      {FrontEnd.filter(item => item.label === "CustomTkinter").map((item, index) => (
+                      <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                        <img 
+                          key={index} 
+                          src={item.src} 
+                          className="w-6 h-6" 
+                          alt={item.label}
+                        />
+                      </div>        
                     ))}
                   
                       {Database.filter(item => item.label === "MySQL").map((item, index) => (
-                      <img 
-                        key={index} 
-                        src={item.src} 
-                        className="w-10 h-10" 
-                        alt={item.label}
-                      />
+                        <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                          <img 
+                            key={index} 
+                            src={item.src} 
+                            className="w-6 h-6" 
+                            alt={item.label}
+                          />
+                       </div>        
                     ))}
+                    
                 </div>            
              }
             /> 

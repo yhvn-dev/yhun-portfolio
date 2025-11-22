@@ -12,18 +12,21 @@ import "./home.css"
 function Home(){
     return(
         <div className="wrapper grid 
-        grid-cols-[1fr] grid-rows-[auto_auto_150vh_auto_auto_auto] bg-[var(--metal-dark5)]">
-            <Header></Header>
-            <Sidebar></Sidebar>
-            <Hero></Hero>
-            <About></About>
-            <Skills_Tech></Skills_Tech>  
-            <Projects></Projects>
-            <Name_section></Name_section>
-            <Footer/>
+        grid-cols-1 
+        grid-rows-[100vh_auto_150vh_auto_auto_auto_auto]
+        bg-[var(--metal-dark5)]
+        w-full
+        overflow-x-hidden">             
+            <Header />
+            <Sidebar />     
+            <Hero />
+            <About />
+            <Skills_Tech />
+            <Projects />
+            <Name_section />
+            <Footer />
         </div>
     )
-
 }
 
 export default Home

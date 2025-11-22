@@ -11,12 +11,11 @@ function Hero() {
         <>
         <section className="sections w-full hero 
         col-start-1 col-end-1 row-start-1 row-end-2 relative ">
-
-         
+      
             <div className="sections col-start-1 col-end-4 row-start-1 row-end-4  backdrop-blur-[200px]">
                     
                 {/* MAIN BOX */}
-                <main className="hero-main-box flex flex-col items-center justify-start col-start-2 col-end-2 row-start-2 row-end-3 
+                <main className="hero-main-box flex flex-col items-center justify-start col-start-1 col-span-full md:col-start-2 md:col-end-2 row-start-2 row-end-3 
                     center bg-[var(--metal-dark5)] border-r-5 border-l-5 border-t-5 border-[var(--metal-dark2)] shadow-[0px_10px_5px_0px_rgba(0,0,0,0.8)]
                     h-full w-full rounded-2xl overflow-hidden">
                 
@@ -39,7 +38,9 @@ function Hero() {
                             <div className="w-full  flex-col flex items-start justify-start px-4 py-16 ">                     
                                 <p className="hook-txt text-[7rem] text-start w-full center">HI I'M JHUN</p>
                                 <p className=" text-start w-full text-[var(--metal-dark4)]  mx-4">Full-Stack Web Developer </p>  
-                                <p className=" text-start w-full text-[var(--metal-dark4)] text-xs mx-4"> Building Scalable & Responsive Web Applications</p>                                   
+                                <p className=" text-start w-full text-[var(--metal-dark4)] text-xs mx-4"> Building Scalable & Responsive Web Applications <br></br>
+                                    Shaping the way users engage with the web, one interface at a time
+                                </p>                                   
                             </div>
 
                             <div className="flex items-end justify-center flex-col h-[50%] w-full p-4 ">

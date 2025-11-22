@@ -17,7 +17,7 @@ function About() {
       
       {/* MAIN BOX   */}
       <main className="flex flex-col items-center justify-start 
-      col-start-2 col-end-2 row-start-2 row-end-3 h-full 
+      col-start-1 col-span-full md:col-start-2 md:col-end-2 row-start-2 row-end-3 h-full 
       w-full rounded-2xl p-1  ">
 
         {/* Title */}
@@ -26,11 +26,13 @@ function About() {
         </div>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-10 grid-rows-10 w-full h-[80%] rounded-[10px] gap-4">
-         
-
+        <div className="grid grid-cols-1 md:grid-cols-10 md:grid-rows-10 w-full md:h-[100%] rounded-[10px] gap-4">
+        
             {/* CARD */}
-          <div className="relative p-4 gap-4 grid grid-rows-10 grid-cols-1 col-start-1 col-end-8 row-start-1 row-end-7 border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black] overflow-hidden">
+          <div className="relative p-4 gap-4 grid grid-rows-10 grid-cols-1 
+          col-start-1 col-span-full
+          md:col-start-1 md:col-end-9 md:row-start-1 md:row-end-5
+          border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black] overflow-hidden">
             {/* Header Background */}
 
             <header className="relative center w-full h-full rounded-[10px] 
@@ -91,25 +93,38 @@ function About() {
 
 
           {/* TECH STACK  ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== */}
-          <div className="flex flex-col items-center justify-start col-start-8 col-end-11 row-start-1 row-end-7
-          border-2 border-[var(--metal-dark2)] rounded-[10px] 
-          shadow-[5px_5px_20px_1px_black] p-4 gap-4">
+              <div className="flex flex-col items-center justify-center
+            col-start-1 col-span-full row-auto 
+            md:col-start-9 md:col-span-full md:row-start-1 md:row-end-5
+            border-2 border-[var(--metal-dark2)] rounded-[10px] 
+            shadow-[5px_5px_20px_1px_black] p-4
+            w-full md:max-w-[380px] md:mx-auto">  {/* <-- add these */}
+
 
             <div className="center w-full p-4 bg-[var(--dark-variant)] 
             rounded-[10px] border-2 border-[var(--metal-dark2)] 
             shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]">
               Tech Stack
             </div>
-
             <Animation.TechStackAnimation/>
-              
+            
           </div>
 
+          {/* Tags */}
+          <div className="col-start-1 col-span-full row-start-3 row-end-8
+          md:col-start-1 md:col-end-4 md:row-start-5  md:row-end-8
+          border-2 border-[var(--metal-dark2)] rounded-[10px] 
+          shadow-[5px_5px_20px_1px_black] p-4">
+            tags
+          </div>
                    
           {/* DESCRIPTION */}
-          <div className="flex items-start justify-start p-4 
-          col-start-4 col-end-11 row-start-7 row-end-11 border-2 border-[var(--metal-dark2)] 
-          rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)]">
+          <div className="description flex items-start justify-start p-4 
+          col-start-1 col-span-full row-start-8
+          md:col-start-4 md:col-end-11 md:row-start-5 md:row-end-8 
+          border-2 border-[var(--metal-dark2)] 
+          rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)] overflow-y-auto
+          min-h-[200px]">
               <p className="text-sm">
                   Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
                 web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
@@ -122,15 +137,12 @@ function About() {
                 my adaptability ---- allowing me to learn and work with different technologies.
               </p>          
           </div>
-          <div className="col-start-1 col-end-4 row-start-7 row-end-9
-          border-2 border-[var(--metal-dark2)] rounded-[10px] 
-          shadow-[5px_5px_20px_1px_black] ">
-            tags
-          </div>
 
           
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 justify-end w-full h-full col-start-1 col-end-4 
-          row-start-9 row-end-11 rounded-[10px]">
+          <div className="flex md:grid grid-cols-2 grid-rows-2 gap-4 justify-end w-full h-full 
+          col-start-1 col-span-full row-auto
+          md:col-start-1 md:col-end-4 md:row-start-9 md:row-end-8 
+          rounded-[10px]">
               <div className="center h-full w-full rounded-[10px] ">
                 <a className="column h-full w-full ">
                   <FileUser fill="var(--main-white)" />

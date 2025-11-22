@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef,useState } from "react";
 import { Social_Media, Tech_Stack } from "../data/image_resources";
 import Jhvn from "../assets/Images/jhvn_1_LOGO.png"
 
@@ -148,25 +148,28 @@ export function SociaMediaAnimation() {
 
 
 
-
 export function TechStackAnimation() {
   const containerRef = useRef(null);
   const contentRef = useRef(null);
   const firstBatchRef = useRef(null);
   const isPausedRef = useRef(false);
 
-  // console.log("Before render:", containerRef.current);
-  // console.log("Before render:", contentRef.current);
-  // console.log("Before render:", firstBatchRef.current);
-  // console.log("Before render:", isPausedRef.current);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect small screen
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
     const content = contentRef.current;
     const firstBatch = firstBatchRef.current;
-
     if (!container || !content || !firstBatch) return;
- 
+
     let scrollAmount = 0;
     let animationFrame;
     const speed = 0.5;
@@ -175,63 +178,59 @@ export function TechStackAnimation() {
       if (!isPausedRef.current) {
         scrollAmount += speed;
 
-        // Get the exact height of one batch
-        const resetPoint = firstBatch.offsetHeight;
+        // reset based on axis
+        const resetPoint = isMobile ? firstBatch.offsetWidth : firstBatch.offsetHeight;
 
-        // Reset seamlessly when we've scrolled one full batch
-        if (scrollAmount >= resetPoint) {
-          scrollAmount = scrollAmount - resetPoint;
-        }
+        if (scrollAmount >= resetPoint) scrollAmount -= resetPoint;
 
-        content.style.transform = `translateY(-${scrollAmount}px)`;
+        content.style.transform = isMobile
+          ? `translateX(-${scrollAmount}px)`
+          : `translateY(-${scrollAmount}px)`;
       }
-      
+
       animationFrame = requestAnimationFrame(scroll);
     };
 
     animationFrame = requestAnimationFrame(scroll);
 
-    const handleMouseEnter = () => {
-      isPausedRef.current = true;
-    };
+    const handleMouseEnter = () => (isPausedRef.current = true);
+    const handleMouseLeave = () => (isPausedRef.current = false);
 
-    const handleMouseLeave = () => {
-      isPausedRef.current = false;
-    };
-
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
+    container.addEventListener("mouseenter", handleMouseEnter);
+    container.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
       cancelAnimationFrame(animationFrame);
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
+      container.removeEventListener("mouseenter", handleMouseEnter);
+      container.removeEventListener("mouseleave", handleMouseLeave);
     };
-    
-    
-  }, []);
-
-
+  }, [isMobile]);
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 h-[80%]">
-
+    <div className="flex items-center justify-center w-full h-full">
       <div
         ref={containerRef}
-        className="relative w-full max-w-md h-[380px] rounded-xl overflow-hidden ">
-        <div ref={contentRef} className="flex flex-col items-center">
-
+        className={`relative center w-full max-w-full md:max-w-[380px] h-[200px] md:h-[300px] rounded-xl overflow-hidden `}
+      >
+        <div
+          ref={contentRef}
+          className={`flex ${isMobile ? "flex-row items-center justify-center" : "flex-col"} items-center `}
+        >
           {/* First Batch */}
-          <div ref={firstBatchRef} className="flex flex-col items-center">
+          <div
+            ref={firstBatchRef}
+            className={`flex ${isMobile ? "flex-row items-center justify-center" : "flex-col"} items-center`}
+          >
             {Tech_Stack.map((item, idx) => (
               <div
                 key={`stack-1-${idx}`}
-                className="p-3 my-4 flex flex-col items-center justify-center"
+                className="p-3 my-2 mx-8 flex flex-col items-center justify-center"
               >
                 <img
                   src={item.src}
                   alt={item.label}
-                  className="w-12 h-auto p-2 bg-[var(--moon-phases-e)] rounded-2xl  transition-all duration-300 hover:scale-110"/>
+                  className="w-12 h-12 p-2 bg-[var(--moon-phases-e)] rounded-2xl transition-all duration-300 hover:scale-110"
+                />
                 <span className="text-xs text-[var(--white-blple)] mt-2 font-medium transition-colors duration-300 hover:text-white">
                   {item.label}
                 </span>
@@ -240,15 +239,16 @@ export function TechStackAnimation() {
           </div>
 
           {/* Second Batch (duplicate for seamless loop) */}
-          <div className="flex flex-col items-center">
+          <div className={`flex ${isMobile ? "flex-row" : "flex-col"} items-center`}>
             {Tech_Stack.map((item, idx) => (
               <div
                 key={`stack-2-${idx}`}
-                className="p-3 my-4 flex flex-col items-center justify-center ">
+                className="p-3 my-2 mx-8 flex flex-col items-center justify-center"
+              >
                 <img
                   src={item.src}
                   alt={item.label}
-                  className="w-12 h-auto p-2 bg-[var(--moon-phases-e)] rounded-2xl transition-all duration-300 hover:scale-110"
+                  className="w-12 h-12 p-2 bg-[var(--moon-phases-e)] rounded-2xl transition-all duration-300 hover:scale-110"
                 />
                 <span className="text-xs text-[var(--white-blple)] mt-2 font-medium transition-colors duration-300 hover:text-white">
                   {item.label}
@@ -260,8 +260,6 @@ export function TechStackAnimation() {
       </div>
     </div>
   );
-
-
 }
 
 
@@ -324,10 +322,10 @@ export function NameAnimation() {
           >
             <img
               src={Jhvn}
-              className="w-100 max-w-[180px] h-auto object-contain mx-24 rounded-2xl mb-4"
+              className="w-100 max-w-[180px] h-20 md:h-auto object-contain mx-24 rounded-2xl mb-4"
               alt="Jhvn"
             />  
-            <p className="JHVN-TEXT text-white text-[16.08rem] leading-none whitespace-nowrap">
+            <p className="text-6xl JHVN-TEXT text-white md:text-[16.08rem] leading-none whitespace-nowrap">
               JHVN
             </p>
           </div>

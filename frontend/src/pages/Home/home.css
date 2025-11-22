@@ -48,8 +48,6 @@
     --color-success-b: hsl(160,60%, 70%);
     --color-success-c:hsl(150, 80%, 80%);
  
-
-
     /* DARK */
     --dark-variant: hsl(220, 7%, 19%);
     --dark-variantb: hsl(0, 78%, 2%);
@@ -130,6 +128,10 @@
 .about-bg-header {
   background: linear-gradient(to right,var(--white-blple),white,var(--white-blple));
 }
+.project-label-bg-header {
+  background: linear-gradient(to right,var(--metal-dark5),var(--moon-phases-b),var(--metal-dark5));
+}
+
 
 .tech-label{
   @apply text-[var(--main-white)]
@@ -147,4 +149,8 @@
 }
 .HEART_ELECT_TEXT{
   font-family: "DM Sans";
+}
+
+.description::-webkit-scrollbar{
+  @apply bg-[var(--metal-dark5)]
 }
