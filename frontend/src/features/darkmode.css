@@ -188,6 +188,7 @@ body.dark .about_main_box{
     body.dark .bd-header{
         @apply bg-[var(--metal-dark4)];
     }
+    
 
     
 body.dark .tech-con {
@@ -212,13 +213,12 @@ body.dark .pr-label-bd-div{
     @apply bg-red-400;
 }
 
-body.dark .pr-main{
+body.dark .pr-main{ 
     @apply  bg-gradient-to-tr from-[var(--w1)] to-[var(--main-white)];
 }
 body.dark .pr-name{
     @apply text-[var(--main-white)];
 }
-
 body.dark .search-div {
     @apply  bg-[var(--main-white)];
 }

@@ -184,7 +184,7 @@ export function Desktop_Template({Project_Logo, Project_Name, Project_Img,     P
               <button
                 key={item.id}
                 onClick={() => setActiveView(item.id)}
-                className={`px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded text-xs transition-all ${
+                className={`desktop-icon px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded text-xs transition-all ${
                   activeView === item.id
                     ? 'text-[var(--ash1-lgray)] border-b-2 border-[var(--ash1-gray)]'
                     : 'text-gray-400 hover:text-white hover:bg-gray-700/30'
@@ -193,6 +193,7 @@ export function Desktop_Template({Project_Logo, Project_Name, Project_Img,     P
                 <div className="scale-75 sm:scale-90 md:scale-100">
                   {item.icon}
                 </div>
+                
               </button>
             ))}
           </nav>

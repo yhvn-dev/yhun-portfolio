@@ -35,7 +35,7 @@ function Lomilindol() {
           Tech_Stack={
             <div className="stack-div flex gap-8">
                 {FrontEnd.filter(item => item.label === "TailwindCss").map((item, index) => (
-                  <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
+                  <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
                     <img 
                       key={index} 
                       src={item.src} 

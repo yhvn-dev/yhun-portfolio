@@ -97,7 +97,7 @@ function Hrms() {
                  >
                    <img 
                      src={item.src} 
-                     className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" 
+                     className="w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6" 
                      alt={item.label}
                    />
                  </div>
@@ -114,7 +114,7 @@ function Hrms() {
                  >
                    <img 
                      src={item.src} 
-                     className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" 
+                     className="w-6 h-6 sm:w-6 sm:h-6 " 
                      alt={item.label}
                    />
                  </div>

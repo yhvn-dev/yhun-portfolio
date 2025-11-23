@@ -9,48 +9,45 @@ function Carousel() {
     { type: "image", name: "certifiacte", src: Certificate },
     { type: "image", name: "group", src: Hackathon },
     { type: "image", name: "solo", src: Hackahton2 },
-    { type: "video", name: "solo", src: VideoSample }
+    { type: "video", name: "vid", src: VideoSample }
   ];
 
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
   const videoRef = useRef(null);
 
-
-  
   const goNext = () => {
     setIndex((prev) => (prev + 1) % achievements_2.length);
   };
-    useEffect(() => {
-      clearTimeout(timeoutRef.current);
 
-      const current = achievements_2[index];
+  useEffect(() => {
+    clearTimeout(timeoutRef.current);
 
-      if (current.type === "image") {
-        timeoutRef.current = setTimeout(goNext, 5000);
-      } else if (current.type === "video") {
-        const video = videoRef.current;
-        if (video) {
-          const handleEnded = () => {
-            goNext(); // move to next slide when video ends
-          };
-          video.addEventListener("ended", handleEnded);
+    const current = achievements_2[index];
 
-          // start from beginning every time it becomes active
-          video.currentTime = 0;
-          video.play();
+    if (current.type === "image") {
+      timeoutRef.current = setTimeout(goNext, 5000);
+    } else if (current.type === "video") {
+      const video = videoRef.current;
+      if (video) {
+        const handleEnded = () => goNext();
+        video.addEventListener("ended", handleEnded);
 
-          return () => {
-            video.removeEventListener("ended", handleEnded);
-          };
-        }
+        video.currentTime = 0;
+        video.play();
+
+        return () => {
+          video.removeEventListener("ended", handleEnded);
+        };
       }
+    }
 
-      return () => clearTimeout(timeoutRef.current);
-    }, [index]);
+    return () => clearTimeout(timeoutRef.current);
+  }, [index]);
 
   return (
     <div className="relative overflow-hidden w-full h-full rounded-[10px] flex items-center">
+      {/* Slides */}
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
@@ -60,23 +57,35 @@ function Carousel() {
             key={i}
             className="min-w-full h-full w-full flex justify-center items-center"
           >
-          {item.type === "image" ? (
-            <img
-              src={item.src}
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          ) : (
-            <video
-              key={index} // <-- force React to remount the video when coming back
-              ref={i === index ? videoRef : null}
-              src={item.src}
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-              autoPlay
-              muted
-              playsInline
-            />
-          )}
+            {item.type === "image" ? (
+              <img
+                src={item.src}
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            ) : (
+              <video
+                key={index}
+                ref={i === index ? videoRef : null}
+                src={item.src}
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+                autoPlay
+                muted
+                playsInline
+              />
+            )}
           </div>
+        ))}
+      </div>
+
+      {/* Indicators */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+        {achievements_2.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`w-2 h-2 rounded-full transition-all 
+              ${index === i ? "bg-white scale-125" : "bg-white/40"}`}
+          ></button>
         ))}
       </div>
     </div>
