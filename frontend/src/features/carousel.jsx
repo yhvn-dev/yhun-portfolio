@@ -83,7 +83,7 @@ function Carousel() {
           <button
             key={i}
             onClick={() => setIndex(i)}
-            className={`w-2 h-2 rounded-full transition-all 
+            className={`carousel-indicators w-2 h-2 rounded-full transition-all 
               ${index === i ? "bg-white scale-125" : "bg-white/40"}`}
           ></button>
         ))}

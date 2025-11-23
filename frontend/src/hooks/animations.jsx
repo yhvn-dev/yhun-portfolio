@@ -322,7 +322,7 @@ export function NameAnimation() {
           >
             <img
               src={Jhvn}
-              className="w-100 max-w-[180px] h-20 md:h-auto object-contain mx-24 rounded-2xl mb-4"
+              className="logo  w-100 max-w-[180px] h-20 md:h-auto object-contain mx-24 rounded-2xl mb-4"
               alt="Jhvn"
             />  
             <p className="text-6xl JHVN-TEXT text-white md:text-[16.08rem] leading-none whitespace-nowrap">

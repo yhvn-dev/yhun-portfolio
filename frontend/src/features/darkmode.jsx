@@ -26,7 +26,7 @@ export function Darkmode(){
     
     return(<>
         <div className="dmode-box flex items-center justify-start px-4
-         w-16 rounded-lg shadow-lg mx-4 border-1 border-[var(--metal-dark2)] shadow-[0px_5px_5px_1px] 
+         w-16 rounded-lg mx-4 border-1 border-[var(--metal-dark2)] shadow-[0px_5px_5px_1px] 
        shadow-black " >
             <button onClick={() => setDark(!dark)} 
                 className="dmode-btn w-5 h-5 rounded-full cursor-pointer ">

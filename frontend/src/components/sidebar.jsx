@@ -11,7 +11,7 @@ function Sidebar() {
             fixed z-20
             w-full h-[10vh] bottom-5   
             center
-            md:w-[10rem] md:h-screen md:top-0 md:right-0">
+            md:w-[10rem] md:h-screen md:top-0 md:right-5">
                 
         <div className="sbar-nav 
             flex w-full md:h-[60vh] items-center justify-evenly px-4
@@ -20,7 +20,7 @@ function Sidebar() {
             
             {/* Logo */}
             <div className="flex items-center justify-center w-auto">
-            <img className="w-10 h-auto" src={Jhvn} />
+            <img className="logo  w-10 h-auto" src={Jhvn} />
             </div>
 
             {/* Dark mode toggle */}

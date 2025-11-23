@@ -103,15 +103,44 @@
 }
 
 body{
-    transition: 0.5s;
+    transition: 1s;
 }
+
+
+
 body.light{
     @apply bg-[var(--dark-variant)]  ;
 }
+.dmode-box {
+  @apply transition-colors duration-700 ease-in-out;
+}
+.dmode-btn {
+  @apply w-5 h-5 rounded-full cursor-pointer transition-all duration-500 ease-in-out ;
+}
 
-.dmode-btn{
-    transition: all 0.5s ease-in;
- }
+
+body.dark::-webkit-scrollbar-track {
+  background: var(--main-white); 
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background: var(--metal-dark4);
+  @apply border-2 rounded-2xl border-[var(--main-white)] cursor-pointer;
+
+}
+body.dark .logo {
+  filter: brightness(0.1) hue-rotate(180deg);
+}
+
+body.dark .carousel-indicators{
+    @apply bg-[var(--metal-dark4)];
+}
+
+
+
+
+
+
 
 body.dark .dmode-box{
      box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.2);
@@ -280,13 +309,5 @@ body.dark .main-header button{
 }
 body.dark .navs-btn{
     @apply bg-[var(--metal-dark5)] text-gray-200;
-}
-
-
-body.dark .main::-webkit-scrollbar{
-     @apply bg-[var(--dark-variant)];
-}
-body.dark .main::-webkit-scroll-thumb{
-     @apply bg-[var(--metal-dark2)] rounded-md;
 }
 

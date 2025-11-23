@@ -9,7 +9,7 @@ function Header() {
       <header className="flex  fixed top-0 left-0 w-full h-[2.5rem] z-50">
 
         <div className="flex items-center justify-start w-full h-full ">
-          <img className="mx-4 w-8 h-auto" src={Jhvn}/>
+          <img className="logo mx-4 w-8 h-auto" src={Jhvn}/>
           <span className="px-4 border-l-2 border-[var(--dark-variant)] text-[var(--main-white)]">Jhunguide Flores</span>
         </div>
         
