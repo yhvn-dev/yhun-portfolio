@@ -26,13 +26,15 @@ function Meloniche() {
               </>
                 }
             ProjectName2={"Meloniche - Desktop Based Music Player Library"}
-            Project_Descr={<p>
-              A simple desktop based musuic player, designed by customtkinter and engineered by Python. This allows users to play music witht the selected one,
-              user can browse different playlsit and group of music depending on the category.
+            Project_Descr={<p className="text-[11px] sm:text-xs md:text-sm 
+            leading-relaxed text-[var(--main-white)]">
+              A simple desktop based musuic player, designed by customtkinter and engineered by Python.
+              This allows users to play music base on the selected one,
+              user can browse different playlist and group of music depending on the category.
             </p>}
             Tech_Stack={
               <>
-              <div className="flex gap-4">          
+              <div className="flex gap-4 my-4">          
               {BackEnd.filter(item => item.label === "Python").map((item, index) => (
                 <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
                     <img 

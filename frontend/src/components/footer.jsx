@@ -17,7 +17,7 @@ function Footer() {
 
   
   return (
-    <footer 
+    <footer id="cont"
       className="row-start-8 row-end-8">
       
       <main className="max-w-7xl mx-auto px-8 py-12 rounded-2xl m-12 "
@@ -30,9 +30,9 @@ function Footer() {
             <img className='h-5 w-5'  src={Logo} alt=""/>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-24 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           {/* About Section */}
-          <div>
+          <div className=''>
             <h3 className="text-base font-semibold mb-3 text-[var(--main-white)]">
               About
             </h3>

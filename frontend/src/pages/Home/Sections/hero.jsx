@@ -9,7 +9,7 @@ function Hero() {
 
     return (
         <>
-        <section className="sections w-full hero 
+        <section id="hero" className="sections w-full hero 
         col-start-1 col-end-1 row-start-1 row-end-2 relative ">
       
             <div className="sections col-start-1 col-end-4 row-start-1 row-end-4  backdrop-blur-[200px]">

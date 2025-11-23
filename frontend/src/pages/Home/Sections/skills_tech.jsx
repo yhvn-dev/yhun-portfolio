@@ -2,7 +2,7 @@ import { FrontEnd, BackEnd, Tools, Database } from "../../../data/image_resource
 
 function Skills_Tech() {
     return (
-        <section className="sections column col-start-1 col-end-2 row-start-3 row-end-3 w-full gap-y-20">
+        <section id="skills-tech"className="sections column col-start-1 col-end-2 row-start-3 row-end-3 w-full gap-y-20">
             {/* MAIN BOX */}
             <main className="flex flex-col items-center justify-start   col-start-1 col-span-full md:col-start-2  md:col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
                 {/* Header */}
@@ -23,14 +23,14 @@ function Skills_Tech() {
                         {/* Glassmorphism blur background */}
                         <div className="absolute inset-0  bg-gradient-to-br from-[var(--metal-dark5)] via-[var(--metal-dark5)] to-[var(--moon-phases-)]  blur-xl -z-10"></div>
                         
-                        <div className="text-white center w-full h-[15%] bg-[var(--dark-variant)]/80 
+                        <div className="text-white center w-full p-1 bg-[var(--dark-variant)]/80 
                             rounded-[10px] border-2 border-[var(--metal-dark2)] shadow-[5px_5px_10px_1px_black]
                             backdrop-blur-md">
                             Frontend
                         </div>
                         <div className="grid grid-cols-4 gap-4 w-full h-full">
                             {FrontEnd.map((tech, index) => (
-                                <div key={index} className="flex flex-col items-center justify-center gap-1 
+                                <div key={index} className="flex flex-col items-center justify-center gap-1  flex-1 
                                     bg-white/5 rounded-xl backdrop-blur-md
                                     border border-white/10
                                     hover:bg-white/10 hover:border-white/20
@@ -64,7 +64,7 @@ function Skills_Tech() {
                         </div>
                         <div className="grid grid-cols-2 w-full h-full gap-4">
                             {Tools.map((tool, index) => (
-                                <div key={index} className="flex flex-col items-center justify-center gap-1 
+                                <div key={index} className="flex flex-col items-center justify-center gap-1   flex-1 
                                     bg-white/5 rounded-xl p-2 backdrop-blur-md
                                     border border-white/10
                                     hover:bg-white/10 hover:border-white/20
@@ -103,7 +103,7 @@ function Skills_Tech() {
                             {BackEnd.map((tech, index) => (
                                 <div 
                                     key={index} 
-                                    className="flex flex-col items-center justify-center gap-2 
+                                    className="flex flex-col items-center justify-center gap-2   flex-1 
                                         bg-white/5 rounded-2xl backdrop-blur-md
                                         border border-white/10
                                         hover:bg-white/10 hover:border-white/20
@@ -142,7 +142,7 @@ function Skills_Tech() {
                         </div>
                         <div className="flex flex-col gap-3 w-full h-full">
                             {Database.map((db, index) => (
-                                <div key={index} className="flex flex-col items-center justify-center gap-1 
+                                <div key={index} className="flex flex-col items-center justify-center  flex-1 gap-1 
                                     bg-white/5 rounded-xl p-3 backdrop-blur-md
                                     border border-white/10 
                                     hover:bg-white/10 hover:border-white/20

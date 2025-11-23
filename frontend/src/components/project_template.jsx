@@ -108,9 +108,7 @@ export function ProjectTemplate({Project_Logo, Project_Name, Project_Img, defaul
         <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-[var(--main-white)] mb-2 sm:mb-3">
           {ProjectName2}
         </h2>
-        <p className="text-[11px] sm:text-xs md:text-sm lg:text-base text-gray-300 leading-relaxed mb-3 sm:mb-4">
           {Project_Descr}
-        </p>
         <div className="py-2 sm:py-4 w-full">
           {Tech_Stack}
         </div>
@@ -209,10 +207,9 @@ export function Desktop_Template({Project_Logo, Project_Name, Project_Img, defau
       <div className="flex flex-col items-start justify-start w-[95%] sm:w-[90%] lg:w-[80%] bg-transparent py-4 sm:py-6">
         <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white mb-2 sm:mb-3">
           {ProjectName2}
-        </h2>
-        <p className="text-[11px] sm:text-xs md:text-sm lg:text-base text-gray-300 leading-relaxed mb-3 sm:mb-4">
+        </h2>     
           {Project_Descr}
-        </p>
+
         <div className="w-full">
           {Tech_Stack}
         </div>

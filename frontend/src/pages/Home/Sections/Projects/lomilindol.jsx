@@ -25,9 +25,10 @@ function Lomilindol() {
                     </>
                     }
           Project_Descr={
-          <p>
+          <p className='text-[11px] sm:text-xs md:text-sm 
+                           leading-relaxed text-[var(--main-white)]'>
             Awarded 3rd Place in the openIT hackathon on November,20,2025.
-            An Eartthquake Monitoring Web Application powered by TailwindCss,React, NodeJs and MySQL. It allows the public to monitor
+            An Earthquake Monitoring Web Application powered by TailwindCss,React, NodeJs and MySQL. It allows the public to monitor
             live earthquake updates sources through web scraping from PHILVOLCS, as trusted and widely known Philippines Goverment Scientific 
             Agency. Our system automatically gathers the latest seismic data, stores it, and displays it in real time through an intuitive and responsive interface.            
           </p>}

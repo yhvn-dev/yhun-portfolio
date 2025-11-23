@@ -68,6 +68,16 @@ export const BackEnd = [
     
 ]
 
+
+export const UseddBackEnd = [
+    {src: NodeJS, label: "NodeJs"},
+    {src: ExpressJS, label: "ExpressJS"}, 
+    {src: Php, label: "Php"},
+    {src: Laravel, label: "Laravel"},
+    {src: Python, label: "Python"}    
+]
+
+
 export const Tools = [
     {src: Git, label: "Git"},
     {src: Github, label: "Github"},

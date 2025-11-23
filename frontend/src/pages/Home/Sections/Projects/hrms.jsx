@@ -56,8 +56,8 @@ function Hrms() {
            }
            ProjectName2={"Nodelab - Human Resource Management System"}
            Project_Descr={
-             <p className="text-[11px] sm:text-xs md:text-sm lg:text-base 
-                           leading-relaxed">
+             <p className="text-[11px] sm:text-xs md:text-sm 
+                           leading-relaxed text-[var(--main-white)]">
                A Web based Human Resource Management System, powered by HTML, CSS, Javascript, Php and MYSQL. 
                Designed to make recruitment, employee management, and HR workflows more efficient. 
                It allows HR staff to manage job postings, track applicants, and maintain employee records, 

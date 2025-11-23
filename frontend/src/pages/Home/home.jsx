@@ -14,6 +14,8 @@ function Home(){
         <div className="wrapper grid 
         grid-cols-1 
         grid-rows-[100vh_auto_150vh_auto_auto_auto_auto]
+        md:grid-rows-[100vh_auto_100vh_auto_auto_auto_auto]
+        md:grid-rows-[100vh_180vh_150vh_auto_auto_auto]
         bg-[var(--metal-dark5)]
         w-full
         overflow-x-hidden">             

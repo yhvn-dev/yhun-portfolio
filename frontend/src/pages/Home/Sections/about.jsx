@@ -2,16 +2,15 @@ import { GithubStats } from "../../../services/GithubStats";
 import { useGithub } from "../../../Context/githubContext";
 import Me_1 from "../../../assets/Images/Me 1.png";
 import {FileUser,Phone,Lightbulb} from "lucide-react"
-
 import * as Animation from "../../../hooks/animations"
+import Carousel from "../../../features/carousel";
 
 
 function About() {
   const { stats } = useGithub();
       
   return (
-    <section className="sections column col-start-1 col-end-2 row-start-2 row-end-2 
-    ">
+    <section id="about" className="sections column col-start-1 col-end-2 row-start-2 row-end-2">
    
       <GithubStats username="yhvn-dev"/>
       
@@ -22,7 +21,7 @@ function About() {
 
         {/* Title */}
         <div className="center w-full h-[20%]">
-          <p className="monu-txt text-2xl text-[var(--main-white)]">About Me</p>
+          <p className="monu-txt text-2xl text-[var(--main-white)] my-16">About Me</p>
         </div>
 
         {/* Grid Layout */}
@@ -92,35 +91,9 @@ function About() {
           </div>
 
 
-          {/* TECH STACK  ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== */}
-              <div className="flex flex-col items-center justify-center
-            col-start-1 col-span-full row-auto 
-            md:col-start-9 md:col-span-full md:row-start-1 md:row-end-5
-            border-2 border-[var(--metal-dark2)] rounded-[10px] 
-            shadow-[5px_5px_20px_1px_black] p-4
-            w-full md:max-w-[380px] md:mx-auto">  {/* <-- add these */}
-
-
-            <div className="center w-full p-4 bg-[var(--dark-variant)] 
-            rounded-[10px] border-2 border-[var(--metal-dark2)] 
-            shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]">
-              Tech Stack
-            </div>
-            <Animation.TechStackAnimation/>
-            
-          </div>
-
-          {/* Tags */}
-          <div className="col-start-1 col-span-full row-start-3 row-end-8
-          md:col-start-1 md:col-end-4 md:row-start-5  md:row-end-8
-          border-2 border-[var(--metal-dark2)] rounded-[10px] 
-          shadow-[5px_5px_20px_1px_black] p-4">
-            tags
-          </div>
-                   
-          {/* DESCRIPTION */}
+          {/* DESCRIPTION - MOVED UP FOR MOBILE */}
           <div className="description flex items-start justify-start p-4 
-          col-start-1 col-span-full row-start-8
+          col-start-1 col-span-full row-start-3
           md:col-start-4 md:col-end-11 md:row-start-5 md:row-end-8 
           border-2 border-[var(--metal-dark2)] 
           rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)] overflow-y-auto
@@ -138,10 +111,51 @@ function About() {
               </p>          
           </div>
 
-          
+          {/* TECH STACK - MOVED DOWN FOR MOBILE */}
+          <div className="flex flex-col items-center justify-center
+            col-start-1 col-span-full row-start-4
+            md:col-start-9 md:col-span-full md:row-start-1 md:row-end-5
+            border-2 border-[var(--metal-dark2)] rounded-[10px] 
+            shadow-[5px_5px_20px_1px_black] p-4
+            w-full md:max-w-[380px] md:mx-auto">
+
+            <div className="center w-full p-2 bg-[var(--dark-variant)] 
+            rounded-[10px] border-2 border-[var(--metal-dark2)] 
+            shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]">
+              Tech Stack
+            </div>
+            <Animation.TechStackAnimation/>
+          </div>
+
+         {/* Tags */}
+        <div className="
+          col-start-1 col-span-full row-start-5 row-end-8
+          md:col-start-1 md:col-end-4 md:row-start-5 md:row-end-7
+          border-2 border-[var(--metal-dark2)] rounded-[10px] 
+          shadow-[5px_5px_20px_1px_black] p-4
+          flex flex-col
+          overflow-hidden
+        ">
+
+          {/* Header */}
+          <div className="
+            center w-full p-2 bg-[var(--dark-variant)] 
+            rounded-[10px] border-2 border-[var(--metal-dark2)] 
+            shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]
+            h-autot">
+            Achievements
+          </div>
+
+          {/* Content that fills the remaining space */}
+          <div className="
+            flex-1 center w-full mt-4 rounded-[10px]">
+              <Carousel/>
+          </div>
+        </div>
+
           <div className="flex md:grid grid-cols-2 grid-rows-2 gap-4 justify-end w-full h-full 
-          col-start-1 col-span-full row-auto
-          md:col-start-1 md:col-end-4 md:row-start-9 md:row-end-8 
+          col-start-1 col-span-full row-start-8
+          md:col-start-1 md:col-end-4 md:row-start-7 md:row-end-8
           rounded-[10px]">
               <div className="center h-full w-full rounded-[10px] ">
                 <a className="column h-full w-full ">
@@ -166,9 +180,6 @@ function About() {
                   <p className="text-center text-[0.7rem] text-[var(--main-white)]">View Projects</p>
                 </a>
               </div>
-
-            
-              
           </div>
           
         </div>

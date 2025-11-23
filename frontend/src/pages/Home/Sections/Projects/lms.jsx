@@ -26,17 +26,19 @@ function Lms() {
                 </>
               }
              Project_Descr={           
-              <>
+              <p className="text-[11px] sm:text-xs md:text-sm 
+                           leading-relaxed text-[var(--main-white)]">
                 A Desktop based Library Management application powered by VB.NET and MYSQL to simplify book organization, 
                 membership handling, and circulation processes. The system features a secure login, interactive dashboard, 
                 and modules for managing books, genres, authors, members, and borrowing transactions. 
                 Designed for efficiency, it automates repetitive tasks, reduces errors, and ensures accurate 
                 record-keeping—providing librarians and staff with a fast, 
                 reliable, and user-friendly tool for daily operations.
-              </>
+              </p>
+
              }         
              Tech_Stack={
-                <div className="flex gap-8">
+                <div className="flex gap-8 my-4">
                   {BackEnd.filter(item => item.label === "VisualBasic").map((item, index) => (
                     <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
                         <img 

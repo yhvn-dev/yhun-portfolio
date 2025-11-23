@@ -12,7 +12,7 @@ function Project_label() {
             border-2 border-[var(--metal-dark2)] ">
               <div className="center bg-transparent backdrop-blur-3xl h-full w-full rounded-2xl
               border-2 border-[var(--metal-dark2)] p-4">
-                <p className="text-6xl hook-txt md:hook-txt-2">PROJECTS</p>      
+                <p className="text-6xl hook-txt md:text-[6rem]">PROJECTS</p>      
               </div>
             </div>
 
