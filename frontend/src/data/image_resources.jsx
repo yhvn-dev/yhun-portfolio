@@ -35,9 +35,9 @@ import Pycharm from "../assets/Icons/PYCHARM.png"
 
 export const Social_Media = [
     { src: Github, label: "Github", url: "https://github.com/yhvn-dev" },
-    { src: Linkedin, label: "LinkedIn", url: "https://linkedin.com/in/your-profile" },
+    { src: Linkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/jhunguide-flores" },
     { src: Instagram, label: "Instagram", url: "https://instagram.com/__jhvn" },
-    { src: Facebook, label: "Facebook", url: "https://facebook.com/your-profile" },
+    { src: Facebook, label: "Facebook", url: "https://www.facebook.com/jhunguide.flores.2025" },
 ];
 
 export const Tech_Stack = [
