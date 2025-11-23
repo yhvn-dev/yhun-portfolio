@@ -1,26 +1,22 @@
 import { useEffect, useState } from "react"
 import Jhvn from "../assets/Images/jhvn_1_LOGO.png"
-import { Darkmode } from "./darkmode"
 import {House,Heart,Brain,LaptopMinimalCheck,Phone}  from "lucide-react"
+import { Darkmode } from "../features/darkmode"
 
 
-
-function Sidebar() {
- 
-
+function Sidebar() { 
   return (
     <aside  
         className="
             fixed z-20
             w-full h-[10vh] bottom-5   
             center
-            md:w-[10rem] md:h-screen md:top-0 md:right-0"
-        >
-        <div className=" 
-            flex w-full md:h-[60vh] items-center justify-around  px-4
-            md:flex-col md:justify-start md:py-6 
-            bg-[var(--metal-dark5)] border-2 border-[var(--metal-dark2)] rounded-[10px]
-        ">
+            md:w-[10rem] md:h-screen md:top-0 md:right-0">
+                
+        <div className="sbar-nav 
+            flex w-full md:h-[60vh] items-center justify-evenly px-4
+            md:flex-col md:justify-evenly md:py-6  rounded-2xl
+            bg-[var(--metal-dark5)] border-2 border-[var(--metal-dark2)] rounded-[10px">
             
             {/* Logo */}
             <div className="flex items-center justify-center w-auto">
@@ -28,10 +24,9 @@ function Sidebar() {
             </div>
 
             {/* Dark mode toggle */}
-            <div className="hidden md:flex md:w-full justify-center md:my-4 ">
-            <Darkmode />
+            <div className="center md:w-full md:justify-start items-start md:my-4  ">
+          
             </div>
-
             {/* Nav */}
             <nav 
             className="

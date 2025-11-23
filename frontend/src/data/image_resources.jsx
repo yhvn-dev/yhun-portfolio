@@ -53,7 +53,6 @@ export const FrontEnd = [
    {src: Css, label: "CSS"},
    {src: Tailwind_Css, label: "TailwindCss"},
    {src: CustomTkiner , label: "CustomTkinter"},
-   {src: DaisyUI, label: "DaisyUI"},
    {src: Javascript, label: "Javascript"},
    {src: ReactJs, label: "ReactJs"},
 ]
@@ -69,7 +68,7 @@ export const BackEnd = [
 ]
 
 
-export const UseddBackEnd = [
+export const UsedBackEnd = [
     {src: NodeJS, label: "NodeJs"},
     {src: ExpressJS, label: "ExpressJS"}, 
     {src: Php, label: "Php"},

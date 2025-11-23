@@ -6,7 +6,6 @@ export function ProjectTemplate({Project_Logo, Project_Name, Project_Img, defaul
   
   const tabs = [
     { id: 0, title: 'Project Overview' },
-    { id: 1, title: 'Documentation' },
     { id: 2, title: 'Resources' }
   ]; 
 
@@ -17,13 +16,13 @@ export function ProjectTemplate({Project_Logo, Project_Name, Project_Img, defaul
         <div className="scale-75 sm:scale-90 md:scale-100">
           {Project_Logo}
         </div>
-        <span className="NODELAB_TEXT bg-transparent text-[var(--main-white)] tracking-wide my-2  sm:text-3xl md:text-sm text-center">
+        <span className="pr-name NODELAB_TEXT bg-transparent text-[var(--main-white)] tracking-wide my-2  sm:text-3xl md:text-sm text-center">
           {Project_Name}
         </span> 
       </div>
 
       {/* Browser Frame with Shiny Border */}
-      <div className="flex flex-col items-center justify-start w-[95%] sm:w-[90%] lg:w-[80%] rounded-xl sm:rounded-2xl overflow-hidden relative 
+      <div className=" flex flex-col items-center justify-start w-[95%] sm:w-[90%] lg:w-[80%] rounded-xl sm:rounded-2xl overflow-hidden relative 
       border-2 sm:border-4 border-[var(--metal-dark1)] shadow-[0_20px_60px_rgba(0,0,0,0.7)]">
 
         {/* Tab Bar (Row 1) */}
@@ -72,9 +71,7 @@ export function ProjectTemplate({Project_Logo, Project_Name, Project_Img, defaul
             </button>
           </div>
           
-          <div className="flex-1 flex items-center bg-[#2a2a2a] rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 w-full transition-colors">
-            <Search size={10} className="sm:hidden text-gray-400 mr-1 flex-shrink-0" />
-            <Search size={12} className="hidden sm:block md:hidden text-gray-400 mr-2 flex-shrink-0" />
+          <div className="search-div flex-1 flex items-center bg-[#2a2a2a] rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 w-full transition-colors">   
             <Search size={14} className="hidden md:block text-gray-400 mr-2 flex-shrink-0" />
             <input 
               type="text" 
@@ -93,9 +90,7 @@ export function ProjectTemplate({Project_Logo, Project_Name, Project_Img, defaul
               className="w-full h-full object-contain"
               alt="Project Preview"
             />  
-          ) : activeTab === 1 ? (
-            <p className="text-white text-xs sm:text-sm md:text-base px-4">Documentation</p>
-          ) : (
+          )  : (
             <div className="text-white flex items-center justify-center flex-col w-full h-full p-2 sm:p-4 overflow-y-auto">
               {Resources}
             </div>
@@ -117,7 +112,9 @@ export function ProjectTemplate({Project_Logo, Project_Name, Project_Img, defaul
   )
 }
 
-export function Desktop_Template({Project_Logo, Project_Name, Project_Img, defaultValue, ProjectName2, Resources, Project_Descr, Tech_Stack}) {
+
+
+export function Desktop_Template({Project_Logo, Project_Name, Project_Img,     Project_Name_Tab, ProjectName2, Resources, Project_Descr, Tech_Stack}) {
   const [activeView, setActiveView] = useState('dashboard');
   
   const menuItems = [
@@ -148,9 +145,9 @@ export function Desktop_Template({Project_Logo, Project_Name, Project_Img, defau
             <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full bg-[#28c840] hover:bg-[#34d84c] cursor-pointer"></div>
           </div>
           
-          <div className="flex items-center gap-2 flex-1 justify-center">
-            <span className="text-gray-300 text-[10px] sm:text-xs md:text-sm font-medium truncate max-w-[120px] sm:max-w-[200px] md:max-w-none">
-              {Project_Name}
+          <div className="flex items-center gap-2 flex-1 justify-center ">
+            <span className="pr-name text-gray-300 text-[10px] sm:text-xs md:text-sm font-medium truncate max-w-[120px] sm:max-w-[200px] md:max-w-none">
+              {Project_Name_Tab}
             </span>
           </div>
 
@@ -175,7 +172,7 @@ export function Desktop_Template({Project_Logo, Project_Name, Project_Img, defau
                 alt="Desktop Application"
               />
             ) : (
-              <div className="text-white flex items-center justify-center flex-col w-full h-full p-2 sm:p-4 overflow-y-auto">
+              <div className="con text-white flex items-center justify-center flex-col w-full h-full p-2 sm:p-4 overflow-y-auto">
                 {Resources}
               </div>
             )}

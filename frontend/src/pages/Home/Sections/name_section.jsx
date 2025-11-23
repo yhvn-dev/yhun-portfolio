@@ -3,7 +3,7 @@ import { NameAnimation } from '../../../hooks/animations'
 
 function Name_section() {
   return (
-    <section className=' sections center w-[full] row-start-6 row-end-6 py-12'>
+    <section className=' sections center w-[full] row-start-6 row-end-6 py-12 shadow-0'>
       <NameAnimation/>
     </section>
   )

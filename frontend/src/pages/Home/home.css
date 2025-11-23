@@ -150,7 +150,12 @@
 .HEART_ELECT_TEXT{
   font-family: "DM Sans";
 }
+.CELESTIAL_CATALOG_TEXT{
+  font-family: 'Banscript';
+}
+
 
 .description::-webkit-scrollbar{
   @apply bg-[var(--metal-dark5)]
 }
+

@@ -210,7 +210,7 @@ export function TechStackAnimation() {
     <div className="flex items-center justify-center w-full h-full">
       <div
         ref={containerRef}
-        className={`relative center w-full max-w-full md:max-w-[380px] h-[200px] md:h-[300px] rounded-xl overflow-hidden `}
+        className={`relative center w-full max-w-full md:max-w-[380px] h-[200px] md:h-[220px] rounded-xl overflow-hidden `}
       >
         <div
           ref={contentRef}
@@ -248,7 +248,7 @@ export function TechStackAnimation() {
                 <img
                   src={item.src}
                   alt={item.label}
-                  className="w-12 h-12 p-2 bg-[var(--moon-phases-e)] rounded-2xl transition-all duration-300 hover:scale-110"
+                  className="stack-div w-12 h-12 p-2 bg-[var(--moon-phases-e)] rounded-2xl transition-all duration-300 hover:scale-110"
                 />
                 <span className="text-xs text-[var(--white-blple)] mt-2 font-medium transition-colors duration-300 hover:text-white">
                   {item.label}

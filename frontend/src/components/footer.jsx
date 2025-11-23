@@ -1,26 +1,33 @@
-import React from 'react';
-import { Mail, Phone, Github, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { Mail, Phone, Github, Instagram, Facebook,Linkedin,MessageCircle } from 'lucide-react';
 import Logo from  "../assets/Images/jhvn_1_LOGO.png"
-import { shadow } from 'three/tsl';
+
 
 function Footer() {
   const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/yhvn-dev', label: 'yhvn-dev' },
-    { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/__jhvn/', label: '@yourusername' },
-    { name: 'Facebook', icon: Facebook, url: '#', label: 'https://www.facebook.com/jhunguide.flores.2025' }
+    { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/__jhvn/', label: '__jhvn' },
+    { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/jhunguide.flores.2025', label: 'Jhunguide Flores' },
+    { name: "Linkdin", icon: Linkedin, url: "https://www.linkedin.com/in/jhunguide-flores",label:"Jhunguide Flores"}
   ];
   const contactInfo = [
     { icon: Mail, label: 'jhunguidef@gmail.com', url: 'jhunguidef@gmail.com' },
     { icon: Phone, label: '+639684368475', url: 'tel:+639684368475' },
   ];
 
+  const navLinks = [
+    {link:"#home",name:"Home"},
+    {link:"#about",name:"About"},
+    {link:"#skills-tech",name:"Technologies"},
+    {link:"#projects",name:"Projects"},
+    {link:"#contacts",name:"Contacts"},
+  ]
 
-  
+
   return (
-    <footer id="cont"
+    <footer id="contacts"
       className="row-start-8 row-end-8">
       
-      <main className="max-w-7xl mx-auto px-8 py-12 rounded-2xl m-12 "
+      <main className="footer-main-div max-w-7xl mx-auto px-8 py-12 rounded-2xl m-12 "
        style={{
           boxShadow: "inset 0px 10px 10px -5px rgba(255,255,255,0.2),0px 14px 5px 1px rgba(0,0,0,0.2)"
        }}>
@@ -67,14 +74,13 @@ function Footer() {
               Navigate
             </h3>
             <ul className="space-y-2">
-              {['Home', 'Projects', 'About', 'Contact'].map((link, index) => (
+              {navLinks.map((item, index) => (
                 <li key={index}>
                   <a
-                    href={`#${link.toLowerCase()}`}
+                    href={item.link}
                     className="text-sm transition-colors duration-200 hover:opacity-80 text-[var(--main-white)]"
-                    
                   >
-                    {link}
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -104,8 +110,7 @@ function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-all duration-200 hover:scale-110 text-[var(--main-white)]"
-            
+                className="transition-all duration-200 hover:scale-110 text-[var(--main-white)]"        
                 aria-label={social.name}
                 title={social.label}
               >

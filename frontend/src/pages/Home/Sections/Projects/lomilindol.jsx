@@ -7,7 +7,7 @@ import Github from "../../../../assets/Icons/GITHUB.png"
 function Lomilindol() {
   return (
 
-    <main className="h-full flex flex-col items-center justify-evenly
+    <main className="pr-main h-full flex flex-col items-center justify-evenly
       col-start-1 col-end-3 row-start-2 row-end-2
       overflow-hidden border-8 border-[var(--metal-dark1)] rounded-2xl
       bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] cursor-pointer">
@@ -33,9 +33,9 @@ function Lomilindol() {
             Agency. Our system automatically gathers the latest seismic data, stores it, and displays it in real time through an intuitive and responsive interface.            
           </p>}
           Tech_Stack={
-            <div className="flex gap-8">
+            <div className="stack-div flex gap-8">
                 {FrontEnd.filter(item => item.label === "TailwindCss").map((item, index) => (
-                  <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                  <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
                     <img 
                       key={index} 
                       src={item.src} 
@@ -47,7 +47,7 @@ function Lomilindol() {
               ))}
             
                 {FrontEnd.filter(item => item.label === "ReactJs").map((item, index) => (
-                  <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                  <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15 " key={item.label}>
                     <img 
                       key={index} 
                       src={item.src} 
@@ -58,7 +58,7 @@ function Lomilindol() {
               ))}
 
               {BackEnd.filter(item => item.label === "NodeJs").map((item, index) => (
-                <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15"  key={item.label}>
                   <img 
                     key={index} 
                     src={item.src} 
@@ -67,9 +67,24 @@ function Lomilindol() {
                   />
                 </div>             
               ))}
+
+                {BackEnd.filter(item => item.label === "ExpressJS").map((item, index) => (
+                <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15"  key={item.label}>
+                  <img 
+                    key={index} 
+                    src={item.src} 
+                    className={`w-6 h-6 
+                      ${
+                        item.label === "ExpressJS" ? "bg-gray-100 w-7 h-7  rounded-lg p-1 " : ""                                
+                        }`}
+
+                    alt={item.label}
+                  />
+                </div>             
+              ))}
             
                 {Database.filter(item => item.label === "MySQL").map((item, index) => (
-                  <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                  <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
                       <img 
                       key={index} 
                       src={item.src} 

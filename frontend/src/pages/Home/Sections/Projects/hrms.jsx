@@ -7,7 +7,7 @@ import Github from "../../../../assets/Icons/GITHUB.png"
 function Hrms() {
   
   return (
-    <main className="h-full flex flex-col items-center justify-evenly
+    <main className="pr-main h-full flex flex-col items-center justify-evenly
        col-start-1 col-end-3 row-start-3 row-end-3
        overflow-y-auto overflow-x-hidden
        border-4 sm:border-6 md:border-8 border-[var(--metal-dark1)] 
@@ -15,12 +15,12 @@ function Hrms() {
        bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] 
        cursor-pointer 
        shadow-[0px_8px_3px_1px] sm:shadow-[0px_10px_4px_1px] md:shadow-[0px_14px_5px_1px] 
-       shadow-black">
+       shadow-black ">
  
         <ProjectTemplate
            Project_Logo={
              <img 
-               className="w-12 h-7 sm:w-16 sm:h-9 md:w-18 md:h-10" 
+               className="w-12 h-7 sm:w-16 sm:h-9 md:w-18 md:h-10"  
                src={HRMS_Logo}
              />
            } 
@@ -72,7 +72,7 @@ function Hrms() {
                {FrontEnd.filter(item => item.label === "HTML5").map((item, index) => (
                  <div 
                    key={index}
-                   className="flex items-center justify-center 
+                   className="stack-div flex items-center justify-center 
                               bg-[var(--metal-dark1)] 
                               rounded-lg sm:rounded-xl 
                               p-1.5 sm:p-2 
@@ -89,7 +89,7 @@ function Hrms() {
                {FrontEnd.filter(item => item.label === "CSS").map((item, index) => (
                  <div 
                    key={index}
-                   className="flex items-center justify-center 
+                   className="stack-div flex items-center justify-center 
                               bg-[var(--metal-dark1)] 
                               rounded-lg sm:rounded-xl 
                               p-1.5 sm:p-2 
@@ -106,7 +106,7 @@ function Hrms() {
                {FrontEnd.filter(item => item.label === "Javascript").map((item, index) => (
                  <div 
                    key={index}
-                   className="flex items-center justify-center 
+                   className="stack-div flex items-center justify-center 
                               bg-[var(--metal-dark1)] 
                               rounded-lg sm:rounded-xl 
                               p-1.5 sm:p-2 
@@ -123,7 +123,7 @@ function Hrms() {
                {BackEnd.filter(item => item.label === "Php").map((item, index) => (
                  <div 
                    key={index}
-                   className="flex items-center justify-center 
+                   className="stack-div flex items-center justify-center 
                               bg-[var(--metal-dark1)] 
                               rounded-lg sm:rounded-xl 
                               p-1.5 sm:p-2 
@@ -140,7 +140,7 @@ function Hrms() {
                {Database.filter(item => item.label === "MySQL").map((item, index) => (
                  <div 
                    key={index}
-                   className="flex items-center justify-center 
+                   className="stack-div flex items-center justify-center 
                               bg-[var(--metal-dark1)] 
                               rounded-lg sm:rounded-xl 
                               p-1.5 sm:p-2 

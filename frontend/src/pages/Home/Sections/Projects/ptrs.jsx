@@ -7,14 +7,16 @@ import Github from "../../../../assets/Icons/GITHUB.png"
 function Ptrs() {
   return (
     
-    <main className="h-full flex flex-col items-center justify-evenly
+    <main className="pr-main  h-full flex flex-col items-center justify-evenly
          col-start-1 col-end-3 row-start-5 row-end-5
          overflow-hidden border-8 border-[var(--metal-dark1)] rounded-2xl
-         bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] cursor-pointer">
+         bg-gradient-to-tr from-[var(--metal-dark5)] to-[var(--metal-dark1)] cursor-pointer shadow-[0px_14px_5px_1px] 
+       shadow-black">
           <Desktop_Template
              Project_Logo={<img className="w-20 h-10 " src={PTRS_Logo}/>} 
-             Project_Name="Heart Elect"
+             Project_Name={<p className="pr-name">Heart Elect</p>}
              Project_Img={PTRS_Db}
+             Project_Name_Tab={<p className="pr-name text-sm">Heart Elect</p>}
              ProjectName2={"Heart Elect - Political Track Record System"}
              Resources={<>
                 <a href="https://github.com/yhvn-dev/Political-Track-Record-System.git" target="blank">
@@ -36,7 +38,7 @@ function Ptrs() {
              Tech_Stack={
                 <div className="flex gap-8 my-4">
                       {BackEnd.filter(item => item.label === "Python").map((item, index) => (
-                        <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                        <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
                           <img 
                             key={index} 
                             src={item.src} 
@@ -46,7 +48,7 @@ function Ptrs() {
                         </div>        
                     ))}
                       {FrontEnd.filter(item => item.label === "CustomTkinter").map((item, index) => (
-                      <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                      <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15 " key={item.label}>
                         <img 
                           key={index} 
                           src={item.src} 
@@ -57,7 +59,7 @@ function Ptrs() {
                     ))}
                   
                       {Database.filter(item => item.label === "MySQL").map((item, index) => (
-                        <div className="center bg-[var(--metal-dark1)] rounded-xl p-2 w-15">
+                        <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
                           <img 
                             key={index} 
                             src={item.src} 
