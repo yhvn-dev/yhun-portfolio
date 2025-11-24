@@ -1,10 +1,8 @@
 import { GithubStats } from "../../../services/GithubStats";
 import { useGithub } from "../../../Context/githubContext";
 import Me_1 from "../../../assets/Images/Me 1.png";
-import {FileUser,Phone,Lightbulb} from "lucide-react"
 import * as Animation from "../../../hooks/animations"
 import Carousel from "../../../features/carousel";
-
 
 function About() {
   const { stats } = useGithub();
@@ -20,7 +18,7 @@ function About() {
       w-full rounded-2xl p-1  ">
 
         {/* Title */}
-        <div className="center w-full h-[20%]">
+        <div className="center w-full h-[20%] fade-in-up">
           <p className="monu-txt text-2xl text-[var(--main-white)] my-16">About Me</p>
         </div>
 
@@ -31,7 +29,7 @@ function About() {
           <div className="relative p-4 gap-4 grid grid-rows-10 grid-cols-1 
           col-start-1 col-span-full
           md:col-start-1 md:col-end-9 md:row-start-1 md:row-end-7
-          border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black] overflow-hidden">
+          border-2 border-[var(--metal-dark2)] rounded-[10px] shadow-[5px_5px_20px_1px_black] overflow-hidden fade-in-up">
             {/* Header Background */}
 
             <header className="relative center w-full h-full rounded-[10px] 
@@ -96,7 +94,7 @@ function About() {
           md:col-start-4 md:col-end-11 md:row-start-7 md:row-end-10
           border-2 border-[var(--metal-dark2)] 
           rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)] overflow-y-auto
-          min-h-[200px]">
+          min-h-[200px] fade-in-up">
               <p className="">
                   Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
                 web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
@@ -116,7 +114,7 @@ function About() {
             md:col-start-9 md:col-span-full md:row-start-1 md:row-end-7
             border-2 border-[var(--metal-dark2)] rounded-[10px] 
             shadow-[5px_5px_20px_1px_black] p-4
-            w-full md:max-w-[380px] md:mx-auto">
+            w-full md:max-w-[380px] md:mx-auto fade-in-up">
 
             <div className="center w-full p-2 bg-[var(--dark-variant)] 
             rounded-[10px] border-2 border-[var(--metal-dark2)] 
@@ -126,38 +124,28 @@ function About() {
             <Animation.TechStackAnimation/>
           </div>
 
-        {/* Achievements */}
-        <div className="
-          col-start-1 col-span-full row-start-5 row-end-8
-          md:col-start-1 md:col-end-4 md:row-start-7 md:row-end-10
-          border-2 border-[var(--metal-dark2)] rounded-[10px] 
-          shadow-[5px_5px_20px_1px_black] p-4
-          flex flex-col
-          overflow-hidden">
+      
+          {/* ACHIEVEMENTS */}
+          <div className="col-span-full md:col-span-3 md:col-start-1 md:row-start-7 md:row-end-8 fade-in-up">
+            <div className="border-2 border-[var(--metal-dark2)] rounded-[10px] 
+              shadow-[5px_5px_20px_1px_black] p-4 flex flex-col overflow-hidden">
 
-          {/* Header */}
-          <div className="
-            center w-full p-2 bg-[var(--dark-variant)] 
-            rounded-[10px] border-2 border-[var(--metal-dark2)] 
-            shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]
-            h-autot">
-            Achievements
-          </div>
+              {/* Header */}
+              <div className="center w-full p-2 bg-[var(--dark-variant)] rounded-[10px] border-2 border-[var(--metal-dark2)] 
+                shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]">
+                Achievements
+              </div>
 
-          {/* Content that fills the remaining space */}
-          <div className="
-            flex-1 center w-full mt-4 rounded-[10px]">
-              <Carousel/>
-          </div>
-        </div>
-
-            <div>
-
-              
+              <div className="flex-1 center w-full mt-4 rounded-[10px]">
+                <Carousel/>
+              </div>
             </div>
+          </div>
 
-       
-          
+          <div>
+            {/* Empty div for potential future content */}
+          </div>
+
         </div>
 
       </main>

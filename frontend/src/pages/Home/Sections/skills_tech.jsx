@@ -1,9 +1,11 @@
 import { FrontEnd, UsedBackEnd, Tools, Database } from "../../../data/image_resources";
+import { FadeInWhenVisible } from "../../../hooks/animations";
 
 function Skills_Tech() {
     return (
         <section id="skills-tech"className="sections column col-start-1 col-end-2 row-start-3 row-end-3 w-full gap-y-20 ">
             {/* MAIN BOX */}
+            
             <main className="skills-tech-main  flex flex-col items-center col-start-1 col-span-full md:col-start-2  md:col-end-2 row-start-2 row-end-3 h-full w-full rounded-2xl p-1">
                 {/* Header */}
                 <div className="center w-full h-[20%]">

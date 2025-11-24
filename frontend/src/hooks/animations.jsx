@@ -1,32 +1,57 @@
 import { useEffect, useRef,useState } from "react";
 import { Social_Media, Tech_Stack } from "../data/image_resources";
 import Jhvn from "../assets/Images/jhvn_1_LOGO.png"
+import { motion, useInView } from "framer-motion";
 
-
-export function useScrollAnimation(className, options = { threshold: 0.2 }) {
-  const elementsRef = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle("show", entry.isIntersecting);
-        });
-      },
-      options 
-    );
-
-    const elements = document.querySelectorAll(`.${className}`);
-    elementsRef.current = elements;
-
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [className, options]);
-
-  return elementsRef;
+export function FadeInWhenVisible({ children, delay = 0, as = "div", className = "" }) {
+  const Component = as;
+  const MotionWrapper = motion(Component);
+  
+  return (
+    <MotionWrapper
+      className={className}
+      style={{ width: "100%", height: "100%" }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay }}
+    >
+      {children}
+    </MotionWrapper>
+  );
 }
 
+
+
+export function useFadeInAnimation(delay = 0) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  
+  return {
+    ref,
+    initial: { opacity: 0, y: 20 },
+    animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
+    transition: { duration: 0.6, delay }
+  };
+}
+
+// Or if you want to use motion components directly:
+export function AnimatedDiv({ children, delay = 0, className = "" }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, delay }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 
 export function SociaMediaAnimation() {
