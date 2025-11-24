@@ -78,7 +78,7 @@ function Carousel() {
       </div>
 
       {/* Indicators */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 my-2">
         {achievements_2.map((_, i) => (
           <button
             key={i}

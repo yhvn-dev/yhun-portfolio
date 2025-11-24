@@ -1,4 +1,19 @@
 import { FadeInWhenVisible } from "../../../hooks/animations";
+import {motion} from "framer-motion"
+
+
+const lightVariant = {
+    hidden:{opacity:0, y:0 },
+    visible:{opacity:1, y:0},
+    transition:{duration:2, ease:"ease in out"}
+}
+
+const parentVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
+
 
 function Hero() {
   return (
@@ -7,7 +22,22 @@ function Hero() {
       <section className="sections w-full col-start-1 col-end-1 row-start-1 row-end-2 border-none">
         <div className="sections col-start-1 col-end-4 row-start-1 row-end-4 border-none">
 
-                    
+            {/* HERO BACKDROP */}
+          <div className="bd bd_main_wrapper">
+              
+              <motion.div
+                  variants={lightVariant}
+                  initial={{opacity: 0, y:50}}
+                  animate="visible"  
+                  transition={{ duration: 2,               
+                  ease: "easeInOut",
+                  times: [0,  1],  }}
+                  className="bd_light">
+                  
+
+              </motion.div>
+
+          </div>                   
                 
           <main className="hero-main-box flex flex-col items-center justify-start 
             col-start-1 col-span-full md:col-start-2 md:col-end-2 row-start-2 row-end-3 

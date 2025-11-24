@@ -88,27 +88,7 @@ function About() {
           </div>
 
 
-          {/* DESCRIPTION - MOVED UP FOR MOBILE */}
-          <div className="description flex items-start justify-start p-4 
-          col-start-1 col-span-full row-start-3
-          md:col-start-4 md:col-end-11 md:row-start-7 md:row-end-10
-          border-2 border-[var(--metal-dark2)] 
-          rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)] overflow-y-auto
-          min-h-[200px] fade-in-up">
-              <p className="">
-                  Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
-                web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
-                I also work with other technologies such as PHP,Laravel and Python and had experience using Java
-                and Visual Basic.I started out using PHP and other langauges where I learned about the fundamentals of basic web
-                development. Over time, I shifted my focuses to the PERN Stack because I enjoy creating modern,
-                fast, scalable and high performing web applications. My experiences using these technologies gave
-                me a sense of stabilty and commitment to modern web development, enhance my understanding of building 
-                dynamic web applications. Beyod my current stack, my background as a developer also strengthen 
-                my adaptability ---- allowing me to learn and work with different technologies.
-              </p>          
-          </div>
-
-          {/* TECH STACK - MOVED DOWN FOR MOBILE */}
+         {/* TECH STACK - MOVED DOWN FOR MOBILE */}
           <div className="flex flex-col items-center justify-center
             col-start-1 col-span-full row-start-4
             md:col-start-9 md:col-span-full md:row-start-1 md:row-end-7
@@ -124,27 +104,48 @@ function About() {
             <Animation.TechStackAnimation/>
           </div>
 
+
+
+
+          {/* DESCRIPTION - MOVED UP FOR MOBILE */}
+          <div className="description flex items-start justify-start p-4 
+          col-start-1 col-span-full row-start-3
+          md:col-start-4 md:col-end-11 md:row-start-7 md:row-end-8
+          border-2 border-[var(--metal-dark2)] 
+          rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)] overflow-y-auto
+          fade-in-up">
+              <p className="">
+                  Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
+                web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
+                I also work with other technologies such as PHP,Laravel and Python and had experience using Java
+                and Visual Basic.I started out using PHP and other langauges where I learned about the fundamentals of basic web
+                development. Over time, I shifted my focuses to the PERN Stack because I enjoy creating modern,
+                fast, scalable and high performing web applications. My experiences using these technologies gave
+                me a sense of stabilty and commitment to modern web development, enhance my understanding of building 
+                dynamic web applications. Beyod my current stack, my background as a developer also strengthen 
+                my adaptability ---- allowing me to learn and work with different technologies.
+              </p>          
+          </div>
+
+ 
       
           {/* ACHIEVEMENTS */}
-          <div className="col-span-full md:col-span-3 md:col-start-1 md:row-start-7 md:row-end-8 fade-in-up">
+          <div className="col-span-full md:col-span-3 md:col-start-1 md:row-start-7 md:row-end-8 ">
             <div className="border-2 border-[var(--metal-dark2)] rounded-[10px] 
-              shadow-[5px_5px_20px_1px_black] p-4 flex flex-col overflow-hidden">
+              shadow-[5px_5px_20px_1px_black] p-4 flex flex-col overflow-hidden h-full">
 
-              {/* Header */}
+             
               <div className="center w-full p-2 bg-[var(--dark-variant)] rounded-[10px] border-2 border-[var(--metal-dark2)] 
                 shadow-[5px_5px_10px_1px_black] text-[var(--main-white)]">
                 Achievements
               </div>
 
-              <div className="flex-1 center w-full mt-4 rounded-[10px]">
+              <div className="flex-1 center w-full my-4 rounded-[10px]">
                 <Carousel/>
-              </div>
+              </div> 
             </div>
           </div>
 
-          <div>
-            {/* Empty div for potential future content */}
-          </div>
 
         </div>
 

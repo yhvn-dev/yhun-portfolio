@@ -3,6 +3,32 @@ import { Social_Media, Tech_Stack } from "../data/image_resources";
 import Jhvn from "../assets/Images/jhvn_1_LOGO.png"
 import { motion, useInView } from "framer-motion";
 
+function useScrollAnimation(options = { threshold: 0.2 }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setVisible(true);
+        observer.unobserve(entry.target); // animate only once
+      }
+    }, options);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [options]);
+
+  return [ref, visible];
+  
+}
+
+export default useScrollAnimation;
+
+
 export function FadeInWhenVisible({ children, delay = 0, as = "div", className = "" }) {
   const Component = as;
   const MotionWrapper = motion(Component);
