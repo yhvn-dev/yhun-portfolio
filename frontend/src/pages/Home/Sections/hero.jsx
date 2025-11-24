@@ -43,13 +43,13 @@ function Hero() {
                     </div>
                 </FadeInWhenVisible>
 
-                <FadeInWhenVisible delay={0.25}>
+
+
+                <FadeInWhenVisible delay={0.4}>
+
                   <p className="text-start w-full text-[var(--metal-dark4)] mx-2 text-[clamp(1rem, 1vw, 1rem)]">
                     Full-Stack Web Developer
                   </p>
-                </FadeInWhenVisible>
-
-                <FadeInWhenVisible delay={0.4}>
                   <p className="text-start w-full text-[var(--metal-dark4)] mx-2 text-xs">
                     I build end-to-end solutions with precision and care. <br />
                     I seamlessly integrate UI/UX design with backend development and security <br />
