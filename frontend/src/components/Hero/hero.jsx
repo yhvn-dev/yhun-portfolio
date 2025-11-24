@@ -1,4 +1,3 @@
-import { useEffect,useRef, useState } from "react";
 import Header from "../Header/header";
 import Sidebar from "../Sidebar/sidebar";
 import {motion} from "framer-motion"
@@ -27,7 +26,7 @@ function Hero() {
             <Sidebar></Sidebar>
 
             {/* HERO BACKDROP */}
-            <div className="bd bd_main_wrapper">
+            <div className="bd bd_main_wrapper bg-red-400`">
                 
                 <motion.div
                     variants={lightVariant}
@@ -36,9 +35,8 @@ function Hero() {
                     transition={{ duration: 2,               
                     ease: "easeInOut",
                     times: [0,  1],  }}
-                    className="bd_light">
-                   
-
+                    className="bd_light bg-amber-400">
+           
                 </motion.div>
 
             </div>
@@ -63,7 +61,7 @@ function Hero() {
 
                 </div>                
 
-                <div className="text_content_main_frame">
+                <div className="text_content_main_frame bg-purple-600" >
 
 
                     <div className="hero_grid hook_frame">
@@ -76,7 +74,7 @@ function Hero() {
 
 
            
-                    <div className="hero_grid text_frame">
+                    <div className="hero_grid text_frame ">
                         <div className="bento_text role">
                             <span id="role_text">Fullstack Web Developer</span>
                             <p id="selling_prop_text_1">

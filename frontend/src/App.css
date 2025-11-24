@@ -191,11 +191,11 @@ body::-webkit-scrollbar-thumb{
 
 .hook-txt{
       font-family:"Monument Text";
-      background: linear-gradient(90deg, white, white,var(--white-blple));
+      background: linear-gradient(0deg, white, var(--white-blple),var(--moon-phases-a));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-shadow: 0px -2px 10px var(--main-white);
+      text-shadow: 0px -2px 20px var(--main-white);
 }
 
 .hook-txt-2 {
