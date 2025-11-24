@@ -98,7 +98,7 @@ export function SociaMediaAnimation() {
       <div ref={contentRef} className="flex items-center">
 
         {/* First Batch */}
-        <div ref={firstBatchRef} className="flex items-center">
+        <div ref={firstBatchRef} className="flex items-center p-4">
           {Social_Media.map((item, idx) => (
             <a
               key={`social-1-${idx}`}
@@ -119,7 +119,7 @@ export function SociaMediaAnimation() {
         </div>
 
         {/*  Second Batch (duplicate for looping) */}
-        <div className="flex  items-center">
+        <div className="flex  items-center p-4">
           {Social_Media.map((item, idx) => (
             <a
               key={`social-2-${idx}`}
@@ -210,7 +210,7 @@ export function TechStackAnimation() {
     <div className="flex items-center justify-center w-full h-full">
       <div
         ref={containerRef}
-        className={`relative center w-full max-w-full md:max-w-[380px] h-[200px] md:h-[220px] rounded-xl overflow-hidden `}
+        className={`relative center w-full max-w-full md:max-w-[380px] h-[200px] md:h-[300px] rounded-xl overflow-hidden `}
       >
         <div
           ref={contentRef}

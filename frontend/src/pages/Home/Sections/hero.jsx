@@ -22,21 +22,21 @@ function Hero() {
                         </ul>
                     </div>                
 
-                    <div className="flex column flex-col items-center center h-full w-full ">
+                    <div className="flex column flex-col items-center justify-start h-full w-full">
         
-                        <div className="w-full flex-col flex items-start justify-start px-4">                     
-                            <p className="hook-txt text-[7rem] text-start w-full center">HI I'M JHUN</p>
-                            <p className="text-start w-full text-[var(--metal-dark4)] mx-4">Full-Stack Web Developer</p>  
-                            <p className="text-start w-full text-[var(--metal-dark4)] text-xs mx-4">
+                        <div className="w-full flex-col flex items-start justify-start h-full px-4 py-8">                     
+                            <p className="hook-txt text-[7.8rem] text-start w-full center">HI I'M JHUN</p>
+                            <p className="text-start w-full text-[var(--metal-dark4)] mx-2">Full-Stack Web Developer</p>  
+                            <p className="text-start w-full text-[var(--metal-dark4)] text-xs mx-2">
                                 I build end-to-end solutions with precision and care. <br/>
                                 I seamlessly integrate UI/UX design with backend development and security <br/>
                                 to create robust, user-friendly applications.
                             </p>
                         </div>
 
-                        <div className="flex items-end justify-start flex-col w-full p-4">
-                            <i className="text-[var(--metal-dark4)] text-sm">College Student At Sariaya, Quezon Philippines</i>
-                            <i className="text-[var(--metal-dark4)] text-sm">jhunguidef@gmail.com</i>         
+                        <div className="flex items-end justify-start flex-col w-full h-[30%] p-4">
+                            <i className="text-[var(--metal-dark4)] text-sm mx-2">College Student At Sariaya, Quezon Philippines</i>
+                            <i className="text-[var(--metal-dark4)] text-sm mx-2">jhunguidef@gmail.com</i>         
                         </div>
 
                     </div>

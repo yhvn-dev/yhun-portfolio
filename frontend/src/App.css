@@ -14,7 +14,7 @@
       /* [PL3]MOON PHASE */
     --moon-phases-a: hsl(204, 19%, 15%);
     --moon-phases-b: hsl(210, 19%, 22%);
-    --moon-phases-c: hsl(197, 65%, 24%);
+    --moon-phases-c: rgb(21, 78, 101);
     --moon-phases-d: hsl(192, 11%, 52%);
     --moon-phases-e: hsl(120, 13%, 85%);
     
@@ -168,7 +168,7 @@ svg{
   @apply flex flex-col items-start justify-start;
 }
 .sections{
-  @apply grid grid-cols-[1.5fr_7fr_1.5fr] grid-rows-[1fr_9fr_1fr] h-full w-full;
+  @apply grid grid-cols-[1.2fr_7.6fr_1.2fr] grid-rows-[1fr_9fr_1fr] h-full w-full;
 }
 
 
