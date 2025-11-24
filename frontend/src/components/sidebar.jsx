@@ -33,7 +33,7 @@ function Sidebar() {
           text-[var(--metal-dark4)]
           dark:text-[var(--main-white)]
 
-          border-2 border-[var(--metal-dark2)]
+          border-1 border-[var(--metal-dark2)]
           rounded-[10px]
         "
       >
