@@ -145,8 +145,6 @@
 .CELESTIAL_CATALOG_TEXT{
   font-family: 'Banscript';
 }
-
-
 .description::-webkit-scrollbar{
   @apply bg-[var(--metal-dark5)]
 }

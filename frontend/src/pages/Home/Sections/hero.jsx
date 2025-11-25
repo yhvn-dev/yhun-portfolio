@@ -35,9 +35,6 @@ function Hero() {
             center border-r-5 border-l-5 border-t-5 
             border-[var(--metal-dark2)] shadow-[0px_10px_5px_0px_rgba(0,0,0,0.8)]
             h-full w-full rounded-2xl overflow-hidden  backdrop-blur-[150px] bg-transparent
-
-         
-
           ">
 
             <header className="box-header w-full h-[3rem] border-[1px] border-[var(--dark-variant)]
@@ -58,7 +55,7 @@ function Hero() {
                     <p className="hook-txt md:text-start md:ml-2 text-[clamp(4.2rem,9.2vw,7.8rem)]">
                       HI I'M
                     </p>
-                    <p className="hook-txt jhun-text ml-20 md:text-start text-[clamp(4.2rem,9.2vw,7.8rem)] md:ml-12 mt-2 md:mt-0">
+                    <p className="hook-txt jhun-text ml-10 md:text-start text-[clamp(4.2rem,9.2vw,7.8rem)] md:ml-12 mt-2 md:mt-0">
                       JHUN
                     </p>
                   </div>
