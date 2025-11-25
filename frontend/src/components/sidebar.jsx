@@ -6,7 +6,7 @@ function Sidebar() {
   const [active, setActive] = useState("#hero");
 
   const links = [
-    { id: "#hero", label: "Hero", icon: <House size={16} /> },
+    { id: "#home", label: "Home", icon: <House size={16} /> },
     { id: "#about", label: "About", icon: <Heart size={16} /> },
     { id: "#skills-tech", label: "Technologies", icon: <Brain size={16} /> },
     { id: "#projects", label: "Projects", icon: <LaptopMinimalCheck size={16} /> },

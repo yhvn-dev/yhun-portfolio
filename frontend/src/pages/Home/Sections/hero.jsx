@@ -15,7 +15,7 @@ const parentVariant = {
 function Hero() {
   return (
     <>
-      <section className="sections w-full col-start-1 col-end-1 row-start-1 row-end-2 border-none">
+      <section id="home" className="homesections w-full col-start-1 col-end-1 row-start-1 row-end-2 border-none">
         <div className="sections col-start-1 col-end-4 row-start-1 row-end-4 border-none ">
 
           {/* HERO BACKDROP */}
@@ -58,7 +58,7 @@ function Hero() {
                     <p className="hook-txt md:text-start md:ml-2 text-[clamp(4.2rem,9.2vw,7.8rem)]">
                       HI I'M
                     </p>
-                    <p className="hook-txt ml-36 md:text-start text-[clamp(4.2rem,9.2vw,7.8rem)] md:ml-12 mt-2 md:mt-0">
+                    <p className="hook-txt jhun-text ml-20 md:text-start text-[clamp(4.2rem,9.2vw,7.8rem)] md:ml-12 mt-2 md:mt-0">
                       JHUN
                     </p>
                   </div>
