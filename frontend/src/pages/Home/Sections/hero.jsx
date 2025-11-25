@@ -55,7 +55,7 @@ function Hero() {
                     <p className="hook-txt md:text-start md:ml-2 text-[clamp(4.2rem,9.2vw,7.8rem)]">
                       HI I'M
                     </p>
-                    <p className="hook-txt jhun-text ml-10 md:text-start text-[clamp(4.2rem,9.2vw,7.8rem)] md:ml-12 mt-2 md:mt-0">
+                    <p className="hook-txt jhun-text ml-14 md:text-start text-[clamp(4.2rem,9.2vw,7.8rem)] md:ml-12 mt-2 md:mt-0">
                       JHUN
                     </p>
                   </div>
