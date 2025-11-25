@@ -4,6 +4,7 @@ import Me_1 from "../../../assets/Images/Me 1.png";
 import * as Animation from "../../../hooks/animations"
 import Carousel from "../../../features/carousel";
 
+
 function About() {
   const { stats } = useGithub();
       
@@ -127,8 +128,6 @@ function About() {
               </p>          
           </div>
 
- 
-      
           {/* ACHIEVEMENTS */}
           <div className="col-span-full md:col-span-3 md:col-start-1 md:row-start-7 md:row-end-8 ">
             <div className="border-2 border-[var(--metal-dark2)] rounded-[10px] 

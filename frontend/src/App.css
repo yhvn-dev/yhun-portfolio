@@ -93,7 +93,6 @@
     --fns-up-9-54:9.54rem;
     --fns-deafult-up-11-08:11.08rem;
 
-
     /* margin */
     --szd-0-6:0.618rem;
     --sz-0-8:0.8rem;
@@ -108,42 +107,44 @@
     --szd-11-08:11.08rem;
 }
 
+
+
 @font-face {
   font-family: "Monument Text";
   src: url("./assets/Fonts/MonumentExtended-Regular.otf");
 }
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("./assets/Fonts/BebasNeue-Regular.ttf");
-}
-
-@font-face {
   font-family: "Inter";
   src: url("./assets/Fonts/Inter_18pt-Regular.ttf");
 }
-
 *{
   font-family: "Inter";
 }
 
 
 
-body.light{
+body.dark{
   @apply bg-[var(--main-white)];
 }
-body.light .hero-bd{
+body.dark{
   transition: 1s;
   @apply bg-[var(--main-white)];
 }
-
-
-body.light .dmode-box {
+body.dark .dmode-box {
   @apply flex  items-center justify-end ;
+}
+body{
+   transition: 1s ease;
+}
+section{
+  transition: 1s ease;
+}
+aside{
+  transition: 1s ease;
 }
 .dmode-box{
   transition: 1s ease;
 }
-
 
 img{
   @apply cursor-pointer;
