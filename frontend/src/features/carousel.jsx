@@ -6,12 +6,12 @@ import VideoSample from "../assets/Videos/Hackathon First Minute.mp4";
 
 function Carousel() {
   const achievements_2 = [
-    { type: "image", name: "certificate", src: Certificate, about: "openIT Hackathon 3rd Place" },
-    { type: "image", name: "group", src: Hackathon, about: "openIT Hackathon 3rd Place" },
-    { type: "image", name: "solo", src: Hackahton2, about: "openIT Hackathon 3rd Place" },
-    { type: "video", name: "vid", src: VideoSample, about: "During the Hackathon" }
+    { type: "image", name: "certificate", src: Certificate, about: "openIT Hackathon  - 3rd Place" },
+    { type: "image", name: "group", src: Hackathon, about: "openIT Hackathon - 3rd Place" },
+    { type: "image", name: "solo", src: Hackahton2, about: "openIT Hackathon - 3rd Place" },
+    { type: "video", name: "vid", src: VideoSample, about: "openIT Hackathon - 3rd Place" }
   ];
-
+  
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
   const videoRef = useRef(null);
@@ -44,9 +44,10 @@ function Carousel() {
     return () => clearTimeout(timeoutRef.current);
   }, [index]);
 
+
   return (
     <div className="relative overflow-hidden w-full h-full rounded-[10px] flex flex-col items-center">
-      
+    
       {/* Slides */}
       <div
         className="flex transition-transform duration-700 ease-in-out w-full h-[90%]"

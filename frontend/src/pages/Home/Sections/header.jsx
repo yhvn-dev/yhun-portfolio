@@ -20,7 +20,7 @@ function Header() {
               <a 
               href="https://www.linkedin.com/in/jhunguide-flores" 
               target="_blank" 
-              className="mx-2 cursor-pointer hover:text-white stroke-white transition-all duration-500 "
+              className="mx-2 cursor-pointer duration-500 hover:scale-110  stroke-white transition-all duration-500 "
          
               id="header-linkedin">
                 <Linkedin  size={16} stroke="var(--main-white)"/>
@@ -30,7 +30,7 @@ function Header() {
               <a 
               href="https://github.com/yhvn-dev" 
               target="_blank" 
-              className="mx-2 cursor-pointer hover:text-white stroke-white transition-all duration-500"
+              className="mx-2 cursor-pointer duration-500 hover:scale-110  stroke-white transition-all"
         
               id="header-github">
               <Github  size={16}  stroke="var(--main-white)"/>

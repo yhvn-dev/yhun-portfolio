@@ -110,7 +110,7 @@ function Footer() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-all duration-200 hover:scale-110 text-[var(--main-white)]"        
+                className="transition-all duration-500 hover:scale-110 text-[var(--main-white)]"        
                 aria-label={social.name}
                 title={social.label}
               >
