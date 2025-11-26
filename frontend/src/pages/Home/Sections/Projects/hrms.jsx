@@ -55,17 +55,14 @@ function Hrms() {
              </div>
            }
            ProjectName2={"Nodelab - Human Resource Management System"}
-           Project_Descr={
-             <p className="text-[11px] sm:text-xs md:text-sm 
-                           leading-relaxed text-[var(--main-white)]">
-               A Web based Human Resource Management System, powered by HTML, CSS, Javascript, Php and MYSQL. 
-               Designed to make recruitment, employee management, and HR workflows more efficient. 
-               It allows HR staff to manage job postings, track applicants, and maintain employee records, 
-               while providing employees and job seekers with an organized, user-friendly platform for 
-               accessing information. Built to reduce manual work, improve accuracy, and support efficient 
-               HR operations in the digital age.
-             </p>
-           }
+         Project_Descr={
+              <p className="text-[11px] sm:text-xs md:text-sm leading-relaxed text-[var(--main-white)]">
+                A web-based Human Resource Management System powered by HTML, CSS, JavaScript, PHP, and MySQL.  
+                Designed to make recruitment, employee management, and HR workflows more efficient, it allows HR staff to manage job postings, track applicants, and maintain employee records.  
+                Employees and job seekers benefit from an organized, user-friendly platform to access information.  
+                The system reduces manual work, improves accuracy, and supports efficient HR operations in the digital age.
+              </p>
+            }
            Tech_Stack={
              <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 lg:gap-8 
                              items-center justify-start">

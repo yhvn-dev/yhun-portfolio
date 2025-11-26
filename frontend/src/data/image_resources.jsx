@@ -82,7 +82,6 @@ export const Tools = [
     {src: Github, label: "Github"},
     {src: Postman, label: "Postman"},
     {src: Wamp, label: "Wamp"},
-    {src: ThunderClient, label: "ThunderClient"},
     {src: Vscode, label: "Vscode"},
     {src: Pycharm, label: "Pycharm"},
 ]

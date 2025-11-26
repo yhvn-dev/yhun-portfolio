@@ -3,7 +3,7 @@ import Jhvn from "../assets/Images/jhvn_1_LOGO.png";
 import { House, Heart, Brain, LaptopMinimalCheck, Phone } from "lucide-react";
 
 function Sidebar() {
-  const [active, setActive] = useState("#hero");
+  const [active, setActive] = useState("#home");
 
   const links = [
     { id: "#home", label: "Home", icon: <House size={16} /> },
@@ -16,7 +16,7 @@ function Sidebar() {
   return (
     <aside
       className="
-        fixed z-20
+        fixed z-30
         w-full h-[10vh] bottom-5   
         center
         md:w-[10rem] md:h-screen md:top-0 md:right-0

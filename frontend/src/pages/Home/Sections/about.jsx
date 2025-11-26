@@ -115,17 +115,12 @@ function About() {
           border-2 border-[var(--metal-dark2)] 
           rounded-[10px] shadow-[5px_5px_20px_1px_black] text-[var(--main-white)] overflow-y-auto
           fade-in-up">
-              <p className="">
-                  Hi I'm Jhunguide Flores from the Philippines, I build full-stack 
-                web applications using the PERN Stack ---- PostgreSQL, ExpressJs, ReactJs, and NodeJs.
-                I also work with other technologies such as PHP,Laravel and Python and had experience using Java
-                and Visual Basic.I started out using PHP and other langauges where I learned about the fundamentals of basic web
-                development. Over time, I shifted my focuses to the PERN Stack because I enjoy creating modern,
-                fast, scalable and high performing web applications. My experiences using these technologies gave
-                me a sense of stabilty and commitment to modern web development, enhance my understanding of building 
-                dynamic web applications. Beyod my current stack, my background as a developer also strengthen 
-                my adaptability ---- allowing me to learn and work with different technologies.
-              </p>          
+           <p className="">
+              Hi, I'm Jhunguide Flores from the Philippines. I build full-stack web applications using the PERN Stack — PostgreSQL, Express.js, React.js, and Node.js.  
+              I also work with other technologies such as PHP, Laravel, and Python, and I have experience using Java and Visual Basic.  
+              I started out with PHP and other languages, where I learned the fundamentals of web development. Over time, I shifted my focus to the PERN Stack because I enjoy creating modern, fast, scalable, and high-performing web applications.  
+              My experience with these technologies has strengthened my sense of stability and commitment to modern web development and enhanced my understanding of building dynamic web applications. Beyond my current stack, my background as a developer has also strengthened my adaptability, allowing me to learn and work with different technologies.
+            </p>
           </div>
 
           {/* ACHIEVEMENTS */}

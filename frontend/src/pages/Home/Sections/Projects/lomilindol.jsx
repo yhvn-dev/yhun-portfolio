@@ -25,13 +25,13 @@ function Lomilindol() {
                     </>
                     }
           Project_Descr={
-          <p className='text-[11px] sm:text-xs md:text-sm 
-                           leading-relaxed text-[var(--main-white)]'>
-            Awarded 3rd Place in the openIT hackathon on November,20,2025.
-            An Earthquake Monitoring Web Application powered by TailwindCss,React, NodeJs and MySQL. It allows the public to monitor
-            live earthquake updates sources through web scraping from PHILVOLCS, trusted and widely known Philippines Goverment Scientific 
-            Agency. Our system automatically gathers the latest seismic data, stores it, and displays it in real time through an intuitive and responsive interface.            
-          </p>}
+            <p className='text-[11px] sm:text-xs md:text-sm leading-relaxed text-[var(--main-white)]'>
+              Awarded 3rd Place in the OpenIT Hackathon on November 20, 2025.  
+              LOMILINDOL is an Earthquake Monitoring Web Application powered by Tailwind CSS, React, Node.js, and MySQL.  
+              It allows the public to monitor live earthquake updates sourced via web scraping from PHIVOLCS, a trusted and widely recognized Philippine government scientific agency.  
+              The system automatically gathers the latest seismic data, stores it, and displays it in real time through an intuitive and responsive interface.
+            </p>
+          }
           Tech_Stack={
             <div className="stack-div flex gap-8">
                 {FrontEnd.filter(item => item.label === "TailwindCss").map((item, index) => (

@@ -144,7 +144,7 @@ function Skills_Tech() {
                         <div className="tech-title text-white center w-full p-1 bg-[var(--dark-variant)]/80 
                             rounded-[10px] border-2 border-[var(--metal-dark2)] shadow-[5px_5px_10px_1px_black]
                             backdrop-blur-md">
-                            Database
+                            Databases
                         </div>
                         <div className="flex md:flex-col gap-3 w-full h-full">
                             {Database.map((db, index) => (

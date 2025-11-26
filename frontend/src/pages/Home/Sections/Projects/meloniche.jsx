@@ -28,12 +28,12 @@ function Meloniche() {
               </>
                 }
             ProjectName2={"Meloniche - Desktop Based Music Player Library"}
-            Project_Descr={<p className="text-[11px] sm:text-xs md:text-sm 
-            leading-relaxed text-[var(--main-white)]">
-              A simple desktop based musuic player, designed by customtkinter and engineered by Python.
-              This allows users to play music base on the selected one,
-              user can browse different playlist and group of music depending on the category.
-            </p>}
+         Project_Descr={
+              <p className="text-[11px] sm:text-xs md:text-sm leading-relaxed text-[var(--main-white)]">
+                A simple desktop-based music player, designed with CustomTkinter and developed using Python.  
+                It allows users to play music based on their selection, browse different playlists, and explore groups of music depending on the category.
+              </p>
+            }
             Tech_Stack={
               <>
               <div className="flex gap-4 my-4">          

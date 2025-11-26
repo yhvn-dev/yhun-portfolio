@@ -28,17 +28,13 @@ function Rgrr_jobfinder() {
               <p className="text-sm my-4 text-[var(--main-white)]">View On Github</p>
             </>
             }
-          Project_Descr=
-          {<p
-            className="text-[11px] sm:text-xs md:text-sm 
-            leading-relaxed text-[var(--main-white)]">
-            Built with TailwindCSS, Laravel, and MySQL,
-            this Student Job Internship Hiring System was developed for RGRR Webmaker to streamline the internship application 
-            process. The platform allows students to browse available internship opportunities offered by the company, 
-            view detailed job descriptions, and submit their applications through a simplified and user-friendly interface. 
-            Administrators can manage job postings, review applicants, and maintain records efficiently, 
-            making the system a practical tool for connecting students with real industry experience.
-          </p>}
+          Project_Descr={
+            <p className="text-[11px] sm:text-xs md:text-sm leading-relaxed text-[var(--main-white)]">
+              Built with TailwindCSS, Laravel, and MySQL, this Student Internship Finder system was developed for RGRR Webmaker to streamline the internship application process.  
+              The platform allows students to browse available internship opportunities offered by the company, view detailed job descriptions, and submit their applications through a simple and user-friendly interface.  
+              Administrators can efficiently manage job postings, review applicants, and maintain records, making the system a practical tool for connecting students with real industry experience.
+            </p>
+          }
           Tech_Stack={
             <div className="flex gap-8">
             {FrontEnd.filter(item => item.label === "HTML5").map((item, index) => (

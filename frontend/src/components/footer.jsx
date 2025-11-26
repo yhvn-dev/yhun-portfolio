@@ -44,7 +44,7 @@ function Footer() {
               About
             </h3>
             <p className="text-sm leading-relaxed text-[var(--main-white)]" >
-              Fullstack Web Developer - Freelancer
+              Fullstack Web Developer/Freelancer       
             </p>
           </div>
 

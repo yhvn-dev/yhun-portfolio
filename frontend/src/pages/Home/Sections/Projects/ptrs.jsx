@@ -26,15 +26,13 @@ function Ptrs() {
              </>}
              defaultValue={"heartelect.com/ptrs"}
              Project_Descr={
-             <p className="text-[11px] sm:text-xs md:text-sm 
-            leading-relaxed text-[var(--main-white)]">
-                  A desktop-based Political Track Record System developed using Python, CustomTkinter, and MySQL. 
-                  This application enables administrators to securely store and manage verified political records 
-                  sourced from trusted references. The system provides users with a clean and interactive feed where 
-                  they can view politician profiles and track records, as well as engage through features such as 
-                  liking or unliking entries. Designed with usability and transparency in mind, this platform offers 
-                  an organized and reliable way to access political information.
-              </p>}
+                <p className="text-[11px] sm:text-xs md:text-sm leading-relaxed text-[var(--main-white)]">
+                  A desktop-based Political Track Record System developed using Python, CustomTkinter, and MySQL.  
+                  This application allows administrators to securely store and manage verified political records sourced from trusted references.  
+                  Users can view politician profiles and track records through a clean, interactive feed, and engage with entries via features such as liking or unliking.  
+                  Designed with usability and transparency in mind, this platform offers an organized and reliable way to access political information.
+                </p>
+              }
              Tech_Stack={
                 <div className="flex gap-8 my-4">
                       {BackEnd.filter(item => item.label === "Python").map((item, index) => (
