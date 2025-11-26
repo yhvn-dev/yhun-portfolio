@@ -91,7 +91,7 @@ export function ProjectTemplate({Project_Logo, Project_Name, Project_Img, defaul
               alt="Project Preview"
             />  
           )  : (
-            <div className="text-white flex items-center justify-center flex-col w-full h-full p-2 sm:p-4 overflow-y-auto">
+            <div className="con text-white flex items-center justify-center flex-col w-full h-full p-2 sm:p-4 overflow-y-auto">
               {Resources}
             </div>
           )}

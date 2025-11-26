@@ -153,12 +153,12 @@
 
 
 
-  .bd_light{
-        grid-area: 1/ 3 /6  /9;
-        border-radius: 50%;
-        background:linear-gradient(to top,var(--color-jk-dark),var(--color-dark-blue),var(--moon-phases-c));
-      
-      }
+.bd_light{
+      grid-area: 1/ 3 /6  /9;
+      border-radius: 50%;
+      background:linear-gradient(to top,var(--color-jk-dark),var(--color-dark-blue),var(--moon-phases-c));
+    
+    }
       
 .bento_text.hook #hook_text {
         font-family: "Monument Text";

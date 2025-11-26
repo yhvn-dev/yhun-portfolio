@@ -6,9 +6,9 @@ import VideoSample from "../assets/Videos/Hackathon First Minute.mp4";
 
 function Carousel() {
   const achievements_2 = [
-    { type: "image", name: "certificate", src: Certificate, about: "openIT Hackathon  - 3rd Place" },
     { type: "image", name: "group", src: Hackathon, about: "openIT Hackathon - 3rd Place" },
     { type: "image", name: "solo", src: Hackahton2, about: "openIT Hackathon - 3rd Place" },
+    { type: "image", name: "certificate", src: Certificate, about: "openIT Hackathon  - 3rd Place" },
     { type: "video", name: "vid", src: VideoSample, about: "openIT Hackathon - 3rd Place" }
   ];
   

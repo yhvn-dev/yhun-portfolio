@@ -23,7 +23,7 @@ function Hero() {
             col-start-1 col-span-full md:col-start-2 md:col-end-2 row-start-2 row-end-3 
             center  h-full w-full rounded-2xl overflow-hidden">
 
-            <div className="absolute top-4 bg-[var(--moon-phases-c)] rounded-full w-1/2 h-1/2">
+            <div className="hero-bd absolute top-4 bg-[var(--moon-phases-c)] rounded-full w-1/2 h-1/2">
        
             </div>
                 

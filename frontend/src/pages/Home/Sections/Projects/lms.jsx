@@ -55,14 +55,14 @@ function Lms() {
                 ))}
                 
                  {Database.filter(item => item.label === "MySQL").map((item, index) => (
-                         <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
-                              <img 
-                              key={index} 
-                              src={item.src} 
-                              className="w-6 h-6" 
-                              alt={item.label}
-                            />
-                          </div>
+                    <div className="stack-div center bg-[var(--metal-dark1)] rounded-xl p-2 w-15" key={item.label}>
+                        <img 
+                        key={index} 
+                        src={item.src} 
+                        className="w-6 h-6" 
+                        alt={item.label}
+                      />
+                    </div>
                 
                 ))}
               </div>
